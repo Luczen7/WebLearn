@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours Design Graphique - WebLearn | Théorie du Design & Composition</title>
+    <meta name="description" content="Théorie du design, typographie, couleurs et composition visuelle. 25 heures de formation pour maîtriser les fondamentaux du design graphique.">
+    <meta name="keywords" content="design graphique cours, typographie, théorie des couleurs, composition visuelle, design principles, branding">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="cours-design-graphique.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="cours-design-graphique.html">
+    <meta property="og:title" content="Design Graphique - WebLearn">
+    <meta property="og:description" content="Théorie du design, typographie, couleurs et composition visuelle.">
+    <meta property="og:image" content="logoWebLearn.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Design Graphique",
+        "description": "Théorie du design, typographie, couleurs et composition visuelle.",
+        "provider": {"@type": "Organization", "name": "WebLearn", "sameAs": "https://"},
+        "educationalLevel": "Intermédiaire",
+        "timeRequired": "PT25H",
+        "isAccessibleForFree": false,
+        "coursePrerequisites": "Aucun prérequis",
+        "teaches": ["Design Graphique", "Typographie", "Théorie des Couleurs", "Composition", "Branding", "Design Principles"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="weblearn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="logoWebLearn.png">
+
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="WebLearn - Accueil">
+                <img src="logoWebLearn.png" alt="WebLearn Logo">
+                <div class="logo-text">Web<span>Learn</span></div>
+            </a>
+            <nav role="navigation" aria-label="Navigation principale">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="cours.html" class="dropdown-toggle active">Cours</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Développement Web</div>
+                            <a href="cours-html-css.html"><i class="fab fa-html5"></i> HTML5 & CSS3</a>
+                            <a href="cours-javascript.html"><i class="fab fa-js"></i> JavaScript Moderne</a>
+                            <a href="cours-react.html"><i class="fab fa-react"></i> React.js Mastery</a>
+                            <a href="cours-nodejs.html"><i class="fab fa-node-js"></i> Node.js & Express</a>
+                            <a href="cours-tailwind.html"><i class="fab fa-css3-alt"></i> Tailwind CSS</a>
+                            <a href="cours-angular.html"><i class="fab fa-angular"></i> Angular Complet</a>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-header">Design & Créativité</div>
+                            <a href="cours-figma.html"><i class="fab fa-figma"></i> Figma pour UI/UX</a>
+                            <a href="cours-design-graphique.html" class="active"><i class="fas fa-paint-brush"></i> Design Graphique</a>
+                            <a href="cours-mobile-first.html"><i class="fas fa-mobile-alt"></i> Design Mobile First</a>
+                        </div>
+                    </li>
+                    <li><a href="apropos.html">A Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Activer/Désactiver le mode nuit"><i class="fas fa-moon" id="darkModeIcon"></i></button></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Menu mobile"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+            <a href="index.html">Accueil</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <a href="cours.html">Cours</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <span>Design Graphique</span>
+        </nav>
+
+        <div class="course-detail-header">
+            <div class="container">
+                <div>
+                    <span class="course-tag" style="margin-bottom: 15px; display: inline-block;">Intermédiaire</span>
+                    <h1>Design Graphique</h1>
+                    <div class="course-meta-header">
+                        <span><i class="far fa-clock" aria-hidden="true"></i> 25 heures</span>
+                        <span><i class="fas fa-signal" aria-hidden="true"></i> Niveau intermédiaire</span>
+                        <span><i class="fas fa-certificate" aria-hidden="true"></i> Certificat inclus</span>
+                        <span><i class="fas fa-infinity" aria-hidden="true"></i> Accès illimité</span>
+                    </div>
+                    <p class="course-description">
+                        Maîtrisez les fondamentaux du design graphique : théorie de la couleur, typographie, composition, hiérarchie visuelle et principes de design. Ce cours vous donne les bases théoriques essentielles pour créer des designs professionnels et impactants.
+                    </p>
+                    <div class="course-tags">
+                        <span>Théorie Couleur</span>
+                        <span>Typographie</span>
+                        <span>Composition</span>
+                        <span>Hiérarchie</span>
+                        <span>Branding</span>
+                        <span>Grid Systems</span>
+                    </div>
+                </div>
+                <div class="course-card-sidebar">
+                    <div class="price">Gratuit</div>
+                    <ul class="features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 25 heures de contenu</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 45 leçons vidéo</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 15 projets pratiques</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Certificat de réussite</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Ressources téléchargeables</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Guide de référence PDF</li>
+                    </ul>
+                    <a href="#contenu" class="btn btn-primary" style="width: 100%; text-align: center; margin-bottom: 10px;">Commencer le cours</a>
+                    <a href="cours.html" class="btn btn-secondary" style="width: 100%; text-align: center;">Voir tous les cours</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content" id="contenu">
+            <div class="course-main">
+                <section class="lesson-section" id="intro-design" aria-labelledby="intro-design-title">
+                    <h2 id="intro-design-title"><span class="lesson-number">1</span> Introduction au Design Graphique</h2>
+                    <p>Le design graphique est l'art de communiquer visuellement. Il combine texte, images et éléments graphiques pour transmettre un message de manière claire, esthétique et efficace.</p>
+
+                    <h3>1.1 Les 10 principes fondamentaux du design</h3>
+                    <ul>
+                        <li><strong>Équilibre</strong> : Distribution visuelle des éléments (symétrique, asymétrique, radial)</li>
+                        <li><strong>Contraste</strong> : Différenciation par la couleur, taille, forme, texture</li>
+                        <li><strong>Hiérarchie</strong> : Organisation de l'importance visuelle</li>
+                        <li><strong>Répétition</strong> : Cohérence et unité visuelle</li>
+                        <li><strong>Alignement</strong> : Création de liens visuels entre les éléments</li>
+                        <li><strong>Proximité</strong> : Regroupement des éléments liés</li>
+                        <li><strong>Espace blanc (Negative Space)</strong> : L'espace vide est aussi important que le plein</li>
+                        <li><strong>Mouvement</strong> : Direction du regard du spectateur</li>
+                        <li><strong>Rythme</strong> : Répétition régulière créant un flux visuel</li>
+                        <li><strong>Unité</strong> : Harmonie entre tous les éléments</li>
+                    </ul>
+
+                    <h3>1.2 Processus de design</h3>
+                    <ol>
+                        <li><strong>Brief</strong> : Comprendre les besoins et objectifs</li>
+                        <li><strong>Recherche</strong> : Analyser le marché, la concurrence, le public cible</li>
+                        <li><strong>Conceptualisation</strong> : Brainstorming et esquisses</li>
+                        <li><strong>Création</strong> : Développement des maquettes</li>
+                        <li><strong>Itération</strong> : Feedback et améliorations</li>
+                        <li><strong>Finalisation</strong> : Livraison des fichiers finaux</li>
+                    </ol>
+                </section>
+
+                <section class="lesson-section" id="couleurs" aria-labelledby="couleurs-title">
+                    <h2 id="couleurs-title"><span class="lesson-number">2</span> Théorie des Couleurs</h2>
+
+                    <h3>2.1 Le cercle chromatique</h3>
+                    <p>Le cercle chromatique est l'outil fondamental pour comprendre les relations entre les couleurs :</p>
+                    <ul>
+                        <li><strong>Couleurs primaires</strong> : Rouge, Jaune, Bleu (RYB) ou Rouge, Vert, Bleu (RVB)</li>
+                        <li><strong>Couleurs secondaires</strong> : Orange, Vert, Violet (mélange de deux primaires)</li>
+                        <li><strong>Couleurs tertiaires</strong> : Jaune-orange, Rouge-orange, Rouge-violet, etc.</li>
+                    </ul>
+
+                    <h3>2.2 Harmonies de couleurs</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr><th>Harmonie</th><th>Description</th><th>Usage</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Complémentaire</td><td>Deux couleurs opposées sur le cercle</td><td>Contraste fort, CTA</td></tr>
+                                <tr><td>Triadique</td><td>Trois couleurs équidistantes</td><td>Vibrant, équilibré</td></tr>
+                                <tr><td>Analogue</td><td>Couleurs adjacentes</td><td>Harmonieux, naturel</td></tr>
+                                <tr><td>Complémentaire partagée</td><td>Une couleur + deux adjacentes à son opposé</td><td>Contraste nuancé</td></tr>
+                                <tr><td>Monochromatique</td><td>Variations de teinte, saturation, luminosité</td><td>Élégant, minimaliste</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>2.3 Psychologie des couleurs</h3>
+                    <ul>
+                        <li><strong>Rouge</strong> : Énergie, passion, urgence, danger</li>
+                        <li><strong>Bleu</strong> : Confiance, calme, professionnalisme, technologie</li>
+                        <li><strong>Vert</strong> : Nature, croissance, santé, argent</li>
+                        <li><strong>Jaune</strong> : Optimisme, créativité, attention</li>
+                        <li><strong>Orange</strong> : Enthousiasme, chaleur, action</li>
+                        <li><strong>Violet</strong> : Luxe, créativité, spiritualité</li>
+                        <li><strong>Noir</strong> : Élégance, pouvoir, mystère</li>
+                        <li><strong>Blanc</strong> : Pureté, simplicité, espace</li>
+                    </ul>
+
+                    <h3>2.4 Systèmes de couleurs numériques</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Design - Systèmes Couleur</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Formats de couleur en design digital :
+
+// HEX (Hexadécimal)
+#FF5733 = Rouge-orangé
+#1A3A6E = Bleu foncé (WebLearn primary)
+#F26522 = Orange (WebLearn secondary)
+
+// RGB (Red, Green, Blue)
+rgb(255, 87, 51)
+rgba(255, 87, 51, 0.8)  // avec opacité 80%
+
+// HSL (Hue, Saturation, Lightness)
+hsl(9, 100%, 60%)
+// Hue : 0-360° (position sur le cercle)
+// Saturation : 0-100% (intensité)
+// Lightness : 0-100% (luminosité)
+
+// HSB/HSV (Hue, Saturation, Brightness/Value)
+// Similaire à HSL mais Brightness au lieu de Lightness
+
+// Outils de palette :
+- Coolors.co (générateur de palettes)
+- Adobe Color (harmonies basées sur le cercle)
+- ColorHunt (palettes communautaires)
+- Paletton (harmonies avancées)</pre>
+                    </div>
+
+                    <div class="info-box info">
+                        <strong><i class="fas fa-info-circle" aria-hidden="true"></i> Règle des 60-30-10</strong>
+                        <p>Pour une palette harmonieuse, utilisez : 60% de couleur dominante (neutre), 30% de couleur secondaire, et 10% d'accent (couleur vive pour attirer l'attention).</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="typographie" aria-labelledby="typographie-title">
+                    <h2 id="typographie-title"><span class="lesson-number">3</span> Typographie</h2>
+                    <p>La typographie est l'art d'organiser le texte dans un design. Un bon choix typographique peut transformer un design moyen en design exceptionnel.</p>
+
+                    <h3>3.1 Classification des polices</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr><th>Catégorie</th><th>Caractéristiques</th><th>Exemples</th><th>Usage</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Serif</td><td>Empattements, traditionnel</td><td>Times, Georgia, Playfair</td><td>Éditorial, luxe</td></tr>
+                                <tr><td>Sans-serif</td><td>Sans empattements, moderne</td><td>Helvetica, Arial, Inter</td><td>UI, tech, web</td></tr>
+                                <tr><td>Script</td><td>Style manuscrit</td><td>Pacifico, Dancing Script</td><td>Invitations, branding</td></tr>
+                                <tr><td>Display</td><td>Décorative, impactante</td><td>Impact, Bebas Neue</td><td>Titres, posters</td></tr>
+                                <tr><td>Monospace</td><td>Largeur fixe</td><td>Courier, Fira Code</td><td>Code, data</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>3.2 Anatomie typographique</h3>
+                    <ul>
+                        <li><strong>Baseline</strong> : Ligne de base sur laquelle reposent les lettres</li>
+                        <li><strong>X-height</strong> : Hauteur des lettres minuscules (a, e, x)</li>
+                        <li><strong>Ascender</strong> : Partie au-dessus de la x-height (b, d, h)</li>
+                        <li><strong>Descender</strong> : Partie en dessous de la baseline (g, j, p)</li>
+                        <li><strong>Kerning</strong> : Espacement entre deux lettres spécifiques</li>
+                        <li><strong>Tracking (letter-spacing)</strong> : Espacement uniforme entre toutes les lettres</li>
+                        <li><strong>Leading (line-height)</strong> : Espacement entre les lignes</li>
+                    </ul>
+
+                    <h3>3.3 Hiérarchie typographique</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Design - Échelle Typographique</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Échelle typographique modulaire (ratio 1.25 - Major Third)
+
+Display Large  : 96px  / line-height: 1.1  / weight: 700
+Display Medium : 60px  / line-height: 1.1  / weight: 700
+H1             : 48px  / line-height: 1.2  / weight: 700
+H2             : 40px  / line-height: 1.2  / weight: 600
+H3             : 33px  / line-height: 1.3  / weight: 600
+H4             : 28px  / line-height: 1.3  / weight: 600
+H5             : 23px  / line-height: 1.4  / weight: 500
+H6             : 19px  / line-height: 1.4  / weight: 500
+Body Large     : 18px  / line-height: 1.6  / weight: 400
+Body           : 16px  / line-height: 1.6  / weight: 400
+Body Small     : 14px  / line-height: 1.5  / weight: 400
+Caption        : 12px  / line-height: 1.4  / weight: 400
+
+// Règles d'or :
+// - line-height corps de texte : 1.5 - 1.7
+// - line-height titres : 1.1 - 1.3
+// - Longueur de ligne idéale : 45-75 caractères
+// - Contraste minimum : 4.5:1 (WCAG AA)</pre>
+                    </div>
+
+                    <h3>3.4 Pairing de polices</h3>
+                    <p>Associer deux polices complémentaires :</p>
+                    <ul>
+                        <li><strong>Contraste de style</strong> : Serif + Sans-serif (Playfair + Inter)</li>
+                        <li><strong>Contraste de poids</strong> : Light + Bold</li>
+                        <li><strong>Même famille</strong> : Utiliser les variations d'une super-famille</li>
+                        <li><strong>Maximum 2-3 polices</strong> par projet</li>
+                    </ul>
+                    <p>Combinaisons populaires :</p>
+                    <ul>
+                        <li>Merriweather + Open Sans (blog, éditorial)</li>
+                        <li>Montserrat + Lato (corporate, startup)</li>
+                        <li>Poppins + Roboto (tech, moderne)</li>
+                        <li>Playfair Display + Source Sans Pro (luxe, élégant)</li>
+                    </ul>
+                </section>
+
+                <section class="lesson-section" id="composition" aria-labelledby="composition-title">
+                    <h2 id="composition-title"><span class="lesson-number">4</span> Composition et Grid Systems</h2>
+
+                    <h3>4.1 Règles de composition</h3>
+                    <ul>
+                        <li><strong>Règle des tiers</strong> : Diviser l'image en 9 parties égales, placer les points d'intérêt aux intersections</li>
+                        <li><strong>Point focal</strong> : Un seul élément dominant qui attire l'attention</li>
+                        <li><strong>Lignes directrices</strong> : Utiliser les lignes naturelles pour guider le regard</li>
+                        <li><strong>Cadre et bordure</strong> : Encadrer le sujet pour le mettre en valeur</li>
+                        <li><strong>Symétrie et asymétrie</strong> : Créer de l'équilibre ou du dynamisme</li>
+                    </ul>
+
+                    <h3>4.2 Systèmes de grille</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Design - Grid Systems</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Grille de colonnes (système le plus courant)
+
+// Desktop (1440px)
+Columns  : 12
+Gutter   : 24px
+Margin   : 48px
+Column width : (1440 - 96 - 264) / 12 = 90px
+
+// Tablet (768px)
+Columns  : 8
+Gutter   : 24px
+Margin   : 32px
+
+// Mobile (375px)
+Columns  : 4
+Gutter   : 16px
+Margin   : 16px
+
+// Types de grilles :
+// 1. Manuscript grid : Une seule colonne (livres)
+// 2. Column grid : Plusieurs colonnes égales (web, magazines)
+// 3. Modular grid : Colonnes + lignes (tableaux de données)
+// 4. Hierarchical grid : Grille irrégulière (posters créatifs)
+// 5. Baseline grid : Alignement sur une grille de lignes (typographie)</pre>
+                    </div>
+
+                    <h3>4.3 Golden Ratio (Ratio d'or)</h3>
+                    <p>Le nombre d'or (φ ≈ 1.618) est considéré comme esthétiquement plaisant :</p>
+                    <ul>
+                        <li>Proportion des éléments : 1 : 1.618</li>
+                        <li>Spirale d'or pour la composition</li>
+                        <li>Échelle typographique basée sur φ</li>
+                        <li>Exemple : 16px → 26px → 42px → 68px</li>
+                    </ul>
+                </section>
+
+                <section class="lesson-section" id="branding" aria-labelledby="branding-title">
+                    <h2 id="branding-title"><span class="lesson-number">5</span> Identité Visuelle et Branding</h2>
+
+                    <h3>5.1 Éléments d'une identité visuelle</h3>
+                    <ul>
+                        <li><strong>Logo</strong> : Symbole principal de la marque</li>
+                        <li><strong>Palette de couleurs</strong> : Couleurs primaires, secondaires, neutres</li>
+                        <li><strong>Typographie</strong> : Polices de marque pour tous les supports</li>
+                        <li><strong>Imagery</strong> : Style photographique, illustrations</li>
+                        <li><strong>Voice & Tone</strong> : Personnalité de la communication</li>
+                        <li><strong>Patterns & Textures</strong> : Éléments décoratifs récurrents</li>
+                    </ul>
+
+                    <h3>5.2 Création d'un logo</h3>
+                    <p>Types de logos :</p>
+                    <ul>
+                        <li><strong>Wordmark</strong> : Texte stylisé (Google, Coca-Cola)</li>
+                        <li><strong>Lettermark</strong> : Initiales (IBM, HBO, NASA)</li>
+                        <li><strong>Pictorial mark</strong> : Symbole iconique (Apple, Twitter)</li>
+                        <li><strong>Abstract mark</strong> : Forme abstraite (Nike, Pepsi)</li>
+                        <li><strong>Mascot</strong> : Personnage (KFC, Michelin)</li>
+                        <li><strong>Combination mark</strong> : Texte + symbole (Adidas, Lacoste)</li>
+                        <li><strong>Emblem</strong> : Texte dans un symbole (Harvard, Starbucks)</li>
+                    </ul>
+
+                    <h3>5.3 Brand guidelines</h3>
+                    <p>Un guide de marque (brand book) contient :</p>
+                    <ul>
+                        <li>Positionnement et valeurs de la marque</li>
+                        <li>Usage correct et incorrect du logo</li>
+                        <li>Palette de couleurs avec codes exacts</li>
+                        <li>Polices et hiérarchie typographique</li>
+                        <li>Templates pour différents supports</li>
+                        <li>Photographie et style visuel</li>
+                        <li>Tone of voice</li>
+                    </ul>
+
+                    <div class="exercise-box">
+                        <h4><i class="fas fa-keyboard" aria-hidden="true"></i> Projet final : Identité de marque complète</h4>
+                        <p>Créez une identité visuelle complète pour une marque fictive (café, application, ou boutique) incluant : recherche et moodboard, logo avec variations, palette de couleurs avec codes, typographie de marque, cartes de visite mockup, mockup de packaging ou d'application, et un mini brand book de 4-6 pages.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="conclusion-design" aria-labelledby="conclusion-design-title">
+                    <h2 id="conclusion-design-title"><span class="lesson-number">6</span> Conclusion</h2>
+                    <p>Vous maîtrisez maintenant les fondamentaux du design graphique. Prochaines étapes :</p>
+                    <ul>
+                        <li><strong>Motion design</strong> : After Effects, Lottie animations</li>
+                        <li><strong>Illustration</strong> : Adobe Illustrator, Procreate</li>
+                        <li><strong>Photographie</strong> : Composition photo, retouche</li>
+                        <li><strong>Print design</strong> : Maîtrise des contraintes d'impression</li>
+                        <li><strong>Portfolio</strong> : Présenter vos projets de design</li>
+                    </ul>
+                </section>
+            </div>
+
+            <aside class="course-sidebar-sticky" aria-label="Navigation du cours">
+                <div class="course-nav">
+                    <h4>Contenu du cours</h4>
+                    <ul>
+                        <li><a href="#intro-design" class="active">1. Introduction Design</a></li>
+                        <li><a href="#couleurs">2. Théorie des Couleurs</a></li>
+                        <li><a href="#typographie">3. Typographie</a></li>
+                        <li><a href="#composition">4. Composition</a></li>
+                        <li><a href="#branding">5. Branding</a></li>
+                        <li><a href="#conclusion-design">6. Conclusion</a></li>
+                    </ul>
+                </div>
+                <div class="course-nav">
+                    <h4>Progression</h4>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 0%;"></div>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">6 leçons • 25 heures</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>WebLearn</h4>
+                <p>Votre plateforme d'apprentissage en ligne pour maîtriser le développement web et les technologies numériques.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liens rapides</h4>
+                <a href="index.html">Accueil</a>
+                <a href="cours.html">Cours</a>
+                <a href="apropos.html">A Propos</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Catégories</h4>
+                <a href="cours.html">Développement Web</a>
+                <a href="cours.html">Design UI/UX</a>
+                <a href="cours.html">Marketing Digital</a>
+                <a href="cours.html">Data Science</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> contact@</p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> +261 38 22 819 76</p>
+                <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Fianarantsoa, Madagascar</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© WebLearn - Online Academy & Knowledge Hub. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="weblearn.js"></script>
+</body>
+</html>

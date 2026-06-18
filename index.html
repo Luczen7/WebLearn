@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebLearn - Cours en ligne Développement Web & Design | Formation en ligne</title>
+    <meta name="description" content="WebLearn : plateforme de formation en ligne spécialisée en développement web, design UI/UX, marketing digital et data science. Cours gratuits et certifiants.">
+    <meta name="keywords" content="cours en ligne, développement web, HTML, CSS, JavaScript, React, formation, e-learning, design UI/UX, marketing digital">
+    <meta name="author" content="WebLearn">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="index.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="WebLearn - Online Academy & Knowledge Hub">
+    <meta property="og:description" content="Apprenez sans limites avec WebLearn. Des cours en ligne de qualité pour développer vos compétences en développement web, design, marketing digital et plus.">
+    <meta property="og:image" content="logoWebLearn.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="">
+    <meta property="twitter:title" content="WebLearn - Online Academy & Knowledge Hub">
+    <meta property="twitter:description" content="Apprenez sans limites avec WebLearn. Des cours en ligne de qualité pour développer vos compétences.">
+    <meta property="twitter:image" content="logoWebLearn.png">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "WebLearn",
+        "url": "https://",
+        "logo": "logoWebLearn.png",
+        "description": "Plateforme d'apprentissage en ligne pour maîtriser le développement web et les technologies numériques",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+261-38-22-819-76",
+            "contactType": "customer service",
+            "email": "contact@"
+        },
+        "sameAs": [
+            "https://twitter.com/weblearn",
+            "https://linkedin.com/company/weblearn",
+            "https://youtube.com/weblearn"
+        ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="weblearn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="logoWebLearn.png">
+
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="WebLearn - Accueil">
+                <img src="logoWebLearn.png" alt="WebLearn Logo">
+                <div class="logo-text">Web<span>Learn</span></div>
+            </a>
+            <nav role="navigation" aria-label="Navigation principale">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" class="active" aria-current="page">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="cours.html" class="dropdown-toggle">Cours</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Développement Web</div>
+                            <a href="cours-html-css.html"><i class="fab fa-html5"></i> HTML5 & CSS3</a>
+                            <a href="cours-javascript.html"><i class="fab fa-js"></i> JavaScript Moderne</a>
+                            <a href="cours-react.html"><i class="fab fa-react"></i> React.js Mastery</a>
+                            <a href="cours-nodejs.html"><i class="fab fa-node-js"></i> Node.js & Express</a>
+                            <a href="cours-tailwind.html"><i class="fab fa-css3-alt"></i> Tailwind CSS</a>
+                            <a href="cours-angular.html"><i class="fab fa-angular"></i> Angular Complet</a>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-header">Design & Créativité</div>
+                            <a href="cours-figma.html"><i class="fab fa-figma"></i> Figma pour UI/UX</a>
+                            <a href="cours-design-graphique.html"><i class="fas fa-paint-brush"></i> Design Graphique</a>
+                            <a href="cours-mobile-first.html"><i class="fas fa-mobile-alt"></i> Design Mobile First</a>
+                        </div>
+                    </li>
+                    <li><a href="apropos.html">A Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Activer/Désactiver le mode nuit"><i class="fas fa-moon" id="darkModeIcon"></i></button></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Menu mobile"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" aria-label="Bannière principale">
+            <div class="hero-content">
+                <h1>Apprenez sans limites avec <span>WebLearn</span></h1>
+                <p>Des cours en ligne de qualité pour développer vos compétences en développement web, design, marketing digital et bien plus encore.</p>
+                <div class="btn-group">
+                    <a href="cours.html" class="btn btn-primary">Explorer les cours</a>
+                    <a href="apropos.html" class="btn btn-outline">En savoir plus</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="why-weblearn">
+            <div class="section-title">
+                <h2 id="why-weblearn">Pourquoi choisir WebLearn ?</h2>
+                <p>Une plateforme pensée pour votre réussite, avec des outils modernes et un accompagnement personnalisé.</p>
+            </div>
+            <div class="card-grid">
+                <article class="card">
+                    <div class="card-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
+                    <h3>Cours de qualité</h3>
+                    <p>Des formations conçues par des experts du secteur, régulièrement mises à jour pour rester à la pointe.</p>
+                </article>
+                <article class="card">
+                    <div class="card-icon"><i class="fas fa-laptop-code" aria-hidden="true"></i></div>
+                    <h3>Apprentissage pratique</h3>
+                    <p>Travaillez sur des projets concrets et construisez un portfolio solide pour décrocher votre emploi de rêve.</p>
+                </article>
+                <article class="card">
+                    <div class="card-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
+                    <h3>Communauté active</h3>
+                    <p>Rejoignez une communauté d'apprenants passionnés, échangez et progressez ensemble.</p>
+                </article>
+                
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--bg-white); margin: 0; max-width: 100%; padding: 80px 20px;" aria-labelledby="popular-courses">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <div class="section-title">
+                    <h2 id="popular-courses">Nos cours populaires</h2>
+                    <p>Découvrez nos formations les plus suivies par nos apprenants.</p>
+                </div>
+                <div class="card-grid">
+                    <article class="course-card">
+                        <div class="course-img" style="background: linear-gradient(135deg, #e34f26, #c0392b);"><i class="fab fa-html5" aria-hidden="true"></i></div>
+                        <div class="course-body">
+                            <span class="course-tag">Débutant</span>
+                            <h3><a href="cours-html-css.html" style="text-decoration:none;color:inherit;">HTML5 & CSS3 Fondamentaux</a></h3>
+                            <p>Maîtrisez les bases du développement web et créez vos premières pages interactives.</p>
+                            <div class="course-meta">
+                                <span><i class="far fa-clock" aria-hidden="true"></i> 20h</span>
+                                <span class="course-price">Gratuit</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="course-card">
+                        <div class="course-img" style="background: linear-gradient(135deg, #f7df1e, #e6c200);"><i class="fab fa-js" aria-hidden="true"></i></div>
+                        <div class="course-body">
+                            <span class="course-tag">Intermédiaire</span>
+                            <h3><a href="cours-javascript.html" style="text-decoration:none;color:inherit;">JavaScript Moderne</a></h3>
+                            <p>Apprenez ES6+, les promesses, async/await et construisez des applications dynamiques.</p>
+                            <div class="course-meta">
+                                <span><i class="far fa-clock" aria-hidden="true"></i> 35h</span>
+                                <span class="course-price">Gratuit</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="course-card">
+                        <div class="course-img" style="background: linear-gradient(135deg, #61dafb, #21a9c4);"><i class="fab fa-react" aria-hidden="true"></i></div>
+                        <div class="course-body">
+                            <span class="course-tag">Avancé</span>
+                            <h3><a href="cours-react.html" style="text-decoration:none;color:inherit;">React.js Mastery</a></h3>
+                            <p>Devenez expert en React : Hooks, Redux, Next.js et architecture d'applications.</p>
+                            <div class="course-meta">
+                                <span><i class="far fa-clock" aria-hidden="true"></i> 50h</span>
+                                <span class="course-price">Gratuit</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="cours.html" class="btn btn-primary">Voir tous les cours</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats" aria-label="Statistiques">
+            <div class="stats-grid">
+                
+                <div class="stat-item"><h3>120+</h3><p>Cours disponibles</p></div>
+                <div class="stat-item"><h3>50+</h3><p>Instructeurs experts</p></div>
+                <div class="stat-item"><h3>-</h3><p>Taux de satisfaction</p></div>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="testimonials">
+            <div class="section-title">
+                <h2 id="testimonials">Ce que disent nos apprenants</h2>
+                <p>Des témoignages authentiques de notre communauté.</p>
+            </div>
+            <div class="card-grid">
+                <article class="testimonial-card">
+                    <p>"WebLearn a complètement transformé ma carrière. J'ai passé de zéro à développeur front-end en 6 mois."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SM</div>
+                        <div><strong>Sophie Martin</strong><span>Développeuse Front-End</span></div>
+                    </div>
+                </article>
+                <article class="testimonial-card">
+                    <p>"La qualité des cours est exceptionnelle. Les projets pratiques m'ont permis de construire un portfolio solide."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">TD</div>
+                        <div><strong>Thomas Dubois</strong><span>Développeur Full-Stack</span></div>
+                    </div>
+                </article>
+                <article class="testimonial-card">
+                    <p>"J'ai essayé plusieurs plateformes, mais WebLearn se démarque par sa pédagogie claire. Je recommande à 100% !"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AL</div>
+                        <div><strong>Amina Lefevre</strong><span>UX Designer</span></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="cta" aria-label="Appel à l'action">
+            <h2>Prêt à commencer votre apprentissage ?</h2>
+            <p>Rejoignez des milliers d'apprenants et transformez votre avenir dès aujourd'hui.</p>
+            <a href="cours.html" class="btn">Commencer gratuitement</a>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>WebLearn</h4>
+                <p>Votre plateforme d'apprentissage en ligne pour maîtriser le développement web et les technologies numériques.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liens rapides</h4>
+                <a href="index.html">Accueil</a>
+                <a href="cours.html">Cours</a>
+                <a href="apropos.html">A Propos</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Catégories</h4>
+                <a href="cours.html">Développement Web</a>
+                <a href="cours.html">Design UI/UX</a>
+                <a href="cours.html">Marketing Digital</a>
+                <a href="cours.html">Data Science</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> contact@</p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> +261 38 22 819 76</p>
+                <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Fianarantsoa, Madagascar</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© WebLearn - Online Academy & Knowledge Hub. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="weblearn.js"></script>
+</body>
+</html>

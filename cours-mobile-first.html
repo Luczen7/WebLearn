@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours Design Mobile First - WebLearn | Formation Responsive Design</title>
+    <meta name="description" content="Créez des expériences mobiles optimales et responsive design avancé. 22 heures de formation pratique en design mobile first.">
+    <meta name="keywords" content="mobile first design, responsive design, mobile UX, design mobile, cours mobile first">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="cours-mobile-first.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="cours-mobile-first.html">
+    <meta property="og:title" content="Design Mobile First - WebLearn">
+    <meta property="og:description" content="Créez des expériences mobiles optimales et responsive design avancé.">
+    <meta property="og:image" content="logoWebLearn.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Design Mobile First",
+        "description": "Créez des expériences mobiles optimales et responsive design avancé.",
+        "provider": {"@type": "Organization", "name": "WebLearn", "sameAs": "https://"},
+        "educationalLevel": "Avancé",
+        "timeRequired": "PT22H",
+        "isAccessibleForFree": false,
+        "coursePrerequisites": "Connaissances HTML/CSS et bases de design",
+        "teaches": ["Mobile First Design", "Responsive Design", "Mobile UX", "Touch Interfaces", "Performance Mobile"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="weblearn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="logoWebLearn.png">
+    
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="WebLearn - Accueil">
+                <img src="logoWebLearn.png" alt="WebLearn Logo">
+                <div class="logo-text">Web<span>Learn</span></div>
+            </a>
+            <nav role="navigation" aria-label="Navigation principale">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="cours.html" class="dropdown-toggle active">Cours</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Développement Web</div>
+                            <a href="cours-html-css.html"><i class="fab fa-html5"></i> HTML5 & CSS3</a>
+                            <a href="cours-javascript.html"><i class="fab fa-js"></i> JavaScript Moderne</a>
+                            <a href="cours-react.html"><i class="fab fa-react"></i> React.js Mastery</a>
+                            <a href="cours-nodejs.html"><i class="fab fa-node-js"></i> Node.js & Express</a>
+                            <a href="cours-tailwind.html"><i class="fab fa-css3-alt"></i> Tailwind CSS</a>
+                            <a href="cours-angular.html"><i class="fab fa-angular"></i> Angular Complet</a>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-header">Design & Créativité</div>
+                            <a href="cours-figma.html"><i class="fab fa-figma"></i> Figma pour UI/UX</a>
+                            <a href="cours-design-graphique.html"><i class="fas fa-paint-brush"></i> Design Graphique</a>
+                            <a href="cours-mobile-first.html" class="active"><i class="fas fa-mobile-alt"></i> Design Mobile First</a>
+                        </div>
+                    </li>
+                    <li><a href="apropos.html">A Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Activer/Désactiver le mode nuit"><i class="fas fa-moon" id="darkModeIcon"></i></button></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Menu mobile"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+            <a href="index.html">Accueil</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <a href="cours.html">Cours</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <span>Design Mobile First</span>
+        </nav>
+
+        <div class="course-detail-header">
+            <div class="container">
+                <div>
+                    <span class="course-tag" style="margin-bottom: 15px; display: inline-block;">Avancé</span>
+                    <h1>Design Mobile First</h1>
+                    <div class="course-meta-header">
+                        <span><i class="far fa-clock" aria-hidden="true"></i> 22 heures</span>
+                        <span><i class="fas fa-signal" aria-hidden="true"></i> Niveau avancé</span>
+                        <span><i class="fas fa-certificate" aria-hidden="true"></i> Certificat inclus</span>
+                        <span><i class="fas fa-infinity" aria-hidden="true"></i> Accès illimité</span>
+                    </div>
+                    <p class="course-description">
+                        Maîtrisez le design mobile first et créez des expériences utilisateur optimales sur tous les appareils. Ce cours couvre les principes du responsive design, les patterns d'interaction tactile, la performance mobile et les stratégies de contenu adaptatif.
+                    </p>
+                    <div class="course-tags">
+                        <span>Mobile First</span>
+                        <span>Responsive</span>
+                        <span>Touch UX</span>
+                        <span>Performance</span>
+                        <span>Breakpoints</span>
+                        <span>Adaptive</span>
+                    </div>
+                </div>
+                <div class="course-card-sidebar">
+                    <div class="price">Gratuit</div>
+                    <ul class="features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 22 heures de contenu</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 40 leçons vidéo</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 14 projets pratiques</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Certificat de réussite</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Ressources téléchargeables</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Guide de référence PDF</li>
+                    </ul>
+                    <a href="#contenu" class="btn btn-primary" style="width: 100%; text-align: center; margin-bottom: 10px;">Commencer le cours</a>
+                    <a href="cours.html" class="btn btn-secondary" style="width: 100%; text-align: center;">Voir tous les cours</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content" id="contenu">
+            <div class="course-main">
+                <section class="lesson-section" id="intro-mobile" aria-labelledby="intro-mobile-title">
+                    <h2 id="intro-mobile-title"><span class="lesson-number">1</span> Introduction au Mobile First</h2>
+                    <p>Le design mobile first est une approche qui consiste à concevoir d'abord pour les appareils mobiles, puis à adapter progressivement pour les écrans plus larges. Cette méthode est devenue essentielle avec la majorité du trafic web provenant des mobiles.</p>
+
+                    <h3>1.1 Pourquoi Mobile First ?</h3>
+                    <ul>
+                        <li><strong>Majorité mobile</strong> : Plus de 60% du trafic web mondial provient des mobiles</li>
+                        <li><strong>Contraintes créatives</strong> : Les limitations mobiles forcent à prioriser le contenu essentiel</li>
+                        <li><strong>Performance</strong> : Les utilisateurs mobiles sont moins patients (3s max de chargement)</li>
+                        <li><strong>SEO</strong> : Google utilise l'indexation mobile-first depuis 2019</li>
+                        <li><strong>Accessibilité</strong> : Meilleure expérience pour tous les utilisateurs</li>
+                    </ul>
+
+                    <h3>1.2 Différence Mobile First vs Desktop First</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr><th>Critère</th><th>Mobile First</th><th>Desktop First</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Approche CSS</td><td>min-width (progressive enhancement)</td><td>max-width (graceful degradation)</td></tr>
+                                <tr><td>Contenu</td><td>Priorisé et essentiel</td><td>Complet puis réduit</td></tr>
+                                <tr><td>Performance</td><td>Optimisée par défaut</td><td>Nécessite optimisation mobile</td></tr>
+                                <tr><td>Complexité</td><td>Plus simple à maintenir</td><td>Plus complexe avec overrides</td></tr>
+                                <tr><td>UX</td><td>Touch-first, gestes natifs</td><td>Mouse-first, hover states</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="breakpoints" aria-labelledby="breakpoints-title">
+                    <h2 id="breakpoints-title"><span class="lesson-number">2</span> Breakpoints et Grilles Responsive</h2>
+
+                    <h3>2.1 Breakpoints modernes</h3>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>CSS - Breakpoints Mobile First</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>/* Mobile First - styles de base pour mobile */
+.container {
+  padding: 16px;
+  width: 100%;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container { padding: 20px; }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container { 
+    padding: 24px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container { max-width: 960px; }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container { max-width: 1140px; }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .container { max-width: 1320px; }
+}</pre>
+                    </div>
+
+                    <h3>2.2 Grille fluide</h3>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>CSS - Grille Fluide</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>/* Grille CSS Grid responsive */
+.grid-responsive {
+  display: grid;
+  gap: 16px;
+  /* Mobile: 1 colonne par défaut */
+  grid-template-columns: 1fr;
+}
+
+/* Tablet: 2 colonnes */
+@media (min-width: 768px) {
+  .grid-responsive {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Desktop: 3 colonnes */
+@media (min-width: 1024px) {
+  .grid-responsive {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Large desktop: 4 colonnes */
+@media (min-width: 1280px) {
+  .grid-responsive {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Auto-fit avec minmax (sans media queries) */
+.grid-auto {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}</pre>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="touch-ux" aria-labelledby="touch-ux-title">
+                    <h2 id="touch-ux-title"><span class="lesson-number">3</span> UX Tactile et Interactions</h2>
+
+                    <h3>3.1 Zones tactiles optimales</h3>
+                    <ul>
+                        <li><strong>Minimum touch target</strong> : 44x44px (Apple) ou 48x48dp (Google)</li>
+                        <li><strong>Espacement entre éléments</strong> : Minimum 8px entre les targets</li>
+                        <li><strong>Thumb zone</strong> : Zone de confort pour le pouce (bas de l'écran)</li>
+                        <li><strong>Reachability</strong> : Éléments importants accessibles en une main</li>
+                    </ul>
+
+                    <h3>3.2 Patterns d'interaction mobile</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr><th>Pattern</th><th>Usage</th><th>Exemple</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Swipe</td><td>Navigation, suppression, refresh</td><td>Stories Instagram, Gmail archive</td></tr>
+                                <tr><td>Pull-to-refresh</td><td>Actualisation de contenu</td><td>Twitter, Facebook</td></tr>
+                                <tr><td>Infinite scroll</td><td>Chargement progressif</td><td>Instagram, Pinterest</td></tr>
+                                <tr><td>Bottom sheet</td><td>Actions contextuelles</td><td>Maps, iOS share</td></tr>
+                                <tr><td>Floating Action Button</td><td>Action principale</td><td>Material Design</td></tr>
+                                <tr><td>Tab bar</td><td>Navigation principale</td><td>iOS apps</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>CSS - Touch Targets</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>/* Touch targets accessibles */
+.touch-target {
+  min-width: 48px;
+  min-height: 48px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Suppression du hover sur mobile */
+@media (hover: none) and (pointer: coarse) {
+  .interactive:hover {
+    /* Désactiver les effets hover sur tactile */
+    transform: none;
+    box-shadow: none;
+  }
+
+  .interactive:active {
+    /* Feedback tactile à la place */
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+}
+
+/* Support du touch-action */
+.swipeable {
+  touch-action: pan-y; /* Permet le scroll vertical, capture horizontal */
+  user-select: none; /* Empêche la sélection de texte */
+  -webkit-user-drag: none;
+}</pre>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="performance" aria-labelledby="performance-title">
+                    <h2 id="performance-title"><span class="lesson-number">4</span> Performance Mobile</h2>
+
+                    <h3>4.1 Optimisations essentielles</h3>
+                    <ul>
+                        <li><strong>Images responsives</strong> : srcset et sizes pour charger la bonne taille</li>
+                        <li><strong>Lazy loading</strong> : Chargement différé des images et iframes</li>
+                        <li><strong>Minification</strong> : CSS/JS compressés</li>
+                        <li><strong>Cache</strong> : Service Worker pour le offline</li>
+                        <li><strong>Font loading</strong> : font-display: swap pour éviter FOIT</li>
+                    </ul>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>HTML - Images Responsives</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>&lt;!-- Images responsives avec srcset --&gt;
+&lt;img 
+  src="image-400.jpg"
+  srcset="image-400.jpg 400w,
+          image-800.jpg 800w,
+          image-1200.jpg 1200w"
+  sizes="(max-width: 600px) 100vw,
+         (max-width: 1000px) 50vw,
+         33vw"
+  alt="Description"
+  loading="lazy"
+&gt;
+
+&lt;!-- Picture element pour art direction --&gt;
+&lt;picture&gt;
+  &lt;source media="(max-width: 600px)" srcset="image-mobile.jpg"&gt;
+  &lt;source media="(max-width: 1000px)" srcset="image-tablet.jpg"&gt;
+  &lt;img src="image-desktop.jpg" alt="Description" loading="lazy"&gt;
+&lt;/picture&gt;</pre>
+                    </div>
+
+                    <div class="info-box info">
+                        <strong><i class="fas fa-info-circle" aria-hidden="true"></i> Core Web Vitals</strong>
+                        <p>Les métriques essentielles pour Google : LCP (Largest Contentful Paint) &lt; 2.5s, FID (First Input Delay) &lt; 100ms, CLS (Cumulative Layout Shift) &lt; 0.1.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="typographie-mobile" aria-labelledby="typographie-mobile-title">
+                    <h2 id="typographie-mobile-title"><span class="lesson-number">5</span> Typographie Mobile</h2>
+
+                    <h3>5.1 Tailles de police adaptatives</h3>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>CSS - Typographie Responsive</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>/* Fluid typography avec clamp() */
+html {
+  font-size: clamp(14px, 2vw + 10px, 18px);
+}
+
+/* Échelle typographique mobile-first */
+.display-large {
+  font-size: clamp(2rem, 5vw + 1rem, 4rem);
+  line-height: 1.1;
+}
+
+.h1 {
+  font-size: clamp(1.75rem, 4vw + 0.5rem, 3rem);
+  line-height: 1.2;
+}
+
+.h2 {
+  font-size: clamp(1.5rem, 3vw + 0.5rem, 2.25rem);
+  line-height: 1.3;
+}
+
+.body {
+  font-size: clamp(0.875rem, 1.5vw + 0.5rem, 1rem);
+  line-height: 1.6;
+}
+
+/* Line length optimale */
+.readable {
+  max-width: 65ch; /* 65 caractères environ */
+}</pre>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="navigation-mobile" aria-labelledby="navigation-mobile-title">
+                    <h2 id="navigation-mobile-title"><span class="lesson-number">6</span> Navigation Mobile</h2>
+
+                    <h3>6.1 Patterns de navigation</h3>
+                    <ul>
+                        <li><strong>Hamburger menu</strong> : Standard mais moins découvrable</li>
+                        <li><strong>Tab bar</strong> : Visible, limité à 5 items</li>
+                        <li><strong>Bottom navigation</strong> : Accessible au pouce</li>
+                        <li><strong>Gesture-based</strong> : Swipe entre sections</li>
+                        <li><strong>Progressive disclosure</strong> : Plus d'options au scroll</li>
+                    </ul>
+
+                    <div class="exercise-box">
+                        <h4><i class="fas fa-keyboard" aria-hidden="true"></i> Projet final : App Mobile Responsive</h4>
+                        <p>Créez une application web progressive (PWA) avec : navigation bottom tab bar, hero section avec swipe, grille de produits responsive, panier avec bottom sheet, formulaire optimisé mobile, et offline support avec Service Worker. Testez sur plusieurs devices réels.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="conclusion-mobile" aria-labelledby="conclusion-mobile-title">
+                    <h2 id="conclusion-mobile-title"><span class="lesson-number">7</span> Conclusion</h2>
+                    <p>Vous maîtrisez maintenant le design mobile first. Prochaines étapes :</p>
+                    <ul>
+                        <li><strong>PWA avancées</strong> : Push notifications, background sync</li>
+                        <li><strong>AMP</strong> : Accelerated Mobile Pages pour la vitesse</li>
+                        <li><strong>App Shell</strong> : Architecture pour les SPAs mobiles</li>
+                        <li><strong>Testing</strong> : Device lab, BrowserStack, Lighthouse</li>
+                    </ul>
+                </section>
+            </div>
+
+            <aside class="course-sidebar-sticky" aria-label="Navigation du cours">
+                <div class="course-nav">
+                    <h4>Contenu du cours</h4>
+                    <ul>
+                        <li><a href="#intro-mobile" class="active">1. Introduction Mobile First</a></li>
+                        <li><a href="#breakpoints">2. Breakpoints & Grilles</a></li>
+                        <li><a href="#touch-ux">3. UX Tactile</a></li>
+                        <li><a href="#performance">4. Performance</a></li>
+                        <li><a href="#typographie-mobile">5. Typographie</a></li>
+                        <li><a href="#navigation-mobile">6. Navigation</a></li>
+                        <li><a href="#conclusion-mobile">7. Conclusion</a></li>
+                    </ul>
+                </div>
+                <div class="course-nav">
+                    <h4>Progression</h4>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 0%;"></div>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">7 leçons • 22 heures</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>WebLearn</h4>
+                <p>Votre plateforme d'apprentissage en ligne pour maîtriser le développement web et les technologies numériques.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liens rapides</h4>
+                <a href="index.html">Accueil</a>
+                <a href="cours.html">Cours</a>
+                <a href="apropos.html">A Propos</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Catégories</h4>
+                <a href="cours.html">Développement Web</a>
+                <a href="cours.html">Design UI/UX</a>
+                <a href="cours.html">Marketing Digital</a>
+                <a href="cours.html">Data Science</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> contact@</p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> +261 38 22 819 76</p>
+                <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Fianarantsoa, Madagascar</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© WebLearn - Online Academy & Knowledge Hub. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="weblearn.js"></script>
+</body>
+</html>

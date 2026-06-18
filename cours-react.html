@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours React.js Mastery - WebLearn | Formation React Hooks & Redux</title>
+    <meta name="description" content="Devenez expert React.js : Hooks, Redux, Next.js, architecture d'applications. 50 heures de formation avancée avec projets enterprise.">
+    <meta name="keywords" content="React cours, React Hooks, Redux formation, Next.js tutorial, React avancé, state management, React Router">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="cours-react.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="cours-react.html">
+    <meta property="og:title" content="React.js Mastery - WebLearn">
+    <meta property="og:description" content="Formation complète React.js : Hooks, Redux Toolkit, Next.js et architecture d'applications.">
+    <meta property="og:image" content="logoWebLearn.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "React.js Mastery",
+        "description": "Devenez expert en React : Hooks, Redux, Next.js et architecture d'applications.",
+        "provider": {"@type": "Organization", "name": "WebLearn", "sameAs": "https://"},
+        "educationalLevel": "Avancé",
+        "timeRequired": "PT50H",
+        "isAccessibleForFree": false,
+        "coursePrerequisites": "Maîtrise de JavaScript ES6+ et des bases de HTML/CSS",
+        "teaches": ["React.js", "React Hooks", "Redux Toolkit", "Next.js", "React Router", "Context API", "Performance Optimization"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="weblearn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="logoWebLearn.png">
+
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="WebLearn - Accueil">
+                <img src="logoWebLearn.png" alt="WebLearn Logo">
+                <div class="logo-text">Web<span>Learn</span></div>
+            </a>
+            <nav role="navigation" aria-label="Navigation principale">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="cours.html" class="dropdown-toggle active">Cours</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Développement Web</div>
+                            <a href="cours-html-css.html"><i class="fab fa-html5"></i> HTML5 & CSS3</a>
+                            <a href="cours-javascript.html"><i class="fab fa-js"></i> JavaScript Moderne</a>
+                            <a href="cours-react.html" class="active"><i class="fab fa-react"></i> React.js Mastery</a>
+                            <a href="cours-nodejs.html"><i class="fab fa-node-js"></i> Node.js & Express</a>
+                            <a href="cours-tailwind.html"><i class="fab fa-css3-alt"></i> Tailwind CSS</a>
+                            <a href="cours-angular.html"><i class="fab fa-angular"></i> Angular Complet</a>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-header">Design & Créativité</div>
+                            <a href="cours-figma.html"><i class="fab fa-figma"></i> Figma pour UI/UX</a>
+                            <a href="cours-design-graphique.html"><i class="fas fa-paint-brush"></i> Design Graphique</a>
+                            <a href="cours-mobile-first.html"><i class="fas fa-mobile-alt"></i> Design Mobile First</a>
+                        </div>
+                    </li>
+                    <li><a href="apropos.html">A Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Activer/Désactiver le mode nuit"><i class="fas fa-moon" id="darkModeIcon"></i></button></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Menu mobile"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+            <a href="index.html">Accueil</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <a href="cours.html">Cours</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <span>React.js Mastery</span>
+        </nav>
+
+        <div class="course-detail-header">
+            <div class="container">
+                <div>
+                    <span class="course-tag" style="margin-bottom: 15px; display: inline-block;">Avancé</span>
+                    <h1>React.js Mastery</h1>
+                    <div class="course-meta-header">
+                        <span><i class="far fa-clock" aria-hidden="true"></i> 50 heures</span>
+                        <span><i class="fas fa-signal" aria-hidden="true"></i> Niveau avancé</span>
+                        <span><i class="fas fa-certificate" aria-hidden="true"></i> Certificat inclus</span>
+                        <span><i class="fas fa-infinity" aria-hidden="true"></i> Accès illimité</span>
+                    </div>
+                    <p class="course-description">
+                        Maîtrisez React.js de A à Z. Ce cours couvre les Hooks modernes, la gestion d'état avec Redux Toolkit, le routing, le rendu côté serveur avec Next.js, et les patterns avancés pour construire des applications enterprise scalables.
+                    </p>
+                    <div class="course-tags">
+                        <span>React 18</span>
+                        <span>Hooks</span>
+                        <span>Redux Toolkit</span>
+                        <span>Next.js</span>
+                        <span>React Router</span>
+                        <span>TypeScript</span>
+                    </div>
+                </div>
+                <div class="course-card-sidebar">
+                    <div class="price">Gratuit</div>
+                    <ul class="features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 50 heures de contenu</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 80 leçons vidéo</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 20 projets pratiques</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Certificat de réussite</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Support communautaire</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Code source complet</li>
+                    </ul>
+                    <a href="#contenu" class="btn btn-primary" style="width: 100%; text-align: center; margin-bottom: 10px;">Commencer le cours</a>
+                    <a href="cours.html" class="btn btn-secondary" style="width: 100%; text-align: center;">Voir tous les cours</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content" id="contenu">
+            <div class="course-main">
+                <section class="lesson-section" id="intro-react" aria-labelledby="intro-react-title">
+                    <h2 id="intro-react-title"><span class="lesson-number">1</span> Introduction à React</h2>
+                    <p>React est une bibliothèque JavaScript développée par Facebook (Meta) pour construire des interfaces utilisateur interactives et réactives. Elle repose sur le concept de composants réutilisables et un DOM virtuel pour des performances optimales.</p>
+
+                    <h3>1.1 Pourquoi React ?</h3>
+                    <ul>
+                        <li><strong>Composants réutilisables</strong> : UI modulaire et maintenable</li>
+                        <li><strong>DOM virtuel</strong> : Mises à jour efficaces et performantes</li>
+                        <li><strong>Unidirectional data flow</strong> : Flux de données prévisible</li>
+                        <li><strong>Écosystème riche</strong> : Router, state management, testing</li>
+                        <li><strong>SSR/SSG</strong> : Next.js pour le rendu côté serveur</li>
+                    </ul>
+
+                    <h3>1.2 Créer un projet React</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Bash</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre># Avec Vite (recommandé - rapide et moderne)
+npm create vite@latest mon-app -- --template react
+# ou avec TypeScript
+npm create vite@latest mon-app -- --template react-ts
+
+cd mon-app
+npm install
+npm run dev
+
+# Avec Create React App (legacy)
+npx create-react-app mon-app</pre>
+                    </div>
+
+                    <h3>1.3 Structure d'un projet React</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Structure</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>mon-app/
+├── public/
+│   ├── index.html
+│   └── favicon.ico
+├── src/
+│   ├── assets/          # Images, fonts, etc.
+│   ├── components/      # Composants réutilisables
+│   ├── pages/           # Pages de l'application
+│   ├── hooks/           # Custom hooks
+│   ├── context/         # Context providers
+│   ├── services/        # API calls
+│   ├── utils/           # Fonctions utilitaires
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+└── vite.config.js</pre>
+                    </div>
+
+                    <div class="info-box info">
+                        <strong><i class="fas fa-info-circle" aria-hidden="true"></i> Vite vs CRA</strong>
+                        <p>Vite est aujourd'hui préféré à Create React App pour sa vitesse de démarrage (10x plus rapide), son hot module replacement instantané, et son support natif de TypeScript et des modules ES.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="composants" aria-labelledby="composants-title">
+                    <h2 id="composants-title"><span class="lesson-number">2</span> Composants React</h2>
+
+                    <h3>2.1 Composants fonctionnels</h3>
+                    <p>Depuis React 16.8 et l'introduction des Hooks, les composants fonctionnels sont la norme :</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>React - Composant Fonctionnel</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Composant simple
+function Welcome({ name, age }) {
+  return (
+    &lt;div className="welcome-card"&gt;
+      &lt;h1&gt;Bonjour, {name} !&lt;/h1&gt;
+      &lt;p&gt;Vous avez {age} ans.&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+
+// Avec arrow function (plus courant)
+const UserCard = ({ name, email, avatar, isActive = false }) => {
+  return (
+    &lt;article className={`user-card ${isActive ? 'active' : ''}`}&gt;
+      &lt;img src={avatar} alt={name} /&gt;
+      &lt;div&gt;
+        &lt;h3&gt;{name}&lt;/h3&gt;
+        &lt;p&gt;{email}&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+  );
+};
+
+// Composition de composants
+const App = () => {
+  return (
+    &lt;div&gt;
+      &lt;Header /&gt;
+      &lt;main&gt;
+        &lt;UserCard name="Alice" email="alice@test.com" isActive /&gt;
+        &lt;UserCard name="Bob" email="bob@test.com" /&gt;
+      &lt;/main&gt;
+      &lt;Footer /&gt;
+    &lt;/div&gt;
+  );
+};</pre>
+                    </div>
+
+                    <h3>2.2 Props et validation</h3>
+                    <p>Les props (propriétés) permettent de passer des données d'un composant parent à un composant enfant :</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>React - Props</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Props avec valeurs par défaut et destructuring
+const Button = ({ 
+  children, 
+  variant = 'primary', 
+  size = 'md',
+  onClick,
+  disabled = false,
+  type = 'button'
+}) => {
+  return (
+    &lt;button
+      type={type}
+      className={`btn btn-${variant} btn-${size}`}
+      onClick={onClick}
+      disabled={disabled}
+    &gt;
+      {children}
+    &lt;/button&gt;
+  );
+};
+
+// Utilisation
+&lt;Button variant="secondary" size="lg" onClick={handleClick}&gt;
+  Cliquez ici
+&lt;/Button&gt;</pre>
+                    </div>
+
+                    <h3>2.3 Rendu conditionnel</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>React - Rendu Conditionnel</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>const StatusMessage = ({ status, error }) => {
+  // if/else classique
+  if (status === 'loading') {
+    return &lt;Spinner /&gt;;
+  }
+
+  if (status === 'error') {
+    return &lt;ErrorMessage message={error} /&gt;;
+  }
+
+  // Opérateur ternaire
+  return (
+    &lt;div&gt;
+      {status === 'success' ? (
+        &lt;SuccessMessage /&gt;
+      ) : (
+        &lt;DefaultMessage /&gt;
+      )}
+    &lt;/div&gt;
+  );
+};
+
+// Opérateur && (render if true)
+const UserProfile = ({ user }) => {
+  return (
+    &lt;div&gt;
+      &lt;h2&gt;{user.name}&lt;/h2&gt;
+      {user.isAdmin && &lt;AdminBadge /&gt;}
+      {user.bio || &lt;p&gt;Aucune bio disponible&lt;/p&gt;}
+    &lt;/div&gt;
+  );
+};</pre>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="hooks" aria-labelledby="hooks-title">
+                    <h2 id="hooks-title"><span class="lesson-number">3</span> React Hooks Essentiels</h2>
+                    <p>Les Hooks permettent d'utiliser l'état et d'autres fonctionnalités React dans les composants fonctionnels.</p>
+
+                    <h3>3.1 useState - Gestion de l'état local</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>React - useState</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>import { useState } from 'react';
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+  const [user, setUser] = useState({ name: '', email: '' });
+
+  const increment = () => setCount(prev => prev + 1);
+  const decrement = () => setCount(prev => prev - 1);
+
+  const updateName = (name) => {
+    setUser(prev => ({ ...prev, name })); // Spread pour préserver les autres champs
+  };
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Compteur : {count}&lt;/p&gt;
+      &lt;button onClick={decrement}&gt;-&lt;/button&gt;
+      &lt;button onClick={increment}&gt;+&lt;/button&gt;
+    &lt;/div&gt;
+  );
+};
+
+// useState avec fonction d'initialisation (lazy)
+const ExpensiveComponent = () => {
+  const [data, setData] = useState(() => {
+    // Cette fonction ne s'exécute qu'au premier rendu
+    return computeExpensiveValue();
+  });
+};</pre>
+                    </div>
+
+                    <h3>3.2 useEffect - Effets de bord</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>React - useEffect</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>import { useState, useEffect } from 'react';
+
+const UserProfile = ({ userId }) => {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  // Exécuté après chaque rendu (éviter !)
+  useEffect(() => {
+    console.log('Rendu effectué');
+  });
+
+  // Exécuté une seule fois au montage
+  useEffect(() => {
+    console.log('Composant monté');
+    return () => {
+      console.log('Composant démonté (cleanup)');
+    };
+  }, []);
+
+  // Exécuté quand userId change
+  useEffect(() => {
+    const fetchUser = async () => {
+      setLoading(true);
+      try {
+        const response = await fetch(`/api/users/${userId}`);
+        const data = await response.json();
+        setUser(data);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchUser();
+  }, [userId]); // Dépendances
+
+  if (loading) return &lt;Spinner /&gt;;
+  return &lt;div&gt;{user.name}&lt;/div&gt;;
+};</pre>
+                    </div>
+
+                    <h3>3.3 useRef et useCallback</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>React - useRef & useCallback</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>import { useRef, useCallback } from 'react';
+
+// useRef - Référence mutable qui ne déclenche pas de re-render
+const TextInput = () => {
+  const inputRef = useRef(null);
+  const renderCount = useRef(0);
+
+  renderCount.current++;
+
+  const focusInput = () => {
+    inputRef.current.focus();
+  };
+
+  return (
+    &lt;div&gt;
+      &lt;input ref={inputRef} type="text" /&gt;
+      &lt;button onClick={focusInput}&gt;Focus&lt;/button&gt;
+      &lt;p&gt;Rendus : {renderCount.current}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+};
+
+// useCallback - Mémoriser une fonction
+const Parent = () => {
+  const [count, setCount] = useState(0);
+
+  // Sans useCallback, cette fonction est recréée à chaque rendu
+  // et le composant enfant est re-render inutilement
+  const handleClick = useCallback(() => {
+    console.log('Cliqué');
+  }, []); // [] = jamais recréée
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;{count}&lt;/p&gt;
+      &lt;button onClick={() => setCount(c => c + 1)}&gt;+&lt;/button&gt;
+      &lt;ChildComponent onClick={handleClick} /&gt;
+    &lt;/div&gt;
+  );
+};</pre>
+                    </div>
+
+                    <h3>3.4 useMemo - Mémorisation de valeurs</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>React - useMemo</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>import { useMemo } from 'react';
+
+const ProductList = ({ products, filter }) => {
+  // Sans useMemo, filteredProducts est recalculé à chaque rendu
+  const filteredProducts = useMemo(() => {
+    console.log('Filtrage exécuté');
+    return products
+      .filter(p => p.name.toLowerCase().includes(filter.toLowerCase()))
+      .sort((a, b) => a.price - b.price);
+  }, [products, filter]); // Recalculé seulement si products ou filter change
+
+  return (
+    &lt;ul&gt;
+      {filteredProducts.map(product => (
+        &lt;ProductItem key={product.id} product={product} /&gt;
+      ))}
+    &lt;/ul&gt;
+  );
+};</pre>
+                    </div>
+
+                    <div class="info-box warning">
+                        <strong><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Attention</strong>
+                        <p>N'abusez pas de useMemo et useCallback. Ils ont un coût (comparaison des dépendances). Utilisez-les uniquement pour des calculs coûteux ou quand un composant enfant est optimisé avec React.memo.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="routing" aria-labelledby="routing-title">
+                    <h2 id="routing-title"><span class="lesson-number">4</span> React Router</h2>
+                    <p>React Router est la bibliothèque de routing standard pour React, permettant la navigation entre les pages sans rechargement.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>React - React Router v6</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>import { 
+  BrowserRouter, 
+  Routes, 
+  Route, 
+  Link, 
+  useParams,
+  useNavigate,
+  Outlet
+} from 'react-router-dom';
+
+// Configuration des routes
+const App = () => {
+  return (
+    &lt;BrowserRouter&gt;
+      &lt;nav&gt;
+        &lt;Link to="/"&gt;Accueil&lt;/Link&gt;
+        &lt;Link to="/products"&gt;Produits&lt;/Link&gt;
+        &lt;Link to="/about"&gt;A Propos&lt;/Link&gt;
+      &lt;/nav&gt;
+
+      &lt;Routes&gt;
+        &lt;Route path="/" element={&lt;Home /&gt;} /&gt;
+        &lt;Route path="/products" element={&lt;ProductLayout /&gt;}&gt;
+          &lt;Route index element={&lt;ProductList /&gt;} /&gt;
+          &lt;Route path=":id" element={&lt;ProductDetail /&gt;} /&gt;
+          &lt;Route path="new" element={&lt;ProductForm /&gt;} /&gt;
+        &lt;/Route&gt;
+        &lt;Route path="/about" element={&lt;About /&gt;} /&gt;
+        &lt;Route path="*" element={&lt;NotFound /&gt;} /&gt;
+      &lt;/Routes&gt;
+    &lt;/BrowserRouter&gt;
+  );
+};
+
+// Layout avec Outlet pour les routes imbriquées
+const ProductLayout = () => {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Produits&lt;/h1&gt;
+      &lt;Outlet /&gt; {/* Les routes enfants s'affichent ici */}
+    &lt;/div&gt;
+  );
+};
+
+// Paramètres d'URL
+const ProductDetail = () => {
+  const { id } = useParams();
+  const navigate = useNavigate();
+
+  return (
+    &lt;div&gt;
+      &lt;h2&gt;Produit #{id}&lt;/h2&gt;
+      &lt;button onClick={() => navigate(-1)}&gt;Retour&lt;/button&gt;
+      &lt;button onClick={() => navigate('/products')}&gt;Tous les produits&lt;/button&gt;
+    &lt;/div&gt;
+  );
+};</pre>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="state-management" aria-labelledby="state-title">
+                    <h2 id="state-title"><span class="lesson-number">5</span> Gestion d'État avec Redux Toolkit</h2>
+                    <p>Redux Toolkit est la façon moderne et recommandée d'utiliser Redux. Il réduit le boilerplate et intègre les bonnes pratiques.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Redux Toolkit - Store</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>import { configureStore, createSlice } from '@reduxjs/toolkit';
+
+// Création d'un slice (état + reducers + actions)
+const counterSlice = createSlice({
+  name: 'counter',
+  initialState: { value: 0 },
+  reducers: {
+    increment: (state) => {
+      state.value += 1; // Immer permet la mutation !
+    },
+    decrement: (state) => {
+      state.value -= 1;
+    },
+    incrementByAmount: (state, action) => {
+      state.value += action.payload;
+    },
+  },
+});
+
+// Export des actions
+export const { increment, decrement, incrementByAmount } = counterSlice.actions;
+
+// Configuration du store
+export const store = configureStore({
+  reducer: {
+    counter: counterSlice.reducer,
+    // autres slices...
+  },
+});
+
+// Types TypeScript
+export type RootState = ReturnType&lt;typeof store.getState&gt;;
+export type AppDispatch = typeof store.dispatch;</pre>
+                    </div>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>React - Utilisation Redux</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>import { Provider, useSelector, useDispatch } from 'react-redux';
+import { store, increment, decrement } from './store';
+
+// Provider dans App.jsx
+const App = () => (
+  &lt;Provider store={store}&gt;
+    &lt;Counter /&gt;
+  &lt;/Provider&gt;
+);
+
+// Composant connecté
+const Counter = () => {
+  const count = useSelector((state) => state.counter.value);
+  const dispatch = useDispatch();
+
+  return (
+    &lt;div&gt;
+      &lt;span&gt;{count}&lt;/span&gt;
+      &lt;button onClick={() => dispatch(increment())}&gt;+&lt;/button&gt;
+      &lt;button onClick={() => dispatch(decrement())}&gt;-&lt;/button&gt;
+    &lt;/div&gt;
+  );
+};
+
+// Async thunk pour les appels API
+import { createAsyncThunk } from '@reduxjs/toolkit';
+
+export const fetchUsers = createAsyncThunk(
+  'users/fetchUsers',
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await fetch('/api/users');
+      if (!response.ok) throw new Error('Erreur serveur');
+      return await response.json();
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  }
+);</pre>
+                    </div>
+
+                    <h3>Context API vs Redux</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr><th>Critère</th><th>Context API</th><th>Redux Toolkit</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Cas d'usage</td><td>État global simple (theme, auth)</td><td>État complexe, logique métier</td></tr>
+                                <tr><td>Performance</td><td>Re-render de tous les consommateurs</td><td>Sélecteurs optimisés, re-render ciblé</td></tr>
+                                <tr><td>DevTools</td><td>Limité</td><td>Redux DevTools avancé</td></tr>
+                                <tr><td>Middleware</td><td>Non</td><td>Oui (thunk, saga, etc.)</td></tr>
+                                <tr><td>Boilerplate</td><td>Minimal</td><td>Réduit avec Toolkit</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="nextjs" aria-labelledby="nextjs-title">
+                    <h2 id="nextjs-title"><span class="lesson-number">6</span> Next.js - React en Production</h2>
+                    <p>Next.js est le framework React le plus populaire, offrant le rendu côté serveur (SSR), la génération statique (SSG), et un routing basé sur le filesystem.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Next.js - App Router</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// app/page.tsx - Page d'accueil
+async function HomePage() {
+  const posts = await fetch('https://api.example.com/posts', {
+    next: { revalidate: 3600 } // ISR : revalidation toutes les heures
+  }).then(r => r.json());
+
+  return (
+    &lt;main&gt;
+      &lt;h1&gt;Blog&lt;/h1&gt;
+      &lt;div className="grid"&gt;
+        {posts.map(post => (
+          &lt;PostCard key={post.id} post={post} /&gt;
+        ))}
+      &lt;/div&gt;
+    &lt;/main&gt;
+  );
+}
+
+// app/posts/[id]/page.tsx - Route dynamique
+async function PostPage({ params }: { params: { id: string } }) {
+  const post = await fetch(`https://api.example.com/posts/${params.id}`)
+    .then(r => r.json());
+
+  return (
+    &lt;article&gt;
+      &lt;h1&gt;{post.title}&lt;/h1&gt;
+      &lt;p&gt;{post.content}&lt;/p&gt;
+    &lt;/article&gt;
+  );
+}
+
+// app/layout.tsx - Layout racine
+export default function RootLayout({ children }) {
+  return (
+    &lt;html lang="fr"&gt;
+      &lt;body&gt;
+        &lt;Header /&gt;
+        {children}
+        &lt;Footer /&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+  );
+}</pre>
+                    </div>
+
+                    <h3>Stratégies de rendu Next.js</h3>
+                    <ul>
+                        <li><strong>SSR (Server-Side Rendering)</strong> : Rendu à chaque requête, données toujours fraîches</li>
+                        <li><strong>SSG (Static Site Generation)</strong> : Rendu au build, performance maximale</li>
+                        <li><strong>ISR (Incremental Static Regeneration)</strong> : SSG avec revalidation périodique</li>
+                        <li><strong>CSR (Client-Side Rendering)</strong> : Rendu dans le navigateur, pour les données utilisateur</li>
+                    </ul>
+                </section>
+
+                <section class="lesson-section" id="performance" aria-labelledby="performance-title">
+                    <h2 id="performance-title"><span class="lesson-number">7</span> Performance et Optimisation</h2>
+
+                    <h3>7.1 React.memo</h3>
+                    <p>React.memo empêche le re-render d'un composant si ses props n'ont pas changé :</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>React - Optimisation</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>import { memo, useMemo, useCallback } from 'react';
+
+// Composant mémorisé
+const ExpensiveList = memo(({ items, onSelect }) => {
+  console.log('ExpensiveList rendu');
+  return (
+    &lt;ul&gt;
+      {items.map(item => (
+        &lt;li key={item.id} onClick={() => onSelect(item.id)}&gt;
+          {item.name}
+        &lt;/li&gt;
+      ))}
+    &lt;/ul&gt;
+  );
+});
+
+// Avec comparaison personnalisée
+const CustomComparison = memo(({ user }) => {
+  return &lt;div&gt;{user.name}&lt;/div&gt;;
+}, (prevProps, nextProps) => {
+  return prevProps.user.id === nextProps.user.id;
+});
+
+// Lazy loading de composants
+import { lazy, Suspense } from 'react';
+const HeavyComponent = lazy(() => import('./HeavyComponent'));
+
+const App = () => (
+  &lt;Suspense fallback={&lt;Spinner /&gt;}&gt;
+    &lt;HeavyComponent /&gt;
+  &lt;/Suspense&gt;
+);</pre>
+                    </div>
+
+                    <div class="exercise-box">
+                        <h4><i class="fas fa-keyboard" aria-hidden="true"></i> Projet final : E-commerce complet</h4>
+                        <p>Créez une application e-commerce avec : catalogue produits avec filtres, panier avec Redux Toolkit, authentification JWT, checkout multi-étapes, dashboard admin, et déploiement sur Vercel. Utilisez Next.js App Router, TypeScript, et Tailwind CSS.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="conclusion-react" aria-labelledby="conclusion-react-title">
+                    <h2 id="conclusion-react-title"><span class="lesson-number">8</span> Conclusion</h2>
+                    <p>Vous maîtrisez maintenant React.js à un niveau avancé. Continuez avec :</p>
+                    <ul>
+                        <li><strong>Testing</strong> : Jest, React Testing Library, Cypress</li>
+                        <li><strong>TypeScript avancé</strong> : Generics, Utility Types, Declaration Merging</li>
+                        <li><strong>React Server Components</strong> : Architecture moderne Next.js</li>
+                        <li><strong>React Native</strong> : Applications mobiles cross-platform</li>
+                    </ul>
+                </section>
+            </div>
+
+            <aside class="course-sidebar-sticky" aria-label="Navigation du cours">
+                <div class="course-nav">
+                    <h4>Contenu du cours</h4>
+                    <ul>
+                        <li><a href="#intro-react" class="active">1. Introduction à React</a></li>
+                        <li><a href="#composants">2. Composants React</a></li>
+                        <li><a href="#hooks">3. React Hooks</a></li>
+                        <li><a href="#routing">4. React Router</a></li>
+                        <li><a href="#state-management">5. Redux Toolkit</a></li>
+                        <li><a href="#nextjs">6. Next.js</a></li>
+                        <li><a href="#performance">7. Performance</a></li>
+                        <li><a href="#conclusion-react">8. Conclusion</a></li>
+                    </ul>
+                </div>
+                <div class="course-nav">
+                    <h4>Progression</h4>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 0%;"></div>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">8 leçons • 50 heures</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>WebLearn</h4>
+                <p>Votre plateforme d'apprentissage en ligne pour maîtriser le développement web et les technologies numériques.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liens rapides</h4>
+                <a href="index.html">Accueil</a>
+                <a href="cours.html">Cours</a>
+                <a href="apropos.html">A Propos</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Catégories</h4>
+                <a href="cours.html">Développement Web</a>
+                <a href="cours.html">Design UI/UX</a>
+                <a href="cours.html">Marketing Digital</a>
+                <a href="cours.html">Data Science</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> contact@</p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> +261 38 22 819 76</p>
+                <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Paris, France</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© WebLearn - Online Academy & Knowledge Hub. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="weblearn.js"></script>
+</body>
+</html>

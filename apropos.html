@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Propos - WebLearn | Online Academy & Knowledge Hub</title>
+    <meta name="description" content="Découvrez WebLearn, la plateforme de formation en ligne dédiée au développement web et aux technologies numériques. Notre mission, notre équipe et nos valeurs.">
+    <meta name="keywords" content="WebLearn, plateforme e-learning, formation en ligne, développement web, équipe WebLearn">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="apropos.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="apropos.html">
+    <meta property="og:title" content="A Propos - WebLearn">
+    <meta property="og:description" content="Découvrez la mission et l'équipe de WebLearn.">
+    <meta property="og:image" content="logoWebLearn.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "A Propos de WebLearn",
+        "description": "Notre mission est de rendre l'éducation numérique accessible à tous.",
+        "url": "apropos.html"
+    }
+    </script>
+
+    <link rel="stylesheet" href="weblearn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="logoWebLearn.png">
+
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="WebLearn - Accueil">
+                <img src="logoWebLearn.png" alt="WebLearn Logo">
+                <div class="logo-text">Web<span>Learn</span></div>
+            </a>
+            <nav role="navigation" aria-label="Navigation principale">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="cours.html" class="dropdown-toggle">Cours</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Développement Web</div>
+                            <a href="cours-html-css.html"><i class="fab fa-html5"></i> HTML5 & CSS3</a>
+                            <a href="cours-javascript.html"><i class="fab fa-js"></i> JavaScript Moderne</a>
+                            <a href="cours-react.html"><i class="fab fa-react"></i> React.js Mastery</a>
+                            <a href="cours-nodejs.html"><i class="fab fa-node-js"></i> Node.js & Express</a>
+                            <a href="cours-tailwind.html"><i class="fab fa-css3-alt"></i> Tailwind CSS</a>
+                            <a href="cours-angular.html"><i class="fab fa-angular"></i> Angular Complet</a>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-header">Design & Créativité</div>
+                            <a href="cours-figma.html"><i class="fab fa-figma"></i> Figma pour UI/UX</a>
+                            <a href="cours-design-graphique.html"><i class="fas fa-paint-brush"></i> Design Graphique</a>
+                            <a href="cours-mobile-first.html"><i class="fas fa-mobile-alt"></i> Design Mobile First</a>
+                        </div>
+                    </li>
+                    <li><a href="apropos.html" class="active" aria-current="page">A Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Activer/Désactiver le mode nuit"><i class="fas fa-moon" id="darkModeIcon"></i></button></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Menu mobile"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>A Propos de WebLearn</h1>
+            <p>Notre mission est de rendre l'éducation numérique accessible à tous.</p>
+        </section>
+
+        <section class="section">
+            <div class="card-grid" style="max-width: 900px; margin: 0 auto;">
+                <div class="card" style="grid-column: 1 / -1;">
+                    <div class="card-icon"><i class="fas fa-bullseye" aria-hidden="true"></i></div>
+                    <h3>Notre Mission</h3>
+                    <p>WebLearn est né d'une conviction simple : l'accès à une éducation de qualité ne devrait pas être un privilège. Nous avons créé une plateforme où chacun peut apprendre à son rythme, avec des cours conçus par des professionnels passionnés. Notre objectif est de former la prochaine génération de talents du numérique, quel que soit leur point de départ.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-eye" aria-hidden="true"></i></div>
+                    <h3>Notre Vision</h3>
+                    <p>Devenir la référence européenne de l'apprentissage en ligne dans le domaine du développement web et des technologies numériques.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-heart" aria-hidden="true"></i></div>
+                    <h3>Nos Valeurs</h3>
+                    <p>Excellence, accessibilité, innovation et communauté. Nous croyons en l'apprentissage collaboratif et au partage des connaissances.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--bg-white); margin: 0; max-width: 100%; padding: 80px 20px;">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <div class="section-title">
+                    <h2>Notre Equipe</h2>
+                    <p>Des experts passionnés qui mettent leur savoir-faire à votre service.</p>
+                </div>
+                <div class="card-grid">
+                    <div class="team-card">
+                        <div class="team-avatar">JD</div>
+                        <h3>Jean Dupont</h3>
+                        <span>Fondateur & CEO</span>
+                        <p>Ancien développeur chez Google, passionné par l'éducation et l'innovation pédagogique.</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">ML</div>
+                        <h3>Marie Lefebvre</h3>
+                        <span>Directrice Pédagogique</span>
+                        <p>Docteure en sciences de l'éducation, elle conçoit nos parcours d'apprentissage.</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">AK</div>
+                        <h3>Ahmed Kader</h3>
+                        <span>Lead Développeur</span>
+                        <p>Expert Full-Stack avec 10 ans d'expérience, il supervise la qualité technique des cours.</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">CP</div>
+                        <h3>Claire Petit</h3>
+                        <span>Responsable Communauté</span>
+                        <p>Elle anime notre communauté et assure le support des apprenants au quotidien.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="stats-grid">
+                <div class="stat-item"><h3>2026</h3><p>Année de création</p></div>
+                <div class="stat-item"><h3>120+</h3><p>Cours publiés</p></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>WebLearn</h4>
+                <p>Votre plateforme d'apprentissage en ligne pour maîtriser le développement web et les technologies numériques.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liens rapides</h4>
+                <a href="index.html">Accueil</a>
+                <a href="cours.html">Cours</a>
+                <a href="apropos.html">A Propos</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Catégories</h4>
+                <a href="cours.html">Développement Web</a>
+                <a href="cours.html">Design UI/UX</a>
+                <a href="cours.html">Marketing Digital</a>
+                <a href="cours.html">Data Science</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> contact@</p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> +261 38 22 819 76</p>
+                <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Fianarantsoa, Madagascar</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© WebLearn - Online Academy & Knowledge Hub. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="weblearn.js"></script>
+</body>
+</html>

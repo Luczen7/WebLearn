@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours Angular Complet - WebLearn | Formation TypeScript & Enterprise</title>
+    <meta name="description" content="Développez des applications enterprise avec Angular et TypeScript. 45 heures de formation : composants, services, RxJS, routing, formulaires réactifs.">
+    <meta name="keywords" content="Angular cours, TypeScript formation, RxJS, Angular CLI, composants Angular, formulaires réactifs, dependency injection">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="cours-angular.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="cours-angular.html">
+    <meta property="og:title" content="Angular Complet - WebLearn">
+    <meta property="og:description" content="Développez des applications enterprise avec TypeScript et Angular.">
+    <meta property="og:image" content="logoWebLearn.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Angular Complet",
+        "description": "Développez des applications enterprise avec TypeScript et Angular.",
+        "provider": {"@type": "Organization", "name": "WebLearn", "sameAs": "https://"},
+        "educationalLevel": "Avancé",
+        "timeRequired": "PT45H",
+        "isAccessibleForFree": false,
+        "coursePrerequisites": "Maîtrise de JavaScript ES6+ et bases de TypeScript",
+        "teaches": ["Angular", "TypeScript", "RxJS", "Angular CLI", "Reactive Forms", "Dependency Injection", "Angular Material"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="weblearn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="logoWebLearn.png">
+
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="WebLearn - Accueil">
+                <img src="logoWebLearn.png" alt="WebLearn Logo">
+                <div class="logo-text">Web<span>Learn</span></div>
+            </a>
+            <nav role="navigation" aria-label="Navigation principale">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="cours.html" class="dropdown-toggle active">Cours</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Développement Web</div>
+                            <a href="cours-html-css.html"><i class="fab fa-html5"></i> HTML5 & CSS3</a>
+                            <a href="cours-javascript.html"><i class="fab fa-js"></i> JavaScript Moderne</a>
+                            <a href="cours-react.html"><i class="fab fa-react"></i> React.js Mastery</a>
+                            <a href="cours-nodejs.html"><i class="fab fa-node-js"></i> Node.js & Express</a>
+                            <a href="cours-tailwind.html"><i class="fab fa-css3-alt"></i> Tailwind CSS</a>
+                            <a href="cours-angular.html" class="active"><i class="fab fa-angular"></i> Angular Complet</a>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-header">Design & Créativité</div>
+                            <a href="cours-figma.html"><i class="fab fa-figma"></i> Figma pour UI/UX</a>
+                            <a href="cours-design-graphique.html"><i class="fas fa-paint-brush"></i> Design Graphique</a>
+                            <a href="cours-mobile-first.html"><i class="fas fa-mobile-alt"></i> Design Mobile First</a>
+                        </div>
+                    </li>
+                    <li><a href="apropos.html">A Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Activer/Désactiver le mode nuit"><i class="fas fa-moon" id="darkModeIcon"></i></button></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Menu mobile"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+            <a href="index.html">Accueil</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <a href="cours.html">Cours</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <span>Angular Complet</span>
+        </nav>
+
+        <div class="course-detail-header">
+            <div class="container">
+                <div>
+                    <span class="course-tag" style="margin-bottom: 15px; display: inline-block;">Avancé</span>
+                    <h1>Angular Complet</h1>
+                    <div class="course-meta-header">
+                        <span><i class="far fa-clock" aria-hidden="true"></i> 45 heures</span>
+                        <span><i class="fas fa-signal" aria-hidden="true"></i> Niveau avancé</span>
+                        <span><i class="fas fa-certificate" aria-hidden="true"></i> Certificat inclus</span>
+                        <span><i class="fas fa-infinity" aria-hidden="true"></i> Accès illimité</span>
+                    </div>
+                    <p class="course-description">
+                        Maîtrisez Angular, le framework enterprise de Google. Ce cours couvre TypeScript, les composants, les services, RxJS pour la programmation réactive, les formulaires, le routing et les bonnes pratiques pour construire des applications robustes et maintenables.
+                    </p>
+                    <div class="course-tags">
+                        <span>Angular 17</span>
+                        <span>TypeScript</span>
+                        <span>RxJS</span>
+                        <span>Signals</span>
+                        <span>Standalone</span>
+                        <span>Angular Material</span>
+                    </div>
+                </div>
+                <div class="course-card-sidebar">
+                    <div class="price">Gratuit</div>
+                    <ul class="features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 45 heures de contenu</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 70 leçons vidéo</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 18 projets pratiques</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Certificat de réussite</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Support communautaire</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Architecture enterprise</li>
+                    </ul>
+                    <a href="#contenu" class="btn btn-primary" style="width: 100%; text-align: center; margin-bottom: 10px;">Commencer le cours</a>
+                    <a href="cours.html" class="btn btn-secondary" style="width: 100%; text-align: center;">Voir tous les cours</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content" id="contenu">
+            <div class="course-main">
+                <section class="lesson-section" id="intro-angular" aria-labelledby="intro-angular-title">
+                    <h2 id="intro-angular-title"><span class="lesson-number">1</span> Introduction à Angular</h2>
+                    <p>Angular est un framework TypeScript développé par Google pour construire des applications web single-page (SPA). Contrairement à React ou Vue, Angular est un framework complet avec tout intégré.</p>
+
+                    <h3>1.1 Pourquoi Angular ?</h3>
+                    <ul>
+                        <li><strong>Framework complet</strong> : Routing, forms, HTTP, testing inclus</li>
+                        <li><strong>TypeScript natif</strong> : Typage fort pour du code robuste</li>
+                        <li><strong>Dependency Injection</strong> : Architecture modulaire et testable</li>
+                        <li><strong>RxJS intégré</strong> : Programmation réactive native</li>
+                        <li><strong>Angular CLI</strong> : Outils de développement puissants</li>
+                        <li><strong>Enterprise-ready</strong> : Utilisé par Google, Microsoft, Forbes</li>
+                    </ul>
+
+                    <h3>1.2 Installation et Angular CLI</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Bash</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre># Installer Angular CLI globalement
+npm install -g @angular/cli
+
+# Créer un nouveau projet
+ng new mon-app --routing --style=scss --standalone
+
+# Options : --routing (routing), --style=scss, --standalone (sans NgModules)
+
+cd mon-app
+ng serve  # Démarre le serveur de développement
+
+# Générer des composants
+ng generate component mon-composant
+ng g c mon-composant --standalone
+
+# Générer un service
+ng g service services/user
+
+# Générer un module
+ng g module features/products --routing
+
+# Build production
+ng build --configuration production</pre>
+                    </div>
+
+                    <h3>1.3 Structure d'un projet Angular</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Structure</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>src/
+├── app/
+│   ├── core/              # Services singleton, guards, interceptors
+│   │   ├── services/
+│   │   ├── guards/
+│   │   └── interceptors/
+│   ├── features/          # Modules fonctionnels (lazy-loaded)
+│   │   ├── products/
+│   │   └── users/
+│   ├── shared/            # Composants, pipes, directives réutilisables
+│   │   ├── components/
+│   │   ├── pipes/
+│   │   └── directives/
+│   ├── app.component.ts
+│   ├── app.config.ts      # Configuration standalone
+│   └── app.routes.ts      # Routes principales
+├── assets/                # Images, fonts, fichiers statiques
+├── environments/          # Variables d'environnement
+└── index.html</pre>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="typescript" aria-labelledby="typescript-title">
+                    <h2 id="typescript-title"><span class="lesson-number">2</span> TypeScript pour Angular</h2>
+                    <p>TypeScript est un sur-ensemble typé de JavaScript qui compile vers du JS. Angular l'utilise nativement pour offrir un développement plus sûr et productif.</p>
+
+                    <h3>2.1 Types de base</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>TypeScript - Types</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Types primitifs
+let nom: string = 'Alice';
+let age: number = 30;
+let isActive: boolean = true;
+let data: any = 'nimporte quoi';
+let inconnu: unknown = 'valeur inconnue';
+
+// Tableaux
+let nombres: number[] = [1, 2, 3];
+let noms: Array&lt;string&gt; = ['Alice', 'Bob'];
+
+// Objets et interfaces
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  age?: number;           // Optionnel
+  readonly createdAt: Date; // Lecture seule
+}
+
+const user: User = {
+  id: 1,
+  name: 'Alice',
+  email: 'alice@test.com',
+  createdAt: new Date()
+};
+
+// Types unions
+type Status = 'pending' | 'active' | 'inactive';
+let userStatus: Status = 'active';
+
+// Generics
+function identity&lt;T&gt;(arg: T): T {
+  return arg;
+}
+const result = identity&lt;string&gt;('hello');</pre>
+                    </div>
+
+                    <h3>2.2 Classes et décorateurs</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>TypeScript - Classes</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Classe avec access modifiers
+class Product {
+  // Propriétés
+  private _price: number;
+  public readonly id: string;
+
+  // Constructor avec shorthand
+  constructor(
+    public name: string,
+    public description: string,
+    price: number,
+    id: string
+  ) {
+    this._price = price;
+    this.id = id;
+  }
+
+  // Getter
+  get price(): number {
+    return this._price;
+  }
+
+  // Setter
+  set price(value: number) {
+    if (value < 0) throw new Error('Prix invalide');
+    this._price = value;
+  }
+
+  // Méthode
+  getDiscountedPrice(discount: number): number {
+    return this._price * (1 - discount);
+  }
+}
+
+// Héritage
+class DigitalProduct extends Product {
+  constructor(
+    name: string,
+    description: string,
+    price: number,
+    id: string,
+    public downloadUrl: string
+  ) {
+    super(name, description, price, id);
+  }
+}</pre>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="composants-angular" aria-labelledby="composants-angular-title">
+                    <h2 id="composants-angular-title"><span class="lesson-number">3</span> Composants Angular</h2>
+                    <p>Les composants sont les blocs de construction d'une application Angular. Chaque composant contrôle une portion de l'écran appelée view.</p>
+
+                    <h3>3.1 Composant standalone (Angular 14+)</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>TypeScript - Composant Standalone</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-user-card',
+  standalone: true,
+  imports: [CommonModule],  // Modules/composants utilisés
+  template: `
+    &lt;div class="card" [class.active]="isActive"&gt;
+      &lt;img [src]="user.avatar" [alt]="user.name"&gt;
+      &lt;h3&gt;{{ user.name }}&lt;/h3&gt;
+      &lt;p&gt;{{ user.email }}&lt;/p&gt;
+      &lt;button (click)="onSelect()"&gt;Sélectionner&lt;/button&gt;
+    &lt;/div&gt;
+  `,
+  styles: [`
+    .card { padding: 1rem; border: 1px solid #ddd; }
+    .active { border-color: blue; }
+    img { width: 50px; height: 50px; border-radius: 50%; }
+  `]
+})
+export class UserCardComponent {
+  @Input() user!: User;
+  @Input() isActive = false;
+  @Output() select = new EventEmitter&lt;User&gt;();
+
+  onSelect() {
+    this.select.emit(this.user);
+  }
+}</pre>
+                    </div>
+
+                    <h3>3.2 Directives intégrées</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>HTML - Directives Angular</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>&lt;!-- Structural directives --&gt;
+&lt;!-- *ngIf --&gt;
+&lt;div *ngIf="isLoggedIn; else loginTemplate"&gt;
+  Bienvenue, {{ user.name }}
+&lt;/div&gt;
+&lt;ng-template #loginTemplate&gt;
+  &lt;a routerLink="/login"&gt;Se connecter&lt;/a&gt;
+&lt;/ng-template&gt;
+
+&lt;!-- *ngFor --&gt;
+&lt;ul&gt;
+  &lt;li *ngFor="let item of items; let i = index; let last = last"&gt;
+    {{ i + 1 }}. {{ item.name }}
+    &lt;span *ngIf="last"&gt; (dernier)&lt;/span&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- *ngSwitch --&gt;
+&lt;div [ngSwitch]="status"&gt;
+  &lt;p *ngSwitchCase="'loading'"&gt;Chargement...&lt;/p&gt;
+  &lt;p *ngSwitchCase="'success'"&gt;Succès !&lt;/p&gt;
+  &lt;p *ngSwitchCase="'error'"&gt;Erreur !&lt;/p&gt;
+  &lt;p *ngSwitchDefault&gt;Statut inconnu&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Attribute directives --&gt;
+&lt;div [class.highlight]="isSelected"&gt;...&lt;/div&gt;
+&lt;div [style.color]="isError ? 'red' : 'green'"&gt;...&lt;/div&gt;
+&lt;input [attr.aria-label]="label"&gt;</pre>
+                    </div>
+
+                    <h3>3.3 Signals (Angular 16+)</h3>
+                    <p>Les Signals sont le nouveau système de réactivité d'Angular, plus performant et prévisible que Zone.js :</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>TypeScript - Signals</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>import { Component, signal, computed, effect } from '@angular/core';
+
+@Component({
+  selector: 'app-counter',
+  standalone: true,
+  template: `
+    &lt;p&gt;Compteur : {{ count() }}&lt;/p&gt;
+    &lt;p&gt;Double : {{ doubleCount() }}&lt;/p&gt;
+    &lt;button (click)="increment()"&gt;+&lt;/button&gt;
+    &lt;button (click)="decrement()"&gt;-&lt;/button&gt;
+  `
+})
+export class CounterComponent {
+  // Signal writable
+  count = signal(0);
+
+  // Signal computed (dérivé)
+  doubleCount = computed(() => this.count() * 2);
+
+  // Effect (side effect)
+  constructor() {
+    effect(() => {
+      console.log('Le compteur a changé :', this.count());
+    });
+  }
+
+  increment() {
+    this.count.update(value => value + 1);
+  }
+
+  decrement() {
+    this.count.set(this.count() - 1);
+  }
+}</pre>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="services-di" aria-labelledby="services-title">
+                    <h2 id="services-title"><span class="lesson-number">4</span> Services et Dependency Injection</h2>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>TypeScript - Service Angular</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>import { Injectable, inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable, BehaviorSubject } from 'rxjs';
+
+// Injectable avec providedIn: 'root' = singleton global
+@Injectable({
+  providedIn: 'root'
+})
+export class UserService {
+  private http = inject(HttpClient);
+  private apiUrl = 'https://api.example.com/users';
+
+  // State management avec BehaviorSubject
+  private users$ = new BehaviorSubject&lt;User[]&gt;([]);
+  public users = this.users$.asObservable();
+
+  getUsers(): Observable&lt;User[]&gt; {
+    return this.http.get&lt;User[]&gt;(this.apiUrl);
+  }
+
+  getUser(id: number): Observable&lt;User&gt; {
+    return this.http.get&lt;User&gt;(`${this.apiUrl}/${id}`);
+  }
+
+  createUser(user: Partial&lt;User&gt;): Observable&lt;User&gt; {
+    return this.http.post&lt;User&gt;(this.apiUrl, user);
+  }
+
+  updateUser(id: number, user: Partial&lt;User&gt;): Observable&lt;User&gt; {
+    return this.http.patch&lt;User&gt;(`${this.apiUrl}/${id}`, user);
+  }
+
+  deleteUser(id: number): Observable&lt;void&gt; {
+    return this.http.delete&lt;void&gt;(`${this.apiUrl}/${id}`);
+  }
+}
+
+// Utilisation dans un composant
+@Component({...})
+export class UserListComponent {
+  private userService = inject(UserService);
+  users$ = this.userService.getUsers();
+}</pre>
+                    </div>
+
+                    <h3>4.1 Interceptors HTTP</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>TypeScript - Interceptor</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>import { HttpInterceptorFn } from '@angular/common/http';
+
+export const authInterceptor: HttpInterceptorFn = (req, next) => {
+  const token = localStorage.getItem('token');
+
+  if (token) {
+    req = req.clone({
+      setHeaders: { Authorization: `Bearer ${token}` }
+    });
+  }
+
+  return next(req);
+};
+
+// Configuration dans app.config.ts
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideHttpClient(withInterceptors([authInterceptor, errorInterceptor]))
+  ]
+};</pre>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="rxjs" aria-labelledby="rxjs-title">
+                    <h2 id="rxjs-title"><span class="lesson-number">5</span> RxJS - Programmation Réactive</h2>
+                    <p>RxJS est une bibliothèque de programmation réactive utilisée intensivement dans Angular pour gérer les flux de données asynchrones.</p>
+
+                    <h3>5.1 Observables et opérateurs essentiels</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>TypeScript - RxJS</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>import { Observable, of, from, Subject, BehaviorSubject } from 'rxjs';
+import { map, filter, switchMap, mergeMap, catchError, debounceTime, distinctUntilChanged, takeUntil } from 'rxjs/operators';
+
+// Création d'observables
+const numbers$ = of(1, 2, 3, 4, 5);
+const users$ = from(fetchUsers());
+
+// Subject (observable + observer)
+const searchSubject = new Subject&lt;string&gt;();
+
+// BehaviorSubject (avec valeur initiale)
+const currentUser$ = new BehaviorSubject&lt;User | null&gt;(null);
+
+// Opérateurs de transformation
+searchSubject.pipe(
+  debounceTime(300),           // Attendre 300ms après la dernière frappe
+  distinctUntilChanged(),      // Ignorer si valeur identique
+  switchMap(term =>            // Annuler la requête précédente
+    this.http.get(`/api/search?q=${term}`).pipe(
+      catchError(() => of([])) // Gérer les erreurs
+    )
+  )
+).subscribe(results => {
+  this.searchResults = results;
+});
+
+// Combinaison d'observables
+import { combineLatest, forkJoin } from 'rxjs';
+
+// combineLatest : émet quand n'importe quel observable émet
+combineLatest([users$, posts$]).subscribe(([users, posts]) => {
+  // Mise à jour de l'UI
+});
+
+// forkJoin : attend que tous les observables soient complets
+forkJoin([getUser(), getOrders(), getStats()]).subscribe(
+  ([user, orders, stats]) => {
+    // Toutes les données sont chargées
+  }
+);
+
+// Gestion du cycle de vie avec takeUntil
+private destroy$ = new Subject&lt;void&gt;();
+
+ngOnInit() {
+  this.data$.pipe(
+    takeUntil(this.destroy$)
+  ).subscribe(data => {
+    this.data = data;
+  });
+}
+
+ngOnDestroy() {
+  this.destroy$.next();
+  this.destroy$.complete();
+}</pre>
+                    </div>
+
+                    <div class="info-box info">
+                        <strong><i class="fas fa-info-circle" aria-hidden="true"></i> Bonne pratique RxJS</strong>
+                        <p>Toujours se désabonner des observables dans ngOnDestroy pour éviter les memory leaks. Utilisez takeUntil avec un Subject de destruction ou le pipe async dans le template.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="formulaires" aria-labelledby="formulaires-title">
+                    <h2 id="formulaires-title"><span class="lesson-number">6</span> Formulaires Réactifs</h2>
+                    <p>Angular propose deux approches pour les formulaires : Template-driven (simple) et Reactive (puissant et testable). Les formulaires réactifs sont recommandés pour les applications complexes.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>TypeScript - Reactive Forms</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>import { Component, inject } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+
+@Component({
+  selector: 'app-user-form',
+  standalone: true,
+  imports: [ReactiveFormsModule, CommonModule],
+  template: `
+    &lt;form [formGroup]="userForm" (ngSubmit)="onSubmit()"&gt;
+      &lt;div&gt;
+        &lt;label&gt;Nom&lt;/label&gt;
+        &lt;input formControlName="name"&gt;
+        &lt;div *ngIf="name?.invalid && name?.touched"&gt;
+          &lt;span *ngIf="name?.errors?.['required']"&gt;Nom requis&lt;/span&gt;
+          &lt;span *ngIf="name?.errors?.['minlength']"&gt;Min 3 caractères&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div&gt;
+        &lt;label&gt;Email&lt;/label&gt;
+        &lt;input formControlName="email" type="email"&gt;
+      &lt;/div&gt;
+
+      &lt;div formGroupName="address"&gt;
+        &lt;label&gt;Rue&lt;/label&gt;
+        &lt;input formControlName="street"&gt;
+        &lt;label&gt;Ville&lt;/label&gt;
+        &lt;input formControlName="city"&gt;
+      &lt;/div&gt;
+
+      &lt;div formArrayName="skills"&gt;
+        &lt;div *ngFor="let skill of skills.controls; let i = index"&gt;
+          &lt;input [formControlName]="i"&gt;
+          &lt;button type="button" (click)="removeSkill(i)"&gt;Supprimer&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;button type="button" (click)="addSkill()"&gt;Ajouter une compétence&lt;/button&gt;
+      &lt;/div&gt;
+
+      &lt;button type="submit" [disabled]="userForm.invalid"&gt;Soumettre&lt;/button&gt;
+    &lt;/form&gt;
+  `
+})
+export class UserFormComponent {
+  private fb = inject(FormBuilder);
+
+  userForm = this.fb.group({
+    name: ['', [Validators.required, Validators.minLength(3)]],
+    email: ['', [Validators.required, Validators.email]],
+    address: this.fb.group({
+      street: ['', Validators.required],
+      city: ['', Validators.required]
+    }),
+    skills: this.fb.array([this.fb.control('')])
+  });
+
+  get name() { return this.userForm.get('name'); }
+  get skills() { return this.userForm.get('skills') as FormArray; }
+
+  addSkill() {
+    this.skills.push(this.fb.control(''));
+  }
+
+  removeSkill(index: number) {
+    this.skills.removeAt(index);
+  }
+
+  onSubmit() {
+    if (this.userForm.valid) {
+      console.log(this.userForm.value);
+    }
+  }
+}</pre>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="routing-angular" aria-labelledby="routing-angular-title">
+                    <h2 id="routing-angular-title"><span class="lesson-number">7</span> Routing et Navigation</h2>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>TypeScript - Routing Angular</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// app.routes.ts
+import { Routes } from '@angular/router';
+import { authGuard } from './core/guards/auth.guard';
+
+export const routes: Routes = [
+  { 
+    path: '', 
+    loadComponent: () => import('./features/home/home.component')
+      .then(m => m.HomeComponent) 
+  },
+  { 
+    path: 'products',
+    loadChildren: () => import('./features/products/products.routes')
+      .then(m => m.PRODUCTS_ROUTES)
+  },
+  { 
+    path: 'profile',
+    loadComponent: () => import('./features/profile/profile.component')
+      .then(m => m.ProfileComponent),
+    canActivate: [authGuard]
+  },
+  { path: '**', redirectTo: '' }
+];
+
+// Guard fonctionnel (Angular 15+)
+export const authGuard: CanActivateFn = () => {
+  const authService = inject(AuthService);
+  const router = inject(Router);
+
+  if (authService.isAuthenticated()) {
+    return true;
+  }
+
+  return router.createUrlTree(['/login']);
+};
+
+// Navigation programmatique
+@Component({...})
+export class ProductComponent {
+  private router = inject(Router);
+  private route = inject(ActivatedRoute);
+
+  goToDetails(id: number) {
+    this.router.navigate(['/products', id]);
+    // ou
+    this.router.navigate(['../details', id], { relativeTo: this.route });
+  }
+}</pre>
+                    </div>
+
+                    <div class="exercise-box">
+                        <h4><i class="fas fa-keyboard" aria-hidden="true"></i> Projet final : CRM Enterprise</h4>
+                        <p>Créez une application CRM complète avec : authentification JWT, dashboard avec graphiques, gestion des clients (CRUD), gestion des opportunités avec pipeline, formulaires réactifs avancés, guards de routing, interceptors HTTP, et architecture modulaire avec lazy loading.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="conclusion-angular" aria-labelledby="conclusion-angular-title">
+                    <h2 id="conclusion-angular-title"><span class="lesson-number">8</span> Conclusion</h2>
+                    <p>Vous maîtrisez maintenant Angular pour construire des applications enterprise. Prochaines étapes :</p>
+                    <ul>
+                        <li><strong>Angular Material</strong> : Composants UI Material Design</li>
+                        <li><strong>NgRx</strong> : State management avec Redux pour Angular</li>
+                        <li><strong>Testing</strong> : Jasmine, Karma, et Angular Testing Library</li>
+                        <li><strong>PWA</strong> : Progressive Web Apps avec Angular</li>
+                        <li><strong>SSR</strong> : Server-Side Rendering avec Angular Universal</li>
+                    </ul>
+                </section>
+            </div>
+
+            <aside class="course-sidebar-sticky" aria-label="Navigation du cours">
+                <div class="course-nav">
+                    <h4>Contenu du cours</h4>
+                    <ul>
+                        <li><a href="#intro-angular" class="active">1. Introduction Angular</a></li>
+                        <li><a href="#typescript">2. TypeScript</a></li>
+                        <li><a href="#composants-angular">3. Composants</a></li>
+                        <li><a href="#services-di">4. Services & DI</a></li>
+                        <li><a href="#rxjs">5. RxJS</a></li>
+                        <li><a href="#formulaires">6. Formulaires</a></li>
+                        <li><a href="#routing-angular">7. Routing</a></li>
+                        <li><a href="#conclusion-angular">8. Conclusion</a></li>
+                    </ul>
+                </div>
+                <div class="course-nav">
+                    <h4>Progression</h4>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 0%;"></div>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">8 leçons • 45 heures</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>WebLearn</h4>
+                <p>Votre plateforme d'apprentissage en ligne pour maîtriser le développement web et les technologies numériques.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liens rapides</h4>
+                <a href="index.html">Accueil</a>
+                <a href="cours.html">Cours</a>
+                <a href="apropos.html">A Propos</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Catégories</h4>
+                <a href="cours.html">Développement Web</a>
+                <a href="cours.html">Design UI/UX</a>
+                <a href="cours.html">Marketing Digital</a>
+                <a href="cours.html">Data Science</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> contact@</p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> +261 38 22 819 76</p>
+                <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Fianarantsoa, Madagascar</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© WebLearn - Online Academy & Knowledge Hub. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="weblearn.js"></script>
+</body>
+</html>

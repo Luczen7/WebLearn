@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours Tailwind CSS Avancé - WebLearn | Formation Utility-First CSS</title>
+    <meta name="description" content="Maîtrisez Tailwind CSS : approche utility-first, personnalisation, composants réutilisables, responsive design. 15 heures de formation pratique.">
+    <meta name="keywords" content="Tailwind CSS cours, utility-first CSS, framework CSS, responsive design Tailwind, personnalisation Tailwind">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="cours-tailwind.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="cours-tailwind.html">
+    <meta property="og:title" content="Tailwind CSS Avancé - WebLearn">
+    <meta property="og:description" content="Créez des interfaces modernes rapidement avec l'approche utility-first de Tailwind CSS.">
+    <meta property="og:image" content="logoWebLearn.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Tailwind CSS Avancé",
+        "description": "Créez des interfaces modernes rapidement avec l'approche utility-first.",
+        "provider": {"@type": "Organization", "name": "WebLearn", "sameAs": "https://"},
+        "educationalLevel": "Intermédiaire",
+        "timeRequired": "PT15H",
+        "isAccessibleForFree": false,
+        "coursePrerequisites": "Connaissances HTML et CSS de base",
+        "teaches": ["Tailwind CSS", "Utility-First CSS", "Responsive Design", "Custom Config", "Plugins Tailwind"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="weblearn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="logoWebLearn.png">
+
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="WebLearn - Accueil">
+                <img src="logoWebLearn.png" alt="WebLearn Logo">
+                <div class="logo-text">Web<span>Learn</span></div>
+            </a>
+            <nav role="navigation" aria-label="Navigation principale">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="cours.html" class="dropdown-toggle active">Cours</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Développement Web</div>
+                            <a href="cours-html-css.html"><i class="fab fa-html5"></i> HTML5 & CSS3</a>
+                            <a href="cours-javascript.html"><i class="fab fa-js"></i> JavaScript Moderne</a>
+                            <a href="cours-react.html"><i class="fab fa-react"></i> React.js Mastery</a>
+                            <a href="cours-nodejs.html"><i class="fab fa-node-js"></i> Node.js & Express</a>
+                            <a href="cours-tailwind.html" class="active"><i class="fab fa-css3-alt"></i> Tailwind CSS</a>
+                            <a href="cours-angular.html"><i class="fab fa-angular"></i> Angular Complet</a>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-header">Design & Créativité</div>
+                            <a href="cours-figma.html"><i class="fab fa-figma"></i> Figma pour UI/UX</a>
+                            <a href="cours-design-graphique.html"><i class="fas fa-paint-brush"></i> Design Graphique</a>
+                            <a href="cours-mobile-first.html"><i class="fas fa-mobile-alt"></i> Design Mobile First</a>
+                        </div>
+                    </li>
+                    <li><a href="apropos.html">A Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Activer/Désactiver le mode nuit"><i class="fas fa-moon" id="darkModeIcon"></i></button></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Menu mobile"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+            <a href="index.html">Accueil</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <a href="cours.html">Cours</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <span>Tailwind CSS</span>
+        </nav>
+
+        <div class="course-detail-header">
+            <div class="container">
+                <div>
+                    <span class="course-tag" style="margin-bottom: 15px; display: inline-block;">Intermédiaire</span>
+                    <h1>Tailwind CSS Avancé</h1>
+                    <div class="course-meta-header">
+                        <span><i class="far fa-clock" aria-hidden="true"></i> 15 heures</span>
+                        <span><i class="fas fa-signal" aria-hidden="true"></i> Niveau intermédiaire</span>
+                        <span><i class="fas fa-certificate" aria-hidden="true"></i> Certificat inclus</span>
+                        <span><i class="fas fa-infinity" aria-hidden="true"></i> Accès illimité</span>
+                    </div>
+                    <p class="course-description">
+                        Maîtrisez Tailwind CSS, le framework utility-first qui révolutionne le développement d'interfaces. Apprenez à créer des designs modernes rapidement sans écrire de CSS personnalisé, tout en maintenant une codebase propre et maintenable.
+                    </p>
+                    <div class="course-tags">
+                        <span>Utility-First</span>
+                        <span>Responsive</span>
+                        <span>Custom Config</span>
+                        <span>Plugins</span>
+                        <span>JIT Mode</span>
+                        <span>Dark Mode</span>
+                    </div>
+                </div>
+                <div class="course-card-sidebar">
+                    <div class="price">Gratuit</div>
+                    <ul class="features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 15 heures de contenu</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 30 leçons vidéo</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 10 projets pratiques</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Certificat de réussite</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Support communautaire</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Cheat sheet incluse</li>
+                    </ul>
+                    <a href="#contenu" class="btn btn-primary" style="width: 100%; text-align: center; margin-bottom: 10px;">Commencer le cours</a>
+                    <a href="cours.html" class="btn btn-secondary" style="width: 100%; text-align: center;">Voir tous les cours</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content" id="contenu">
+            <div class="course-main">
+                <section class="lesson-section" id="intro-tailwind" aria-labelledby="intro-tailwind-title">
+                    <h2 id="intro-tailwind-title"><span class="lesson-number">1</span> Introduction à Tailwind CSS</h2>
+                    <p>Tailwind CSS est un framework CSS utility-first qui fournit des classes utilitaires de bas niveau pour construire des designs entièrement personnalisés directement dans votre HTML.</p>
+
+                    <h3>1.1 Pourquoi Tailwind ?</h3>
+                    <ul>
+                        <li><strong>Utility-first</strong> : Pas de classes sémantiques prédéfinies, vous composez votre design</li>
+                        <li><strong>Highly customizable</strong> : Configuration complète via tailwind.config.js</li>
+                        <li><strong>Responsive design</strong> : Préfixes responsive intégrés (sm:, md:, lg:, xl:)</li>
+                        <li><strong>Dark mode</strong> : Support natif du mode sombre</li>
+                        <li><strong>JIT engine</strong> : Compilation ultra-rapide, génère uniquement le CSS utilisé</li>
+                        <li><strong>PurgeCSS intégré</strong> : Bundle CSS minimal en production</li>
+                    </ul>
+
+                    <h3>1.2 Installation</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Bash</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre># Via npm (recommandé)
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+# Via CDN (développement uniquement)
+&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</pre>
+                    </div>
+
+                    <h3>1.3 Configuration de base</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>tailwind.config.js</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './src/**/*.{html,js,jsx,ts,tsx,vue}',
+    './public/index.html',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          500: '#3b82f6',
+          600: '#2563eb',
+          900: '#1e3a8a',
+        },
+        brand: '#f26522',
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Poppins', 'sans-serif'],
+      },
+      spacing: {
+        '128': '32rem',
+        '144': '36rem',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      },
+    },
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+  ],
+}</pre>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="utilities-base" aria-labelledby="utilities-title">
+                    <h2 id="utilities-title"><span class="lesson-number">2</span> Classes Utilitaires Essentielles</h2>
+
+                    <h3>2.1 Layout et Spacing</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>HTML - Layout Tailwind</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>&lt;!-- Container --&gt;
+&lt;div class="container mx-auto px-4"&gt;
+
+  &lt;!-- Flexbox --&gt;
+  &lt;div class="flex items-center justify-between gap-4"&gt;
+    &lt;div class="flex-1"&gt;...&lt;/div&gt;
+    &lt;div class="flex-shrink-0"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Grid --&gt;
+  &lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"&gt;
+    &lt;div class="col-span-2"&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Spacing (1 unit = 0.25rem = 4px) --&gt;
+  &lt;div class="p-4 m-2"&gt;...&lt;/div&gt;     <!-- padding 16px, margin 8px -->
+  &lt;div class="px-6 py-3"&gt;...&lt;/div&gt;  <!-- padding-x 24px, padding-y 12px -->
+  &lt;div class="space-y-4"&gt;           <!-- espace vertical entre enfants -->
+    &lt;div&gt;Item 1&lt;/div&gt;
+    &lt;div&gt;Item 2&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                    </div>
+
+                    <h3>2.2 Typography et Colors</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>HTML - Typography Tailwind</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>&lt;!-- Typography --&gt;
+&lt;h1 class="text-4xl font-bold text-gray-900 tracking-tight"&gt;
+  Titre principal
+&lt;/h1&gt;
+&lt;p class="text-base text-gray-600 leading-relaxed"&gt;
+  Paragraphe avec interligne confortable
+&lt;/p&gt;
+&lt;span class="text-sm font-medium text-blue-600 uppercase tracking-wider"&gt;
+  Label
+&lt;/span&gt;
+
+&lt;!-- Colors --&gt;
+&lt;div class="bg-white text-gray-900 border border-gray-200"&gt;
+  &lt;div class="bg-blue-500 hover:bg-blue-600 text-white"&gt;
+    Bouton primaire
+  &lt;/div&gt;
+  &lt;div class="bg-red-100 text-red-800 border-red-200"&gt;
+    Message d'erreur
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Opacity et background --&gt;
+&lt;div class="bg-gray-900/50 backdrop-blur-sm"&gt;Overlay&lt;/div&gt;
+&lt;div class="bg-gradient-to-r from-blue-500 to-purple-600"&gt;Dégradé&lt;/div&gt;</pre>
+                    </div>
+
+                    <h3>2.3 Sizing et Positioning</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>HTML - Sizing Tailwind</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>&lt;!-- Sizing --&gt;
+&lt;div class="w-full h-screen"&gt;...&lt;/div&gt;
+&lt;div class="w-64 h-32"&gt;...&lt;/div&gt;
+&lt;div class="min-h-[500px] max-w-4xl"&gt;...&lt;/div&gt;
+&lt;div class="aspect-video"&gt;...&lt;/div&gt;  <!-- Ratio 16:9 -->
+
+&lt;!-- Positioning --&gt;
+&lt;div class="relative"&gt;
+  &lt;div class="absolute top-0 right-0"&gt;Badge&lt;/div&gt;
+  &lt;div class="fixed bottom-4 right-4"&gt;FAB&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Z-index --&gt;
+&lt;div class="z-50"&gt;Modal&lt;/div&gt;
+&lt;div class="z-40"&gt;Overlay&lt;/div&gt;
+&lt;div class="z-10"&gt;Contenu&lt;/div&gt;</pre>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="responsive" aria-labelledby="responsive-tailwind-title">
+                    <h2 id="responsive-tailwind-title"><span class="lesson-number">3</span> Responsive Design avec Tailwind</h2>
+                    <p>Tailwind utilise une approche mobile-first avec des préfixes responsive intuitifs.</p>
+
+                    <h3>3.1 Breakpoints par défaut</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr><th>Préfixe</th><th>Min-width</th><th>CSS</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><code>sm:</code></td><td>640px</td><td><code>@media (min-width: 640px)</code></td></tr>
+                                <tr><td><code>md:</code></td><td>768px</td><td><code>@media (min-width: 768px)</code></td></tr>
+                                <tr><td><code>lg:</code></td><td>1024px</td><td><code>@media (min-width: 1024px)</code></td></tr>
+                                <tr><td><code>xl:</code></td><td>1280px</td><td><code>@media (min-width: 1280px)</code></td></tr>
+                                <tr><td><code>2xl:</code></td><td>1536px</td><td><code>@media (min-width: 1536px)</code></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>HTML - Responsive Tailwind</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>&lt;!-- Mobile-first : styles par défaut pour mobile --&gt;
+&lt;div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"&gt;
+  &lt;!-- 1 colonne mobile, 2 tablette, 3 desktop, 4 large desktop --&gt;
+&lt;/div&gt;
+
+&lt;!-- Texte responsive --&gt;
+&lt;h1 class="text-2xl md:text-3xl lg:text-4xl font-bold"&gt;
+  Titre adaptatif
+&lt;/h1&gt;
+
+&lt;!-- Navigation responsive --&gt;
+&lt;nav class="hidden md:flex"&gt;...&lt;/nav&gt;
+&lt;button class="md:hidden"&gt;Menu&lt;/button&gt;
+
+&lt;!-- Padding responsive --&gt;
+&lt;section class="px-4 py-8 md:px-8 md:py-12 lg:px-16 lg:py-20"&gt;
+  ...
+&lt;/section&gt;
+
+&lt;!-- Container responsive --&gt;
+&lt;div class="w-full px-4 sm:px-6 lg:px-8 xl:px-12"&gt;
+  &lt;div class="max-w-7xl mx-auto"&gt;...&lt;/div&gt;
+&lt;/div&gt;</pre>
+                    </div>
+
+                    <h3>3.2 Container queries (v3.2+)</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>HTML - Container Queries</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>&lt;!-- Définir un conteneur --&gt;
+&lt;div class="@container"&gt;
+  &lt;div class="@md:grid-cols-2 @lg:grid-cols-3"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="components" aria-labelledby="components-title">
+                    <h2 id="components-title"><span class="lesson-number">4</span> Composants et Réutilisabilité</h2>
+
+                    <h3>4.1 @apply pour extraire des composants</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>CSS - @apply</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>/* input.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply btn bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply btn bg-gray-200 text-gray-800 hover:bg-gray-300;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-lg p-6 border border-gray-100;
+  }
+
+  .input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors;
+  }
+}</pre>
+                    </div>
+
+                    <h3>4.2 Composants avec React/Vue</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>React - Composant Tailwind</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Button.jsx
+const Button = ({ 
+  children, 
+  variant = 'primary', 
+  size = 'md',
+  className = '',
+  ...props 
+}) => {
+  const baseStyles = 'inline-flex items-center justify-center rounded-lg font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
+
+  const variants = {
+    primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
+    secondary: 'bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-500',
+    danger: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500',
+    ghost: 'bg-transparent text-gray-600 hover:bg-gray-100',
+  };
+
+  const sizes = {
+    sm: 'px-3 py-1.5 text-sm',
+    md: 'px-4 py-2 text-base',
+    lg: 'px-6 py-3 text-lg',
+  };
+
+  return (
+    &lt;button 
+      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
+      {...props}
+    &gt;
+      {children}
+    &lt;/button&gt;
+  );
+};</pre>
+                    </div>
+
+                    <h3>4.3 Conditional classes avec clsx/tailwind-merge</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - clsx + tailwind-merge</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>import clsx from 'clsx';
+import { twMerge } from 'tailwind-merge';
+
+// Fonction utilitaire
+function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
+
+// Utilisation
+const Alert = ({ type, children, className }) => {
+  return (
+    &lt;div className={cn(
+      'p-4 rounded-lg border',
+      type === 'success' && 'bg-green-50 border-green-200 text-green-800',
+      type === 'error' && 'bg-red-50 border-red-200 text-red-800',
+      type === 'warning' && 'bg-yellow-50 border-yellow-200 text-yellow-800',
+      className
+    )}&gt;
+      {children}
+    &lt;/div&gt;
+  );
+};</pre>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="dark-mode" aria-labelledby="dark-tailwind-title">
+                    <h2 id="dark-tailwind-title"><span class="lesson-number">5</span> Dark Mode et Thèmes</h2>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>tailwind.config.js - Dark Mode</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>module.exports = {
+  darkMode: 'class', // 'media' pour OS preference, 'class' pour toggle manuel
+  // ...
+}</pre>
+                    </div>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>HTML - Dark Mode</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>&lt;!-- Toggle manuel avec class --&gt;
+&lt;html class="dark"&gt;
+  &lt;body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"&gt;
+    &lt;div class="card bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700"&gt;
+      &lt;h2 class="text-gray-900 dark:text-white"&gt;Titre&lt;/h2&gt;
+      &lt;p class="text-gray-600 dark:text-gray-300"&gt;Description&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+&lt;!-- Avec le plugin forms --&gt;
+&lt;input class="bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white" /&gt;</pre>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="plugins" aria-labelledby="plugins-title">
+                    <h2 id="plugins-title"><span class="lesson-number">6</span> Plugins et Extensions</h2>
+
+                    <h3>6.1 Plugins officiels</h3>
+                    <ul>
+                        <li><strong>@tailwindcss/forms</strong> : Styles de formulaire de base</li>
+                        <li><strong>@tailwindcss/typography</strong> : Styles pour contenu riche (articles, docs)</li>
+                        <li><strong>@tailwindcss/aspect-ratio</strong> : Ratios d'aspect contrôlés</li>
+                        <li><strong>@tailwindcss/line-clamp</strong> : Troncation de texte multi-lignes</li>
+                    </ul>
+
+                    <h3>6.2 Créer un plugin personnalisé</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - Plugin Tailwind</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// plugins/animation.js
+const plugin = require('tailwindcss/plugin');
+
+module.exports = plugin(function({ addUtilities, theme }) {
+  const animations = {
+    '.animate-fade-in': {
+      animation: 'fadeIn 0.5s ease-out',
+    },
+    '.animate-slide-up': {
+      animation: 'slideUp 0.3s ease-out',
+    },
+  };
+
+  addUtilities(animations);
+});
+
+// tailwind.config.js
+module.exports = {
+  plugins: [
+    require('./plugins/animation'),
+  ],
+}</pre>
+                    </div>
+
+                    <div class="exercise-box">
+                        <h4><i class="fas fa-keyboard" aria-hidden="true"></i> Projet final : Dashboard Admin</h4>
+                        <p>Créez un dashboard admin complet avec : sidebar responsive collapsible, cards de statistiques avec icônes, tableau de données avec tri et pagination, formulaires avec validation visuelle, graphiques (avec un librairie comme Chart.js), et toggle dark mode fonctionnel.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="conclusion-tailwind" aria-labelledby="conclusion-tailwind-title">
+                    <h2 id="conclusion-tailwind-title"><span class="lesson-number">7</span> Conclusion</h2>
+                    <p>Vous maîtrisez maintenant Tailwind CSS pour créer des interfaces modernes rapidement. Prochaines étapes :</p>
+                    <ul>
+                        <li><strong>Headless UI</strong> : Composants accessibles sans style de Tailwind Labs</li>
+                        <li><strong>Tailwind UI</strong> : Templates premium prêts à l'emploi</li>
+                        <li><strong>Just-in-Time mode</strong> : Configuration avancée du moteur JIT</li>
+                        <li><strong>Design tokens</strong> : Système de design avec Tailwind</li>
+                    </ul>
+                </section>
+            </div>
+
+            <aside class="course-sidebar-sticky" aria-label="Navigation du cours">
+                <div class="course-nav">
+                    <h4>Contenu du cours</h4>
+                    <ul>
+                        <li><a href="#intro-tailwind" class="active">1. Introduction</a></li>
+                        <li><a href="#utilities-base">2. Classes Utilitaires</a></li>
+                        <li><a href="#responsive">3. Responsive Design</a></li>
+                        <li><a href="#components">4. Composants</a></li>
+                        <li><a href="#dark-mode">5. Dark Mode</a></li>
+                        <li><a href="#plugins">6. Plugins</a></li>
+                        <li><a href="#conclusion-tailwind">7. Conclusion</a></li>
+                    </ul>
+                </div>
+                <div class="course-nav">
+                    <h4>Progression</h4>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 0%;"></div>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">7 leçons • 15 heures</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>WebLearn</h4>
+                <p>Votre plateforme d'apprentissage en ligne pour maîtriser le développement web et les technologies numériques.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liens rapides</h4>
+                <a href="index.html">Accueil</a>
+                <a href="cours.html">Cours</a>
+                <a href="apropos.html">A Propos</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Catégories</h4>
+                <a href="cours.html">Développement Web</a>
+                <a href="cours.html">Design UI/UX</a>
+                <a href="cours.html">Marketing Digital</a>
+                <a href="cours.html">Data Science</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> contact@</p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> +261 38 22 819 76</p>
+                <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Fianarantsoa, Madagascar</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© WebLearn - Online Academy & Knowledge Hub. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="weblearn.js"></script>
+</body>
+</html>

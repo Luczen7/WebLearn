@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - WebLearn | Online Academy & Knowledge Hub</title>
+    <meta name="description" content="Contactez WebLearn pour toute question sur nos cours de développement web et design. Notre équipe vous répond sous 24h.">
+    <meta name="keywords" content="contact WebLearn, support, questions cours, formation en ligne">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="contact.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="contact.html">
+    <meta property="og:title" content="Contact - WebLearn">
+    <meta property="og:description" content="Contactez-nous pour toute question ou projet.">
+    <meta property="og:image" content="logoWebLearn.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact WebLearn",
+        "description": "Contactez WebLearn pour toute question.",
+        "url": "contact.html",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+33-1-23-45-67-89",
+            "contactType": "customer service",
+            "email": "contact@"
+        }
+    }
+    </script>
+
+    <link rel="stylesheet" href="weblearn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="logoWebLearn.png">
+
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="WebLearn - Accueil">
+                <img src="logoWebLearn.png" alt="WebLearn Logo">
+                <div class="logo-text">Web<span>Learn</span></div>
+            </a>
+            <nav role="navigation" aria-label="Navigation principale">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="cours.html" class="dropdown-toggle">Cours</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Développement Web</div>
+                            <a href="cours-html-css.html"><i class="fab fa-html5"></i> HTML5 & CSS3</a>
+                            <a href="cours-javascript.html"><i class="fab fa-js"></i> JavaScript Moderne</a>
+                            <a href="cours-react.html"><i class="fab fa-react"></i> React.js Mastery</a>
+                            <a href="cours-nodejs.html"><i class="fab fa-node-js"></i> Node.js & Express</a>
+                            <a href="cours-tailwind.html"><i class="fab fa-css3-alt"></i> Tailwind CSS</a>
+                            <a href="cours-angular.html"><i class="fab fa-angular"></i> Angular Complet</a>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-header">Design & Créativité</div>
+                            <a href="cours-figma.html"><i class="fab fa-figma"></i> Figma pour UI/UX</a>
+                            <a href="cours-design-graphique.html"><i class="fas fa-paint-brush"></i> Design Graphique</a>
+                            <a href="cours-mobile-first.html"><i class="fas fa-mobile-alt"></i> Design Mobile First</a>
+                        </div>
+                    </li>
+                    <li><a href="apropos.html">A Propos</a></li>
+                    <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+                    <li><button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Activer/Désactiver le mode nuit"><i class="fas fa-moon" id="darkModeIcon"></i></button></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Menu mobile"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Contactez-nous</h1>
+            <p>Une question ? Un projet ? Nous sommes là pour vous aider.</p>
+        </section>
+
+        <section class="section">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <h3>Email</h3>
+                    <p>contact@</p>
+                    <p>support@</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
+                    <h3>Téléphone</h3>
+                    <p>+261 38 22 819 76</p>
+                    <p>Lun-Ven, 9h-18h</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                    <h3>Adresse</h3>
+                    <p>Andrainjato</p>
+                    <p>Fianarantsoa, Madagascar</p>
+                </div>
+            </div>
+
+            <div class="card-grid" style="max-width: 800px; margin: 0 auto;">
+                <div class="card" style="grid-column: 1 / -1;">
+                    <h3 style="text-align: center; margin-bottom: 30px; color: var(--primary);">Envoyez-nous un message</h3>
+                    <form onsubmit="event.preventDefault(); alert('Message envoyé ! Nous vous répondrons dans les plus brefs délais.'); this.reset();">
+                        <div class="form-group">
+                            <label for="nom">Nom complet</label>
+                            <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Adresse email</label>
+                            <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sujet">Sujet</label>
+                            <select id="sujet" name="sujet" required>
+                                <option value="">Choisir un sujet</option>
+                                <option value="general">Question générale</option>
+                                <option value="cours">Question sur un cours</option>
+                                <option value="technique">Problème technique</option>
+                                <option value="partenariat">Partenariat</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Votre message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Rejoignez notre communauté</h2>
+            <p>Suivez-nous sur les réseaux sociaux pour ne rien manquer de nos actualités et offres.</p>
+            <div class="btn-group" style="margin-top: 20px;">
+                <a href="#" class="btn btn-outline"><i class="fab fa-twitter" aria-hidden="true"></i> Twitter</a>
+                <a href="#" class="btn btn-outline"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+                <a href="#" class="btn btn-outline"><i class="fab fa-youtube" aria-hidden="true"></i> YouTube</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>WebLearn</h4>
+                <p>Votre plateforme d'apprentissage en ligne pour maîtriser le développement web et les technologies numériques.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liens rapides</h4>
+                <a href="index.html">Accueil</a>
+                <a href="cours.html">Cours</a>
+                <a href="apropos.html">A Propos</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Catégories</h4>
+                <a href="cours.html">Développement Web</a>
+                <a href="cours.html">Design UI/UX</a>
+                <a href="cours.html">Marketing Digital</a>
+                <a href="cours.html">Data Science</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> contact@</p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> +261 38 22 819 76</p>
+                <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Fianarantsoa, Madagascar</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© WebLearn - Online Academy & Knowledge Hub. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="weblearn.js"></script>
+</body>
+</html>

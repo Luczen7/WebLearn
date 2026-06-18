@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours JavaScript Moderne - WebLearn | Formation ES6+ Avancée</title>
+    <meta name="description" content="Maîtrisez JavaScript moderne ES6+ : promesses, async/await, modules, DOM manipulation, API REST. 35 heures de formation pratique avec projets réels.">
+    <meta name="keywords" content="JavaScript cours, ES6 formation, async await, promesses JavaScript, DOM manipulation, API REST, JavaScript moderne">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="cours-javascript.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="cours-javascript.html">
+    <meta property="og:title" content="JavaScript Moderne - WebLearn">
+    <meta property="og:description" content="Formation complète JavaScript ES6+ : de la syntaxe moderne aux applications dynamiques.">
+    <meta property="og:image" content="logoWebLearn.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "JavaScript Moderne",
+        "description": "Apprenez ES6+, les promesses, async/await et construisez des applications dynamiques avec JavaScript moderne.",
+        "provider": {"@type": "Organization", "name": "WebLearn", "sameAs": "https://"},
+        "educationalLevel": "Intermédiaire",
+        "timeRequired": "PT35H",
+        "isAccessibleForFree": false,
+        "coursePrerequisites": "Connaissances HTML et CSS de base",
+        "teaches": ["JavaScript ES6+", "Promises", "Async/Await", "DOM API", "Fetch API", "Modules ES6", "LocalStorage"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="weblearn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="logoWebLearn.png">
+
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="WebLearn - Accueil">
+                <img src="logoWebLearn.png" alt="WebLearn Logo">
+                <div class="logo-text">Web<span>Learn</span></div>
+            </a>
+            <nav role="navigation" aria-label="Navigation principale">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="cours.html" class="dropdown-toggle active">Cours</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Développement Web</div>
+                            <a href="cours-html-css.html"><i class="fab fa-html5"></i> HTML5 & CSS3</a>
+                            <a href="cours-javascript.html" class="active"><i class="fab fa-js"></i> JavaScript Moderne</a>
+                            <a href="cours-react.html"><i class="fab fa-react"></i> React.js Mastery</a>
+                            <a href="cours-nodejs.html"><i class="fab fa-node-js"></i> Node.js & Express</a>
+                            <a href="cours-tailwind.html"><i class="fab fa-css3-alt"></i> Tailwind CSS</a>
+                            <a href="cours-angular.html"><i class="fab fa-angular"></i> Angular Complet</a>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-header">Design & Créativité</div>
+                            <a href="cours-figma.html"><i class="fab fa-figma"></i> Figma pour UI/UX</a>
+                            <a href="cours-design-graphique.html"><i class="fas fa-paint-brush"></i> Design Graphique</a>
+                            <a href="cours-mobile-first.html"><i class="fas fa-mobile-alt"></i> Design Mobile First</a>
+                        </div>
+                    </li>
+                    <li><a href="apropos.html">A Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Activer/Désactiver le mode nuit"><i class="fas fa-moon" id="darkModeIcon"></i></button></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Menu mobile"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+            <a href="index.html">Accueil</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <a href="cours.html">Cours</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <span>JavaScript Moderne</span>
+        </nav>
+
+        <div class="course-detail-header">
+            <div class="container">
+                <div>
+                    <span class="course-tag" style="margin-bottom: 15px; display: inline-block;">Intermédiaire</span>
+                    <h1>JavaScript Moderne</h1>
+                    <div class="course-meta-header">
+                        <span><i class="far fa-clock" aria-hidden="true"></i> 35 heures</span>
+                        <span><i class="fas fa-signal" aria-hidden="true"></i> Niveau intermédiaire</span>
+                        <span><i class="fas fa-certificate" aria-hidden="true"></i> Certificat inclus</span>
+                        <span><i class="fas fa-infinity" aria-hidden="true"></i> Accès illimité</span>
+                    </div>
+                    <p class="course-description">
+                        Maîtrisez JavaScript moderne de ES6 à ES2023. Ce cours couvre la syntaxe avancée, la manipulation du DOM, les API asynchrones, les modules ES6 et la création d'applications web dynamiques et interactives.
+                    </p>
+                    <div class="course-tags">
+                        <span>ES6+</span>
+                        <span>Promises</span>
+                        <span>Async/Await</span>
+                        <span>DOM API</span>
+                        <span>Fetch API</span>
+                        <span>Modules</span>
+                    </div>
+                </div>
+                <div class="course-card-sidebar">
+                    <div class="price">Gratuit</div>
+                    <ul class="features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 35 heures de contenu</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 60 leçons vidéo</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 15 projets pratiques</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Certificat de réussite</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Support communautaire</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Code source des projets</li>
+                    </ul>
+                    <a href="#contenu" class="btn btn-primary" style="width: 100%; text-align: center; margin-bottom: 10px;">Commencer le cours</a>
+                    <a href="cours.html" class="btn btn-secondary" style="width: 100%; text-align: center;">Voir tous les cours</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content" id="contenu">
+            <div class="course-main">
+                <section class="lesson-section" id="intro-js" aria-labelledby="intro-js-title">
+                    <h2 id="intro-js-title"><span class="lesson-number">1</span> Introduction à JavaScript</h2>
+                    <p>JavaScript est le langage de programmation du web. Créé en 1995, il est aujourd'hui indispensable pour créer des sites web interactifs et des applications web modernes.</p>
+
+                    <h3>1.1 Qu'est-ce que JavaScript ?</h3>
+                    <p>JavaScript est un langage de programmation :</p>
+                    <ul>
+                        <li><strong>Interprété</strong> : exécuté ligne par ligne par le navigateur</li>
+                        <li><strong>Orienté objet</strong> : basé sur des objets et des prototypes</li>
+                        <li><strong>Événementiel</strong> : réagit aux actions de l'utilisateur</li>
+                        <li><strong>Asynchrone</strong> : capable d'effectuer plusieurs tâches simultanément</li>
+                    </ul>
+
+                    <h3>1.2 Où écrire du JavaScript ?</h3>
+                    <p>Vous pouvez inclure JavaScript de trois façons :</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>HTML - Inclusion JS</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>&lt;!-- 1. Inline (à éviter) --&gt;
+&lt;button onclick="alert('Hello')"&gt;Cliquez&lt;/button&gt;
+
+&lt;!-- 2. Interne --&gt;
+&lt;script&gt;
+  console.log('Hello World');
+&lt;/script&gt;
+
+&lt;!-- 3. Externe (recommandé) --&gt;
+&lt;script src="app.js" defer&gt;&lt;/script&gt;
+&lt;!-- defer : exécute après le parsing HTML --&gt;</pre>
+                    </div>
+
+                    <div class="info-box warning">
+                        <strong><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Bonne pratique</strong>
+                        <p>Toujours placer les balises <code>&lt;script&gt;</code> en bas du body ou utiliser l'attribut <code>defer</code> dans le head. Cela évite de bloquer le rendu de la page.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="variables-types" aria-labelledby="variables-title">
+                    <h2 id="variables-title"><span class="lesson-number">2</span> Variables et Types de Données</h2>
+
+                    <h3>2.1 Déclaration de variables</h3>
+                    <p>JavaScript propose trois mots-clés pour déclarer des variables :</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// var - fonction-scopé, peut être redéclaré (éviter)
+var nom = 'Alice';
+
+// let - bloc-scopé, peut être réassigné
+let age = 25;
+age = 26; // OK
+
+// const - bloc-scopé, ne peut pas être réassigné
+const PI = 3.14159;
+// PI = 3.14; // ERREUR !
+
+// const avec objets : la référence est constante
+const user = { name: 'Bob' };
+user.name = 'Charlie'; // OK !
+// user = {}; // ERREUR</pre>
+                    </div>
+
+                    <h3>2.2 Types de données primitifs</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr><th>Type</th><th>Description</th><th>Exemple</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><code>string</code></td><td>Chaîne de caractères</td><td><code>"Hello"</code> ou <code>'Hello'</code></td></tr>
+                                <tr><td><code>number</code></td><td>Nombre (entier ou décimal)</td><td><code>42</code>, <code>3.14</code></td></tr>
+                                <tr><td><code>boolean</code></td><td>Vrai ou Faux</td><td><code>true</code>, <code>false</code></td></tr>
+                                <tr><td><code>undefined</code></td><td>Valeur non définie</td><td><code>let x;</code></td></tr>
+                                <tr><td><code>null</code></td><td>Valeur nulle intentionnelle</td><td><code>let y = null;</code></td></tr>
+                                <tr><td><code>symbol</code></td><td>Identifiant unique</td><td><code>Symbol('id')</code></td></tr>
+                                <tr><td><code>bigint</code></td><td>Entiers très grands</td><td><code>9007199254740991n</code></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>2.3 Template literals (ES6)</h3>
+                    <p>Les template literals permettent d'interpoler des variables et de créer des chaînes multi-lignes :</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - Template Literals</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>const nom = 'Marie';
+const age = 28;
+
+// Interpolation
+const message = `Bonjour ${nom}, vous avez ${age} ans.`;
+
+// Multi-lignes
+const html = `
+  &lt;div class="card"&gt;
+    &lt;h2&gt;${nom}&lt;/h2&gt;
+    &lt;p&gt;${age} ans&lt;/p&gt;
+  &lt;/div&gt;
+`;
+
+// Expressions complexes
+const prix = 100;
+const tva = 0.2;
+console.log(`Total TTC : ${prix * (1 + tva)}€`);</pre>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="fonctions" aria-labelledby="fonctions-title">
+                    <h2 id="fonctions-title"><span class="lesson-number">3</span> Fonctions en JavaScript</h2>
+
+                    <h3>3.1 Déclaration de fonctions</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - Fonctions</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Déclaration de fonction (hoisted)
+function saluer(nom) {
+  return `Bonjour ${nom} !`;
+}
+
+// Expression de fonction
+const addition = function(a, b) {
+  return a + b;
+};
+
+// Arrow function (ES6) - syntaxe concise
+const multiplication = (a, b) => a * b;
+
+// Arrow function avec bloc
+const division = (a, b) => {
+  if (b === 0) throw new Error('Division par zéro');
+  return a / b;
+};
+
+// Paramètres par défaut (ES6)
+function creerUser(nom, role = 'user') {
+  return { nom, role };
+}
+
+// Rest parameters (ES6)
+function somme(...nombres) {
+  return nombres.reduce((acc, n) => acc + n, 0);
+}
+somme(1, 2, 3, 4); // 10</pre>
+                    </div>
+
+                    <h3>3.2 Fonctions de callback et Higher-Order Functions</h3>
+                    <p>Les fonctions sont des citoyens de première classe en JavaScript :</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - HOF</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>const nombres = [1, 2, 3, 4, 5];
+
+// map : transformer chaque élément
+const doubles = nombres.map(n => n * 2);
+// [2, 4, 6, 8, 10]
+
+// filter : garder certains éléments
+const pairs = nombres.filter(n => n % 2 === 0);
+// [2, 4]
+
+// reduce : réduire à une seule valeur
+const total = nombres.reduce((acc, n) => acc + n, 0);
+// 15
+
+// find : trouver le premier élément
+const premierPair = nombres.find(n => n % 2 === 0);
+// 2
+
+// some / every : tests booléens
+const aUnPair = nombres.some(n => n % 2 === 0); // true
+const tousPairs = nombres.every(n => n % 2 === 0); // false</pre>
+                    </div>
+
+                    <div class="info-box success">
+                        <strong><i class="fas fa-lightbulb" aria-hidden="true"></i> Astuce</strong>
+                        <p>Préférez les méthodes fonctionnelles (map, filter, reduce) aux boucles impératives (for, while). Le code est plus lisible, déclaratif et moins sujet aux erreurs.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="objets-tableaux" aria-labelledby="objets-title">
+                    <h2 id="objets-title"><span class="lesson-number">4</span> Objets et Tableaux Avancés</h2>
+
+                    <h3>4.1 Destructuring (ES6)</h3>
+                    <p>Le destructuring permet d'extraire des valeurs d'objets et de tableaux de manière concise :</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - Destructuring</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Destructuring d'objet
+const user = { nom: 'Alice', age: 30, ville: 'Paris' };
+const { nom, age } = user;
+
+// Avec renommage
+const { nom: prenom, ville = 'Inconnue' } = user;
+
+// Destructuring de tableau
+const [premier, deuxieme, ...reste] = [10, 20, 30, 40, 50];
+// premier = 10, deuxieme = 20, reste = [30, 40, 50]
+
+// Destructuring dans les paramètres
+function afficherUser({ nom, age }) {
+  console.log(`${nom} a ${age} ans`);
+}
+
+// Nested destructuring
+const data = { user: { profile: { email: 'test@test.com' } } };
+const { user: { profile: { email } } } = data;</pre>
+                    </div>
+
+                    <h3>4.2 Spread et Rest operators</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - Spread/Rest</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Spread sur tableaux
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5, 6]; // [1, 2, 3, 4, 5, 6]
+
+// Spread sur objets (shallow copy)
+const user1 = { nom: 'Bob', age: 25 };
+const user2 = { ...user1, ville: 'Lyon', age: 26 };
+// { nom: 'Bob', age: 26, ville: 'Lyon' }
+
+// Fusion de tableaux/objets
+const merged = { ...defaults, ...options };
+
+// Clonage d'objet
+const clone = { ...original };
+const deepClone = JSON.parse(JSON.stringify(original)); // Deep copy simple</pre>
+                    </div>
+
+                    <h3>4.3 Méthodes modernes des tableaux</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - Tableaux</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>const fruits = ['pomme', 'banane', 'orange'];
+
+// includes (ES2016)
+fruits.includes('banane'); // true
+
+// flat / flatMap (ES2019)
+const nested = [1, [2, 3], [4, [5, 6]]];
+nested.flat(2); // [1, 2, 3, 4, 5, 6]
+
+// at (ES2022) - index négatif supporté
+fruits.at(-1); // 'orange' (dernier élément)
+
+// toSorted, toReversed, toSpliced (ES2023) - immutables
+const sorted = fruits.toSorted(); // Nouveau tableau trié
+// fruits reste inchangé !</pre>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="dom" aria-labelledby="dom-title">
+                    <h2 id="dom-title"><span class="lesson-number">5</span> Manipulation du DOM</h2>
+                    <p>Le DOM (Document Object Model) est une représentation en mémoire de la structure HTML d'une page. JavaScript permet de le manipuler dynamiquement.</p>
+
+                    <h3>5.1 Sélection d'éléments</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - DOM Selection</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Sélection unique
+const titre = document.getElementById('titre');
+const premier = document.querySelector('.item'); // Premier match
+
+// Sélection multiple (NodeList)
+const items = document.querySelectorAll('.item'); // Tous les matchs
+const paragraphes = document.getElementsByTagName('p'); // HTMLCollection
+
+// Conversion en tableau pour utiliser les méthodes modernes
+const itemsArray = [...document.querySelectorAll('.item')];
+// ou
+const itemsArray2 = Array.from(document.querySelectorAll('.item'));</pre>
+                    </div>
+
+                    <h3>5.2 Modification du DOM</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - DOM Manipulation</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>const element = document.querySelector('#monElement');
+
+// Modification du contenu
+element.textContent = 'Nouveau texte'; // Texte brut (sécurisé)
+element.innerHTML = '&lt;strong&gt;HTML&lt;/strong&gt;'; // HTML interprété (attention XSS)
+
+// Attributs
+element.setAttribute('data-id', '123');
+element.getAttribute('data-id'); // '123'
+element.removeAttribute('disabled');
+
+// Classes CSS
+element.classList.add('active');
+element.classList.remove('hidden');
+element.classList.toggle('visible');
+element.classList.contains('active'); // true/false
+
+// Styles inline
+element.style.backgroundColor = '#f26522';
+element.style.cssText = 'color: white; padding: 10px;';
+
+// Création d'éléments
+const nouveauDiv = document.createElement('div');
+nouveauDiv.className = 'card';
+nouveauDiv.textContent = 'Nouveau contenu';
+document.body.appendChild(nouveauDiv);
+
+// Insertion avant/après
+element.before(nouveauDiv);
+element.after(nouveauDiv);
+element.replaceWith(nouveauDiv);</pre>
+                    </div>
+
+                    <h3>5.3 Gestion des événements</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - Events</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>const btn = document.querySelector('#monBouton');
+
+// addEventListener (recommandé)
+btn.addEventListener('click', function(event) {
+  console.log('Cliqué !');
+  console.log(event.target); // Élément cliqué
+  event.preventDefault(); // Empêche le comportement par défaut
+});
+
+// Avec fonction fléchée
+btn.addEventListener('click', (e) => {
+  console.log('Cliqué !');
+});
+
+// Délégation d'événements (performance)
+document.querySelector('#liste').addEventListener('click', (e) => {
+  if (e.target.matches('.item')) {
+    console.log('Item cliqué :', e.target.textContent);
+  }
+});
+
+// Événements courants
+// 'submit' - Formulaire soumis
+// 'input' - Valeur d'input modifiée
+// 'change' - Valeur confirmée (blur)
+// 'keydown/keyup' - Touches clavier
+// 'scroll' - Défilement
+// 'DOMContentLoaded' - DOM prêt</pre>
+                    </div>
+
+                    <div class="exercise-box">
+                        <h4><i class="fas fa-keyboard" aria-hidden="true"></i> Projet : Todo List interactive</h4>
+                        <p>Créez une application Todo List avec : ajout de tâches via un formulaire, suppression individuelle, marquage comme terminé (barré), filtre (tous/actifs/terminés), compteur de tâches restantes, et persistance dans le localStorage.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="async" aria-labelledby="async-title">
+                    <h2 id="async-title"><span class="lesson-number">6</span> Programmation Asynchrone</h2>
+                    <p>JavaScript est single-threaded mais gère l'asynchronicité via le Event Loop. Comprendre les callbacks, promesses et async/await est essentiel pour les applications modernes.</p>
+
+                    <h3>6.1 Promises</h3>
+                    <p>Une Promise représente une valeur qui peut être disponible maintenant, dans le futur, ou jamais :</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - Promises</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Création d'une Promise
+const fetchData = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    const success = true;
+    if (success) {
+      resolve({ data: 'Données reçues' });
+    } else {
+      reject(new Error('Échec de la requête'));
+    }
+  }, 1000);
+});
+
+// Consommation
+fetchData
+  .then(result => console.log(result))
+  .catch(error => console.error(error))
+  .finally(() => console.log('Terminé'));
+
+// Chaînage
+fetchUser(1)
+  .then(user => fetchOrders(user.id))
+  .then(orders => console.log(orders))
+  .catch(err => console.error(err));
+
+// Promise.all - attendre plusieurs promesses
+Promise.all([fetchUser(), fetchPosts(), fetchComments()])
+  .then(([user, posts, comments]) => {
+    console.log('Tout est chargé !');
+  })
+  .catch(err => console.error('Une erreur est survenue'));
+
+// Promise.race - première promesse résolue
+Promise.race([fetchFast(), fetchSlow()])
+  .then(result => console.log('Le plus rapide :', result));</pre>
+                    </div>
+
+                    <h3>6.2 Async/Await (ES2017)</h3>
+                    <p>La syntaxe async/await rend le code asynchrone aussi lisible que le code synchrone :</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - Async/Await</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Fonction async
+async function getUserData(userId) {
+  try {
+    const response = await fetch(`/api/users/${userId}`);
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const user = await response.json();
+    const orders = await fetch(`/api/orders/${user.id}`).then(r => r.json());
+
+    return { user, orders };
+  } catch (error) {
+    console.error('Erreur :', error.message);
+    throw error; // Re-lancer pour le caller
+  }
+}
+
+// Appel
+getUserData(1)
+  .then(data => console.log(data))
+  .catch(err => console.error(err));
+
+// Avec Promise.all
+async function loadDashboard() {
+  const [user, posts, stats] = await Promise.all([
+    fetchUser(),
+    fetchPosts(),
+    fetchStats()
+  ]);
+  return { user, posts, stats };
+}</pre>
+                    </div>
+
+                    <h3>6.3 Fetch API</h3>
+                    <p>L'API Fetch moderne remplace XMLHttpRequest pour les requêtes HTTP :</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - Fetch API</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// GET request
+async function getPosts() {
+  const response = await fetch('https://api.example.com/posts');
+  if (!response.ok) throw new Error('Erreur réseau');
+  return response.json();
+}
+
+// POST request
+async function createPost(data) {
+  const response = await fetch('https://api.example.com/posts', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer token123'
+    },
+    body: JSON.stringify(data)
+  });
+  return response.json();
+}
+
+// AbortController - annuler une requête
+const controller = new AbortController();
+fetch('/api/data', { signal: controller.signal });
+// Pour annuler : controller.abort();</pre>
+                    </div>
+
+                    <div class="info-box info">
+                        <strong><i class="fas fa-info-circle" aria-hidden="true"></i> Gestion d'erreurs</strong>
+                        <p>Toujours entourer les appels <code>await</code> dans un bloc <code>try/catch</code>. Les erreurs réseau et les réponses HTTP avec status d'erreur (4xx, 5xx) doivent être gérées explicitement.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="modules" aria-labelledby="modules-title">
+                    <h2 id="modules-title"><span class="lesson-number">7</span> Modules ES6</h2>
+                    <p>Les modules ES6 permettent de diviser le code en fichiers réutilisables avec une portée isolée.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - math.js (export)</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Export nommé
+export const PI = 3.14159;
+export function addition(a, b) {
+  return a + b;
+}
+
+// Export par défaut (un seul par fichier)
+export default class Calculator {
+  constructor() {
+    this.result = 0;
+  }
+  add(n) { this.result += n; return this; }
+  getResult() { return this.result; }
+}
+
+// Ré-export
+export { foo, bar } from './helpers.js';</pre>
+                    </div>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - app.js (import)</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Import nommé
+import { PI, addition } from './math.js';
+
+// Import avec alias
+import { addition as add } from './math.js';
+
+// Import tout
+import * as Math from './math.js';
+Math.addition(2, 3);
+
+// Import par défaut
+import Calculator from './math.js';
+const calc = new Calculator();
+
+// Import mixte
+import Calculator, { PI } from './math.js';
+
+// Import dynamique (lazy loading)
+const module = await import('./heavy-module.js');</pre>
+                    </div>
+
+                    <div class="info-box success">
+                        <strong><i class="fas fa-lightbulb" aria-hidden="true"></i> Architecture modulaire</strong>
+                        <p>Organisez votre code en modules par fonctionnalité : <code>api.js</code> pour les requêtes, <code>utils.js</code> pour les fonctions utilitaires, <code>components/</code> pour les composants UI réutilisables.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="stockage" aria-labelledby="stockage-title">
+                    <h2 id="stockage-title"><span class="lesson-number">8</span> Stockage Local</h2>
+
+                    <h3>8.1 localStorage et sessionStorage</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - Web Storage</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// localStorage - persiste après fermeture du navigateur
+localStorage.setItem('username', 'Alice');
+const username = localStorage.getItem('username');
+localStorage.removeItem('username');
+localStorage.clear(); // Tout supprimer
+
+// Stocker des objets (JSON)
+const user = { nom: 'Bob', age: 30 };
+localStorage.setItem('user', JSON.stringify(user));
+const savedUser = JSON.parse(localStorage.getItem('user'));
+
+// sessionStorage - persiste pendant la session
+sessionStorage.setItem('token', 'abc123');
+
+// Vérifier la disponibilité
+try {
+  localStorage.setItem('test', 'test');
+  localStorage.removeItem('test');
+} catch (e) {
+  console.warn('localStorage non disponible');
+}</pre>
+                    </div>
+
+                    <div class="exercise-box">
+                        <h4><i class="fas fa-keyboard" aria-hidden="true"></i> Projet final : Application météo</h4>
+                        <p>Créez une application météo complète qui : utilise l'API OpenWeatherMap, affiche la météo actuelle et les prévisions, permet de sauvegarder des villes favorites dans le localStorage, gère les erreurs réseau avec des messages utilisateur, et utilise async/await pour toutes les requêtes API.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="conclusion-js" aria-labelledby="conclusion-js-title">
+                    <h2 id="conclusion-js-title"><span class="lesson-number">9</span> Conclusion et Prochaines Étapes</h2>
+                    <p>Vous maîtrisez maintenant les fondamentaux de JavaScript moderne. Voici les prochaines étapes pour devenir un développeur JavaScript expert :</p>
+
+                    <ol>
+                        <li><strong>Frameworks Frontend</strong> : Passez au cours <a href="cours-react.html">React.js Mastery</a> ou <a href="cours-angular.html">Angular Complet</a></li>
+                        <li><strong>Backend JavaScript</strong> : Découvrez <a href="cours-nodejs.html">Node.js & Express</a> pour le développement serveur</li>
+                        <li><strong>TypeScript</strong> : Ajoutez le typage statique à JavaScript pour des projets plus robustes</li>
+                        <li><strong>Testing</strong> : Apprenez Jest et les tests unitaires/e2e</li>
+                    </ol>
+
+                    <h3>Ressources complémentaires</h3>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank" rel="noopener">MDN JavaScript</a> - Documentation de référence</li>
+                        <li><a href="https://javascript.info" target="_blank" rel="noopener">JavaScript.info</a> - Tutoriels approfondis</li>
+                        <li><a href="https://eloquentjavascript.net" target="_blank" rel="noopener">Eloquent JavaScript</a> - Livre gratuit</li>
+                        <li><a href="https://github.com/getify/You-Dont-Know-JS" target="_blank" rel="noopener">You Don't Know JS</a> - Série de livres avancés</li>
+                    </ul>
+                </section>
+            </div>
+
+            <aside class="course-sidebar-sticky" aria-label="Navigation du cours">
+                <div class="course-nav">
+                    <h4>Contenu du cours</h4>
+                    <ul>
+                        <li><a href="#intro-js" class="active">1. Introduction à JS</a></li>
+                        <li><a href="#variables-types">2. Variables et Types</a></li>
+                        <li><a href="#fonctions">3. Fonctions</a></li>
+                        <li><a href="#objets-tableaux">4. Objets et Tableaux</a></li>
+                        <li><a href="#dom">5. Manipulation du DOM</a></li>
+                        <li><a href="#async">6. Programmation Asynchrone</a></li>
+                        <li><a href="#modules">7. Modules ES6</a></li>
+                        <li><a href="#stockage">8. Stockage Local</a></li>
+                        <li><a href="#conclusion-js">9. Conclusion</a></li>
+                    </ul>
+                </div>
+                <div class="course-nav">
+                    <h4>Progression</h4>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 0%;"></div>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">9 leçons • 35 heures</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>WebLearn</h4>
+                <p>Votre plateforme d'apprentissage en ligne pour maîtriser le développement web et les technologies numériques.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liens rapides</h4>
+                <a href="index.html">Accueil</a>
+                <a href="cours.html">Cours</a>
+                <a href="apropos.html">A Propos</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Catégories</h4>
+                <a href="cours.html">Développement Web</a>
+                <a href="cours.html">Design UI/UX</a>
+                <a href="cours.html">Marketing Digital</a>
+                <a href="cours.html">Data Science</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> contact@</p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> +261 38 22 819 76</p>
+                <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Fianarantsoa, Madagascar</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© WebLearn - Online Academy & Knowledge Hub. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="weblearn.js"></script>
+</body>
+</html>

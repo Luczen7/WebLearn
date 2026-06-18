@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours HTML5 & CSS3 Fondamentaux - WebLearn | Formation Gratuite Débutant</title>
+    <meta name="description" content="Apprenez HTML5 et CSS3 de zéro. Cours complet gratuit : structure HTML, sémantique, CSS Grid, Flexbox, responsive design. 20 heures de formation pratique.">
+    <meta name="keywords" content="HTML5 cours, CSS3 formation, apprendre HTML, tutoriel CSS, Flexbox, CSS Grid, responsive design, cours gratuit">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="cours-html-css.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="cours-html-css.html">
+    <meta property="og:title" content="HTML5 & CSS3 Fondamentaux - WebLearn">
+    <meta property="og:description" content="Cours complet gratuit pour maîtriser HTML5 et CSS3. De zéro à héros du développement web.">
+    <meta property="og:image" content="logoWebLearn.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "HTML5 & CSS3 Fondamentaux",
+        "description": "Maîtrisez les bases du développement web et créez vos premières pages interactives avec HTML5 et CSS3.",
+        "provider": {
+            "@type": "Organization",
+            "name": "WebLearn",
+            "sameAs": "https://"
+        },
+        "educationalLevel": "Débutant",
+        "timeRequired": "PT20H",
+        "isAccessibleForFree": true,
+        "coursePrerequisites": "Aucun prérequis",
+        "teaches": ["HTML5", "CSS3", "Flexbox", "CSS Grid", "Responsive Design", "Sémantique web"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="weblearn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="logoWebLearn.png">
+
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="WebLearn - Accueil">
+                <img src="logoWebLearn.png" alt="WebLearn Logo">
+                <div class="logo-text">Web<span>Learn</span></div>
+            </a>
+            <nav role="navigation" aria-label="Navigation principale">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="cours.html" class="dropdown-toggle active">Cours</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Développement Web</div>
+                            <a href="cours-html-css.html" class="active"><i class="fab fa-html5"></i> HTML5 & CSS3</a>
+                            <a href="cours-javascript.html"><i class="fab fa-js"></i> JavaScript Moderne</a>
+                            <a href="cours-react.html"><i class="fab fa-react"></i> React.js Mastery</a>
+                            <a href="cours-nodejs.html"><i class="fab fa-node-js"></i> Node.js & Express</a>
+                            <a href="cours-tailwind.html"><i class="fab fa-css3-alt"></i> Tailwind CSS</a>
+                            <a href="cours-angular.html"><i class="fab fa-angular"></i> Angular Complet</a>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-header">Design & Créativité</div>
+                            <a href="cours-figma.html"><i class="fab fa-figma"></i> Figma pour UI/UX</a>
+                            <a href="cours-design-graphique.html"><i class="fas fa-paint-brush"></i> Design Graphique</a>
+                            <a href="cours-mobile-first.html"><i class="fas fa-mobile-alt"></i> Design Mobile First</a>
+                        </div>
+                    </li>
+                    <li><a href="apropos.html">A Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Activer/Désactiver le mode nuit"><i class="fas fa-moon" id="darkModeIcon"></i></button></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Menu mobile"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+            <a href="index.html">Accueil</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <a href="cours.html">Cours</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <span>HTML5 & CSS3</span>
+        </nav>
+
+        <div class="course-detail-header">
+            <div class="container">
+                <div>
+                    <span class="course-tag" style="margin-bottom: 15px; display: inline-block;">Débutant</span>
+                    <h1>HTML5 & CSS3 Fondamentaux</h1>
+                    <div class="course-meta-header">
+                        <span><i class="far fa-clock" aria-hidden="true"></i> 20 heures</span>
+                        <span><i class="fas fa-signal" aria-hidden="true"></i> Niveau débutant</span>
+                        <span><i class="fas fa-certificate" aria-hidden="true"></i> Certificat inclus</span>
+                        <span><i class="fas fa-infinity" aria-hidden="true"></i> Accès illimité</span>
+                    </div>
+                    <p class="course-description">
+                        Maîtrisez les fondamentaux du développement web avec HTML5 et CSS3. Ce cours complet vous guide de la structure de base d'une page web jusqu'aux techniques avancées de mise en page avec Flexbox et CSS Grid. À la fin de cette formation, vous serez capable de créer des sites web responsives et modernes.
+                    </p>
+                    <div class="course-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>Flexbox</span>
+                        <span>CSS Grid</span>
+                        <span>Responsive</span>
+                        <span>Sémantique</span>
+                    </div>
+                </div>
+                <div class="course-card-sidebar">
+                    <div class="price">Gratuit</div>
+                    <ul class="features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 20 heures de contenu</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 45 leçons vidéo</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 12 projets pratiques</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Certificat de réussite</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Support communautaire</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Ressources téléchargeables</li>
+                    </ul>
+                    <a href="#contenu" class="btn btn-primary" style="width: 100%; text-align: center; margin-bottom: 10px;">Commencer le cours</a>
+                    <a href="cours.html" class="btn btn-secondary" style="width: 100%; text-align: center;">Voir tous les cours</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content" id="contenu">
+            <div class="course-main">
+                <section class="lesson-section" id="introduction" aria-labelledby="intro-title">
+                    <h2 id="intro-title"><span class="lesson-number">1</span> Introduction au Web</h2>
+                    <p>Avant de plonger dans le code, comprenons comment fonctionne le web. Le World Wide Web est un système d'information distribué où les documents sont reliés par des hyperliens et accessibles via Internet.</p>
+
+                    <h3>1.1 Comment fonctionne le web ?</h3>
+                    <p>Le web repose sur un modèle client-serveur. Votre navigateur (client) envoie une requête HTTP à un serveur web qui renvoie les fichiers HTML, CSS et JavaScript nécessaires à l'affichage de la page.</p>
+
+                    <div class="info-box info">
+                        <strong><i class="fas fa-info-circle" aria-hidden="true"></i> À retenir</strong>
+                        <p>HTTP (HyperText Transfer Protocol) est le protocole de communication entre le client et le serveur. HTTPS est la version sécurisée qui chiffre les données échangées.</p>
+                    </div>
+
+                    <h3>1.2 Les outils du développeur web</h3>
+                    <p>Pour commencer, vous avez besoin de :</p>
+                    <ul>
+                        <li><strong>Un éditeur de code</strong> : VS Code (recommandé), Sublime Text, ou Atom</li>
+                        <li><strong>Un navigateur moderne</strong> : Chrome, Firefox, Safari ou Edge</li>
+                        <li><strong>Les outils de développement</strong> (DevTools) intégrés à votre navigateur</li>
+                    </ul>
+
+                    <div class="exercise-box">
+                        <h4><i class="fas fa-keyboard" aria-hidden="true"></i> Exercice pratique</h4>
+                        <p>Installez VS Code et les extensions suivantes : Live Server, Prettier, et Auto Rename Tag. Ouvrez les DevTools de votre navigateur avec F12 et explorez les onglets Elements, Console et Network.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="html-bases" aria-labelledby="html-bases-title">
+                    <h2 id="html-bases-title"><span class="lesson-number">2</span> Les bases du HTML</h2>
+                    <p>HTML (HyperText Markup Language) est le langage de balisage utilisé pour structurer le contenu des pages web. Il utilise des balises pour définir la signification et la structure du contenu.</p>
+
+                    <h3>2.1 Structure d'un document HTML</h3>
+                    <p>Tout document HTML5 suit une structure de base obligatoire :</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>HTML</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Ma première page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Bonjour le monde !&lt;/h1&gt;
+    &lt;p&gt;Ceci est mon premier paragraphe.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                    </div>
+
+                    <h3>2.2 Les balises essentielles</h3>
+                    <p>Voici les balises HTML les plus courantes :</p>
+
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr><th>Balise</th><th>Description</th><th>Usage</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><code>&lt;h1&gt; à &lt;h6&gt;</code></td><td>Titres de niveau 1 à 6</td><td>Hiérarchie du contenu</td></tr>
+                                <tr><td><code>&lt;p&gt;</code></td><td>Paragraphe</td><td>Texte courant</td></tr>
+                                <tr><td><code>&lt;a&gt;</code></td><td>Lien hypertexte</td><td>Navigation</td></tr>
+                                <tr><td><code>&lt;img&gt;</code></td><td>Image</td><td>Média</td></tr>
+                                <tr><td><code>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</code></td><td>Listes</td><td>Énumération</td></tr>
+                                <tr><td><code>&lt;div&gt;</code></td><td>Conteneur générique</td><td>Division</td></tr>
+                                <tr><td><code>&lt;span&gt;</code></td><td>Conteneur en ligne</td><td>Style inline</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>2.3 Les balises sémantiques HTML5</h3>
+                    <p>HTML5 introduit des balises sémantiques qui donnent du sens à la structure :</p>
+                    <ul>
+                        <li><code>&lt;header&gt;</code> : En-tête de page ou de section</li>
+                        <li><code>&lt;nav&gt;</code> : Navigation principale</li>
+                        <li><code>&lt;main&gt;</code> : Contenu principal (unique par page)</li>
+                        <li><code>&lt;article&gt;</code> : Contenu autonome (article, post)</li>
+                        <li><code>&lt;section&gt;</code> : Section thématique</li>
+                        <li><code>&lt;aside&gt;</code> : Contenu connexe (sidebar)</li>
+                        <li><code>&lt;footer&gt;</code> : Pied de page</li>
+                    </ul>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>HTML - Structure sémantique</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>&lt;body&gt;
+  &lt;header&gt;
+    &lt;nav&gt;...&lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;header&gt;&lt;h1&gt;Titre&lt;/h1&gt;&lt;/header&gt;
+      &lt;section&gt;...&lt;/section&gt;
+      &lt;section&gt;...&lt;/section&gt;
+    &lt;/article&gt;
+
+    &lt;aside&gt;...&lt;/aside&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;...&lt;/footer&gt;
+&lt;/body&gt;</pre>
+                    </div>
+
+                    <div class="info-box warning">
+                        <strong><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Attention</strong>
+                        <p>N'utilisez pas les balises sémantiques uniquement pour leur style par défaut. Utilisez CSS pour le style et HTML pour la structure. Une bonne sémantique améliore l'accessibilité et le SEO.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="css-bases" aria-labelledby="css-bases-title">
+                    <h2 id="css-bases-title"><span class="lesson-number">3</span> Introduction à CSS</h2>
+                    <p>CSS (Cascading Style Sheets) est le langage qui décrit la présentation d'un document HTML. Il contrôle les couleurs, les polices, la mise en page et les animations.</p>
+
+                    <h3>3.1 Syntaxe CSS de base</h3>
+                    <p>La syntaxe CSS suit le modèle : sélecteur { propriété: valeur; }</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>CSS</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>/* Sélecteur d'élément */
+h1 {
+  color: #1a3a6e;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+/* Sélecteur de classe */
+.btn {
+  background: #f26522;
+  padding: 12px 24px;
+  border-radius: 8px;
+}
+
+/* Sélecteur d'ID */
+#header {
+  position: sticky;
+  top: 0;
+}</pre>
+                    </div>
+
+                    <h3>3.2 Les sélecteurs CSS</h3>
+                    <p>Les sélecteurs permettent de cibler les éléments à styliser :</p>
+                    <ul>
+                        <li><strong>Sélecteur universel</strong> <code>*</code> : cible tous les éléments</li>
+                        <li><strong>Sélecteur d'élément</strong> <code>p</code> : cible tous les paragraphes</li>
+                        <li><strong>Sélecteur de classe</strong> <code>.class</code> : cible les éléments avec cette classe</li>
+                        <li><strong>Sélecteur d'ID</strong> <code>#id</code> : cible un élément unique</li>
+                        <li><strong>Sélecteur descendant</strong> <code>div p</code> : cible les p dans les div</li>
+                        <li><strong>Sélecteur enfant direct</strong> <code>ul > li</code> : cible les li enfants directs</li>
+                        <li><strong>Pseudo-classes</strong> <code>:hover</code>, <code>:focus</code>, <code>:nth-child()</code></li>
+                    </ul>
+
+                    <h3>3.3 Le modèle de boîte (Box Model)</h3>
+                    <p>Chaque élément HTML est une boîte rectangulaire composée de :</p>
+                    <ol>
+                        <li><strong>Content</strong> : le contenu (texte, image)</li>
+                        <li><strong>Padding</strong> : marge interne (transparente)</li>
+                        <li><strong>Border</strong> : bordure</li>
+                        <li><strong>Margin</strong> : marge externe (transparente)</li>
+                    </ol>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>CSS - Box Model</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>.box {
+  /* Box-sizing pour un calcul plus intuitif */
+  box-sizing: border-box;
+
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+  border: 2px solid #1a3a6e;
+  margin: 15px auto;
+
+  /* Le total sera bien 300px de large */
+}</pre>
+                    </div>
+
+                    <div class="info-box success">
+                        <strong><i class="fas fa-lightbulb" aria-hidden="true"></i> Bonne pratique</strong>
+                        <p>Utilisez toujours <code>box-sizing: border-box;</code> pour tous les éléments. Cela inclut le padding et la border dans le calcul de la largeur/hauteur, ce qui est beaucoup plus intuitif.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="flexbox" aria-labelledby="flexbox-title">
+                    <h2 id="flexbox-title"><span class="lesson-number">4</span> Flexbox - Mise en page flexible</h2>
+                    <p>Flexbox (Flexible Box Layout) est un module CSS conçu pour distribuer l'espace entre les éléments d'un conteneur et contrôler leur alignement, même lorsque leur taille est inconnue ou dynamique.</p>
+
+                    <h3>4.1 Concepts fondamentaux</h3>
+                    <p>Flexbox repose sur deux axes :</p>
+                    <ul>
+                        <li><strong>Axe principal (main axis)</strong> : défini par <code>flex-direction</code> (row ou column)</li>
+                        <li><strong>Axe transversal (cross axis)</strong> : perpendiculaire à l'axe principal</li>
+                    </ul>
+
+                    <h3>4.2 Propriétés du conteneur flex</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>CSS - Flexbox Container</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>.container {
+  display: flex;
+
+  /* Direction des éléments */
+  flex-direction: row; /* row | row-reverse | column | column-reverse */
+
+  /* Retour à la ligne */
+  flex-wrap: wrap; /* nowrap | wrap | wrap-reverse */
+
+  /* Raccourci : direction + wrap */
+  flex-flow: row wrap;
+
+  /* Alignement sur l'axe principal */
+  justify-content: center; /* flex-start | flex-end | center | space-between | space-around | space-evenly */
+
+  /* Alignement sur l'axe transversal (une ligne) */
+  align-items: center; /* stretch | flex-start | flex-end | center | baseline */
+
+  /* Alignement sur l'axe transversal (plusieurs lignes) */
+  align-content: space-between; /* stretch | flex-start | flex-end | center | space-between | space-around */
+}</pre>
+                    </div>
+
+                    <h3>4.3 Propriétés des éléments flex</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>CSS - Flex Items</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>.item {
+  /* Ordre d'affichage (défaut: 0) */
+  order: 1;
+
+  /* Facteur de grossissement */
+  flex-grow: 1; /* 0 = ne pas grandir */
+
+  /* Facteur de rétrécissement */
+  flex-shrink: 1; /* 0 = ne pas rétrécir */
+
+  /* Taille de base avant distribution */
+  flex-basis: 200px;
+
+  /* Raccourci : grow shrink basis */
+  flex: 1 1 200px;
+
+  /* Alignement individuel */
+  align-self: flex-end; /* auto | flex-start | flex-end | center | baseline | stretch */
+}</pre>
+                    </div>
+
+                    <div class="exercise-box">
+                        <h4><i class="fas fa-keyboard" aria-hidden="true"></i> Projet pratique : Navbar responsive</h4>
+                        <p>Créez une barre de navigation avec logo à gauche et liens à droite. En mobile (max-width: 768px), les liens doivent s'empiler verticalement. Utilisez Flexbox pour l'alignement et les media queries pour le responsive.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="css-grid" aria-labelledby="grid-title">
+                    <h2 id="grid-title"><span class="lesson-number">5</span> CSS Grid - Grilles avancées</h2>
+                    <p>CSS Grid Layout est un système de mise en page bidimensionnel qui permet de créer des grilles complexes avec des lignes et des colonnes. C'est l'outil idéal pour les layouts de page complets.</p>
+
+                    <h3>5.1 Définir une grille</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>CSS - Grid Basics</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>.grid-container {
+  display: grid;
+
+  /* Définir 3 colonnes de tailles différentes */
+  grid-template-columns: 200px 1fr 200px;
+
+  /* Définir 2 lignes */
+  grid-template-rows: 100px auto;
+
+  /* Espacement entre les cellules */
+  gap: 20px;
+
+  /* Raccourci pour row-gap + column-gap */
+  /* gap: 20px 30px; */
+}</pre>
+                    </div>
+
+                    <h3>5.2 Unités fractionnaires et fonctions</h3>
+                    <ul>
+                        <li><code>fr</code> : unité fractionnaire qui occupe l'espace restant</li>
+                        <li><code>repeat(3, 1fr)</code> : répète 3 colonnes de 1fr</li>
+                        <li><code>minmax(200px, 1fr)</code> : minimum 200px, maximum 1fr</li>
+                        <li><code>auto-fit</code> et <code>auto-fill</code> : ajustement automatique</li>
+                    </ul>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>CSS - Grid Responsive</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>/* Grille responsive sans media queries */
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Placement des éléments */
+.header { grid-column: 1 / -1; } /* De la 1ère à la dernière colonne */
+.sidebar { grid-row: 2 / 4; }
+.footer { grid-column: 1 / -1; }</pre>
+                    </div>
+
+                    <h3>5.3 Grid vs Flexbox</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr><th>Critère</th><th>Flexbox</th><th>Grid</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Dimension</td><td>Unidimensionnel (ligne OU colonne)</td><td>Bidimensionnel (ligne ET colonne)</td></tr>
+                                <tr><td>Cas d'usage</td><td>Composants, alignement, navbar</td><td>Layout global de page, galeries</td></tr>
+                                <tr><td>Contenu</td><td>Basé sur le contenu</td><td>Basé sur le conteneur</td></tr>
+                                <tr><td>Complexité</td><td>Plus simple</td><td>Plus puissant</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="info-box info">
+                        <strong><i class="fas fa-info-circle" aria-hidden="true"></i> Conseil d'expert</strong>
+                        <p>Flexbox et Grid ne sont pas concurrents mais complémentaires. Utilisez Grid pour la structure globale de la page et Flexbox pour l'alignement des éléments internes.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="responsive" aria-labelledby="responsive-title">
+                    <h2 id="responsive-title"><span class="lesson-number">6</span> Responsive Design</h2>
+                    <p>Le responsive design permet d'adapter l'affichage d'un site web à la taille de l'écran de l'utilisateur. C'est aujourd'hui indispensable avec la multiplicité des devices.</p>
+
+                    <h3>6.1 Viewport et media queries</h3>
+                    <p>La balise meta viewport est essentielle pour le responsive :</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>HTML - Viewport</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</pre>
+                    </div>
+
+                    <h3>6.2 Media queries essentielles</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>CSS - Media Queries</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>/* Mobile first - styles par défaut pour mobile */
+.container {
+  padding: 15px;
+}
+
+/* Tablette */
+@media (min-width: 768px) {
+  .container {
+    padding: 30px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}</pre>
+                    </div>
+
+                    <h3>6.3 Images responsives</h3>
+                    <p>Utilisez <code>max-width: 100%</code> pour que les images ne dépassent jamais leur conteneur :</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>CSS - Images Responsive</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Images avec différentes résolutions */
+&lt;picture&gt;
+  &lt;source media="(min-width: 800px)" srcset="image-large.jpg"&gt;
+  &lt;source media="(min-width: 400px)" srcset="image-medium.jpg"&gt;
+  &lt;img src="image-small.jpg" alt="Description"&gt;
+&lt;/picture&gt;</pre>
+                    </div>
+
+                    <div class="exercise-box">
+                        <h4><i class="fas fa-keyboard" aria-hidden="true"></i> Projet final : Landing page responsive</h4>
+                        <p>Créez une landing page complète avec : header sticky, hero section, grille de features (3 colonnes desktop, 1 colonne mobile), section testimonials, et footer. Utilisez Grid pour le layout global et Flexbox pour les alignements internes.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="css-avance" aria-labelledby="css-avance-title">
+                    <h2 id="css-avance-title"><span class="lesson-number">7</span> CSS Avancé</h2>
+
+                    <h3>7.1 Variables CSS (Custom Properties)</h3>
+                    <p>Les variables CSS permettent de définir des valeurs réutilisables :</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>CSS - Variables</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>:root {
+  --primary: #1a3a6e;
+  --secondary: #f26522;
+  --spacing: 1rem;
+  --radius: 8px;
+}
+
+.btn {
+  background: var(--primary);
+  padding: var(--spacing);
+  border-radius: var(--radius);
+}
+
+/* Avec fallback */
+.btn-alt {
+  background: var(--primary, blue);
+}</pre>
+                    </div>
+
+                    <h3>7.2 Animations et transitions</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>CSS - Animations</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>/* Transitions simples */
+.btn {
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.element {
+  animation: fadeIn 0.6s ease-out forwards;
+}</pre>
+                    </div>
+
+                    <h3>7.3 Pseudo-éléments ::before et ::after</h3>
+                    <p>Ces pseudo-éléments permettent d'insérer du contenu décoratif sans HTML supplémentaire :</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>CSS - Pseudo-éléments</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>.quote::before {
+  content: '"';
+  font-size: 3rem;
+  color: var(--secondary);
+  line-height: 0;
+}
+
+/* Overlay sur image */
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  pointer-events: none;
+}</pre>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="conclusion" aria-labelledby="conclusion-title">
+                    <h2 id="conclusion-title"><span class="lesson-number">8</span> Conclusion et Ressources</h2>
+                    <p>Félicitations ! Vous avez maintenant les bases solides pour créer des sites web modernes et responsives. Voici les prochaines étapes recommandées :</p>
+
+                    <h3>Prochaines étapes</h3>
+                    <ol>
+                        <li><strong>Pratiquez régulièrement</strong> : Créez des projets personnels pour renforcer vos compétences</li>
+                        <li><strong>Apprenez JavaScript</strong> : Passez au cours <a href="cours-javascript.html">JavaScript Moderne</a> pour ajouter de l'interactivité</li>
+                        <li><strong>Explorez les frameworks CSS</strong> : Découvrez <a href="cours-tailwind.html">Tailwind CSS</a> pour accélérer votre développement</li>
+                        <li><strong>Maîtrisez le responsive</strong> : Testez vos sites sur différents devices et navigateurs</li>
+                    </ol>
+
+                    <h3>Ressources complémentaires</h3>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML" target="_blank" rel="noopener">MDN Web Docs - HTML</a> : La référence complète</li>
+                        <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS" target="_blank" rel="noopener">MDN Web Docs - CSS</a> : Documentation CSS</li>
+                        <li><a href="https://caniuse.com" target="_blank" rel="noopener">Can I Use</a> : Compatibilité navigateurs</li>
+                        <li><a href="https://css-tricks.com" target="_blank" rel="noopener">CSS-Tricks</a> : Articles et guides avancés</li>
+                        <li><a href="https://web.dev" target="_blank" rel="noopener">web.dev</a> : Bonnes pratiques Google</li>
+                    </ul>
+
+                    <div class="info-box success">
+                        <strong><i class="fas fa-trophy" aria-hidden="true"></i> Vous avez terminé !</strong>
+                        <p>Vous disposez maintenant des compétences fondamentales pour créer des sites web professionnels. N'oubliez pas de consulter les autres cours WebLearn pour continuer votre progression.</p>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="course-sidebar-sticky" aria-label="Navigation du cours">
+                <div class="course-nav">
+                    <h4>Contenu du cours</h4>
+                    <ul>
+                        <li><a href="#introduction" class="active">1. Introduction au Web</a></li>
+                        <li><a href="#html-bases">2. Les bases du HTML</a></li>
+                        <li><a href="#css-bases">3. Introduction à CSS</a></li>
+                        <li><a href="#flexbox">4. Flexbox</a></li>
+                        <li><a href="#css-grid">5. CSS Grid</a></li>
+                        <li><a href="#responsive">6. Responsive Design</a></li>
+                        <li><a href="#css-avance">7. CSS Avancé</a></li>
+                        <li><a href="#conclusion">8. Conclusion</a></li>
+                    </ul>
+                </div>
+                <div class="course-nav">
+                    <h4>Progression</h4>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 0%;"></div>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">8 leçons • 20 heures</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>WebLearn</h4>
+                <p>Votre plateforme d'apprentissage en ligne pour maîtriser le développement web et les technologies numériques.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liens rapides</h4>
+                <a href="index.html">Accueil</a>
+                <a href="cours.html">Cours</a>
+                <a href="apropos.html">A Propos</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Catégories</h4>
+                <a href="cours.html">Développement Web</a>
+                <a href="cours.html">Design UI/UX</a>
+                <a href="cours.html">Marketing Digital</a>
+                <a href="cours.html">Data Science</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> contact@</p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> +261 38 22 819 76</p>
+                <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Fianarantsoa, Madagascar</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© WebLearn - Online Academy & Knowledge Hub. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="weblearn.js"></script>
+</body>
+</html>

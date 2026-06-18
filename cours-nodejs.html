@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours Node.js & Express - WebLearn | Formation Backend API REST</title>
+    <meta name="description" content="Construisez des API REST robustes avec Node.js et Express. 40 heures de formation : Express, MongoDB, authentification JWT, sécurité, déploiement.">
+    <meta name="keywords" content="Node.js cours, Express formation, API REST, MongoDB, backend JavaScript, JWT authentification, déploiement Node.js">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="cours-nodejs.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="cours-nodejs.html">
+    <meta property="og:title" content="Node.js & Express - WebLearn">
+    <meta property="og:description" content="Formation complète backend : Node.js, Express, MongoDB, API REST sécurisées.">
+    <meta property="og:image" content="logoWebLearn.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Node.js & Express",
+        "description": "Construisez des API REST robustes et des applications backend scalables avec Node.js et Express.",
+        "provider": {"@type": "Organization", "name": "WebLearn", "sameAs": "https://"},
+        "educationalLevel": "Avancé",
+        "timeRequired": "PT40H",
+        "isAccessibleForFree": false,
+        "coursePrerequisites": "Maîtrise de JavaScript ES6+ et bases de HTTP",
+        "teaches": ["Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "API REST", "Sécurité web"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="weblearn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="logoWebLearn.png">
+
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="WebLearn - Accueil">
+                <img src="logoWebLearn.png" alt="WebLearn Logo">
+                <div class="logo-text">Web<span>Learn</span></div>
+            </a>
+            <nav role="navigation" aria-label="Navigation principale">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="cours.html" class="dropdown-toggle active">Cours</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Développement Web</div>
+                            <a href="cours-html-css.html"><i class="fab fa-html5"></i> HTML5 & CSS3</a>
+                            <a href="cours-javascript.html"><i class="fab fa-js"></i> JavaScript Moderne</a>
+                            <a href="cours-react.html"><i class="fab fa-react"></i> React.js Mastery</a>
+                            <a href="cours-nodejs.html" class="active"><i class="fab fa-node-js"></i> Node.js & Express</a>
+                            <a href="cours-tailwind.html"><i class="fab fa-css3-alt"></i> Tailwind CSS</a>
+                            <a href="cours-angular.html"><i class="fab fa-angular"></i> Angular Complet</a>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-header">Design & Créativité</div>
+                            <a href="cours-figma.html"><i class="fab fa-figma"></i> Figma pour UI/UX</a>
+                            <a href="cours-design-graphique.html"><i class="fas fa-paint-brush"></i> Design Graphique</a>
+                            <a href="cours-mobile-first.html"><i class="fas fa-mobile-alt"></i> Design Mobile First</a>
+                        </div>
+                    </li>
+                    <li><a href="apropos.html">A Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Activer/Désactiver le mode nuit"><i class="fas fa-moon" id="darkModeIcon"></i></button></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Menu mobile"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+            <a href="index.html">Accueil</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <a href="cours.html">Cours</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <span>Node.js & Express</span>
+        </nav>
+
+        <div class="course-detail-header">
+            <div class="container">
+                <div>
+                    <span class="course-tag" style="margin-bottom: 15px; display: inline-block;">Avancé</span>
+                    <h1>Node.js & Express</h1>
+                    <div class="course-meta-header">
+                        <span><i class="far fa-clock" aria-hidden="true"></i> 40 heures</span>
+                        <span><i class="fas fa-signal" aria-hidden="true"></i> Niveau avancé</span>
+                        <span><i class="fas fa-certificate" aria-hidden="true"></i> Certificat inclus</span>
+                        <span><i class="fas fa-infinity" aria-hidden="true"></i> Accès illimité</span>
+                    </div>
+                    <p class="course-description">
+                        Devenez un développeur backend complet avec Node.js et Express. Ce cours couvre la création d'API REST, la gestion de bases de données MongoDB, l'authentification sécurisée, le déploiement en production et les bonnes pratiques du développement serveur.
+                    </p>
+                    <div class="course-tags">
+                        <span>Node.js</span>
+                        <span>Express</span>
+                        <span>MongoDB</span>
+                        <span>JWT</span>
+                        <span>API REST</span>
+                        <span>Sécurité</span>
+                    </div>
+                </div>
+                <div class="course-card-sidebar">
+                    <div class="price">Gratuit</div>
+                    <ul class="features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 40 heures de contenu</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 65 leçons vidéo</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 18 projets pratiques</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Certificat de réussite</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Support communautaire</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Déploiement cloud inclus</li>
+                    </ul>
+                    <a href="#contenu" class="btn btn-primary" style="width: 100%; text-align: center; margin-bottom: 10px;">Commencer le cours</a>
+                    <a href="cours.html" class="btn btn-secondary" style="width: 100%; text-align: center;">Voir tous les cours</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content" id="contenu">
+            <div class="course-main">
+                <section class="lesson-section" id="intro-node" aria-labelledby="intro-node-title">
+                    <h2 id="intro-node-title"><span class="lesson-number">1</span> Introduction à Node.js</h2>
+                    <p>Node.js est un environnement d'exécution JavaScript côté serveur, construit sur le moteur V8 de Chrome. Il permet d'utiliser JavaScript pour le backend, créant ainsi un stack full JavaScript.</p>
+
+                    <h3>1.1 Pourquoi Node.js ?</h3>
+                    <ul>
+                        <li><strong>Single-threaded avec Event Loop</strong> : Gère des milliers de connexions simultanées</li>
+                        <li><strong>NPM</strong> : Plus grand écosystème de packages au monde</li>
+                        <li><strong>Full-stack JavaScript</strong> : Même langage frontend et backend</li>
+                        <li><strong>Performances</strong> : Moteur V8 optimisé, I/O non bloquant</li>
+                        <li><strong>Microservices</strong> : Idéal pour les architectures modernes</li>
+                    </ul>
+
+                    <h3>1.2 Installation et premiers pas</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Bash</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre># Vérifier l'installation
+node --version  # v20.x.x recommandé
+npm --version
+
+# Initialiser un projet
+mkdir mon-api && cd mon-api
+npm init -y
+
+# Installer Express
+npm install express
+
+# Structure recommandée
+mon-api/
+├── src/
+│   ├── config/         # Configuration (DB, env)
+│   ├── controllers/    # Logique métier
+│   ├── models/         # Schémas de données
+│   ├── routes/         # Définition des routes
+│   ├── middleware/     # Middlewares personnalisés
+│   ├── utils/          # Fonctions utilitaires
+│   └── app.js          # Point d'entrée
+├── tests/
+├── .env
+├── .gitignore
+└── package.json</pre>
+                    </div>
+
+                    <h3>1.3 Premier serveur Express</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - Serveur Express</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Middleware pour parser le JSON
+app.use(express.json());
+
+// Route GET
+app.get('/', (req, res) => {
+  res.json({ message: 'Bienvenue sur mon API !' });
+});
+
+// Route avec paramètre
+app.get('/users/:id', (req, res) => {
+  const userId = req.params.id;
+  res.json({ id: userId, name: 'Alice' });
+});
+
+// Route POST
+app.post('/users', (req, res) => {
+  const { name, email } = req.body;
+  // Logique de création...
+  res.status(201).json({ id: 1, name, email });
+});
+
+// Gestion des erreurs 404
+app.use((req, res) => {
+  res.status(404).json({ error: 'Route non trouvée' });
+});
+
+app.listen(PORT, () => {
+  console.log(`Serveur démarré sur http://localhost:${PORT}`);
+});</pre>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="routing-middleware" aria-labelledby="routing-title">
+                    <h2 id="routing-title"><span class="lesson-number">2</span> Routing et Middleware</h2>
+
+                    <h3>2.1 Système de routing avancé</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - Routing Express</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>const express = require('express');
+const router = express.Router();
+
+// Routes chaînées
+router.route('/products')
+  .get(getAllProducts)
+  .post(createProduct);
+
+router.route('/products/:id')
+  .get(getProduct)
+  .put(updateProduct)
+  .patch(patchProduct)
+  .delete(deleteProduct);
+
+// Route avec regex
+app.get('/users/:id([0-9]+)', (req, res) => {
+  res.json({ userId: req.params.id });
+});
+
+// Query parameters
+app.get('/search', (req, res) => {
+  const { q, category, sort } = req.query;
+  // q=iphone&category=electronics&sort=price
+  res.json({ query: q, category, sort });
+});
+
+// Middleware de route
+app.get('/admin', isAuthenticated, isAdmin, (req, res) => {
+  res.json({ message: 'Panel admin' });
+});</pre>
+                    </div>
+
+                    <h3>2.2 Middlewares personnalisés</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - Middlewares</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Logger personnalisé
+const logger = (req, res, next) => {
+  console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
+  next(); // Passe au middleware/route suivant
+};
+app.use(logger);
+
+// Validation des données
+const validateUser = (req, res, next) => {
+  const { name, email } = req.body;
+
+  if (!name || !email) {
+    return res.status(400).json({ 
+      error: 'Nom et email requis' 
+    });
+  }
+
+  if (!email.includes('@')) {
+    return res.status(400).json({ 
+      error: 'Email invalide' 
+    });
+  }
+
+  next();
+};
+app.post('/users', validateUser, createUser);
+
+// Gestion des erreurs globale
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(err.status || 500).json({
+    error: err.message || 'Erreur serveur interne'
+  });
+});</pre>
+                    </div>
+
+                    <h3>2.3 Middlewares tiers essentiels</h3>
+                    <ul>
+                        <li><strong>cors</strong> : Gestion des requêtes cross-origin</li>
+                        <li><strong>helmet</strong> : Sécurisation des headers HTTP</li>
+                        <li><strong>morgan</strong> : Logger de requêtes HTTP</li>
+                        <li><strong>compression</strong> : Compression gzip des réponses</li>
+                        <li><strong>rate-limit</strong> : Limitation du nombre de requêtes</li>
+                    </ul>
+                </section>
+
+                <section class="lesson-section" id="mongodb" aria-labelledby="mongodb-title">
+                    <h2 id="mongodb-title"><span class="lesson-number">3</span> Base de données avec MongoDB</h2>
+                    <p>MongoDB est une base de données NoSQL orientée documents, parfaitement adaptée aux applications Node.js grâce à sa flexibilité et sa scalabilité.</p>
+
+                    <h3>3.1 Introduction à MongoDB et Mongoose</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - Mongoose</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>const mongoose = require('mongoose');
+
+// Connexion à MongoDB
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => console.log('Connecté à MongoDB'))
+  .catch(err => console.error('Erreur de connexion:', err));
+
+// Définition d'un schéma
+const userSchema = new mongoose.Schema({
+  name: { 
+    type: String, 
+    required: [true, 'Le nom est requis'],
+    trim: true,
+    maxlength: [50, 'Nom trop long']
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+    lowercase: true,
+    match: [/\S+@\S+\.\S+/, 'Email invalide']
+  },
+  age: {
+    type: Number,
+    min: [0, 'Âge positif requis'],
+    max: [150, 'Âge invalide']
+  },
+  role: {
+    type: String,
+    enum: ['user', 'admin', 'moderator'],
+    default: 'user'
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+});
+
+// Méthode d'instance
+userSchema.methods.getFullInfo = function() {
+  return `${this.name} (${this.email})`;
+};
+
+// Méthode statique
+userSchema.statics.findByEmail = function(email) {
+  return this.findOne({ email });
+};
+
+const User = mongoose.model('User', userSchema);</pre>
+                    </div>
+
+                    <h3>3.2 Opérations CRUD</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - CRUD MongoDB</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// CREATE
+const newUser = await User.create({
+  name: 'Alice',
+  email: 'alice@example.com',
+  age: 28
+});
+
+// READ
+const users = await User.find({ age: { $gte: 18 } })
+  .select('name email')
+  .sort({ createdAt: -1 })
+  .limit(10)
+  .skip(0);
+
+const user = await User.findById('507f1f77bcf86cd799439011');
+const userByEmail = await User.findOne({ email: 'alice@example.com' });
+
+// UPDATE
+const updated = await User.findByIdAndUpdate(
+  id,
+  { name: 'Alice Dupont' },
+  { new: true, runValidators: true }
+);
+
+// DELETE
+await User.findByIdAndDelete(id);
+
+// Agrégations
+const stats = await User.aggregate([
+  { $match: { age: { $gte: 18 } } },
+  { $group: { 
+    _id: '$role', 
+    count: { $sum: 1 },
+    avgAge: { $avg: '$age' }
+  }},
+  { $sort: { count: -1 } }
+]);</pre>
+                    </div>
+
+                    <div class="info-box warning">
+                        <strong><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Sécurité</strong>
+                        <p>Ne jamais inclure directement des données utilisateur dans les requêtes MongoDB sans validation. Utilisez toujours Mongoose avec validation de schéma ou sanitize les entrées pour prévenir les injections NoSQL.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="auth" aria-labelledby="auth-title">
+                    <h2 id="auth-title"><span class="lesson-number">4</span> Authentification et Sécurité</h2>
+
+                    <h3>4.1 JWT (JSON Web Tokens)</h3>
+                    <p>JWT est le standard moderne pour l'authentification stateless. Il permet de vérifier l'identité d'un utilisateur sans session serveur.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - JWT Auth</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
+
+// Inscription
+const register = async (req, res) => {
+  const { name, email, password } = req.body;
+
+  // Vérifier si l'email existe déjà
+  const existingUser = await User.findOne({ email });
+  if (existingUser) {
+    return res.status(409).json({ error: 'Email déjà utilisé' });
+  }
+
+  // Hasher le mot de passe (coût 12)
+  const hashedPassword = await bcrypt.hash(password, 12);
+
+  const user = await User.create({
+    name,
+    email,
+    password: hashedPassword
+  });
+
+  res.status(201).json({ 
+    message: 'Utilisateur créé',
+    user: { id: user._id, name: user.name, email: user.email }
+  });
+};
+
+// Connexion
+const login = async (req, res) => {
+  const { email, password } = req.body;
+
+  const user = await User.findOne({ email }).select('+password');
+  if (!user) {
+    return res.status(401).json({ error: 'Identifiants invalides' });
+  }
+
+  const isValid = await bcrypt.compare(password, user.password);
+  if (!isValid) {
+    return res.status(401).json({ error: 'Identifiants invalides' });
+  }
+
+  // Générer le JWT
+  const token = jwt.sign(
+    { userId: user._id, role: user.role },
+    process.env.JWT_SECRET,
+    { expiresIn: '7d' }
+  );
+
+  res.json({ token, user: { id: user._id, name: user.name } });
+};
+
+// Middleware d'authentification
+const authenticate = async (req, res, next) => {
+  try {
+    const token = req.headers.authorization?.split(' ')[1];
+
+    if (!token) {
+      return res.status(401).json({ error: 'Token manquant' });
+    }
+
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    req.user = await User.findById(decoded.userId);
+    next();
+  } catch (error) {
+    res.status(401).json({ error: 'Token invalide' });
+  }
+};
+
+// Route protégée
+app.get('/profile', authenticate, (req, res) => {
+  res.json({ user: req.user });
+});</pre>
+                    </div>
+
+                    <h3>4.2 Sécurité web essentielle</h3>
+                    <ul>
+                        <li><strong>Helmet</strong> : Sécurise les headers HTTP (XSS, clickjacking, etc.)</li>
+                        <li><strong>Rate Limiting</strong> : Limite les requêtes par IP (100 req/15min)</li>
+                        <li><strong>Input Sanitization</strong> : Nettoie les entrées utilisateur</li>
+                        <li><strong>CORS</strong> : Configure les origines autorisées</li>
+                        <li><strong>HTTPS</strong> : Toujours en production</li>
+                        <li><strong>Variables d'environnement</strong> : Ne jamais committer les secrets</li>
+                    </ul>
+                </section>
+
+                <section class="lesson-section" id="api-rest" aria-labelledby="api-title">
+                    <h2 id="api-title"><span class="lesson-number">5</span> Architecture API REST complète</h2>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>JavaScript - API REST complète</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// src/routes/productRoutes.js
+const express = require('express');
+const router = express.Router();
+const productController = require('../controllers/productController');
+const { authenticate, authorize } = require('../middleware/auth');
+
+router
+  .route('/')
+  .get(productController.getAllProducts)
+  .post(authenticate, authorize('admin'), productController.createProduct);
+
+router
+  .route('/:id')
+  .get(productController.getProduct)
+  .patch(authenticate, authorize('admin'), productController.updateProduct)
+  .delete(authenticate, authorize('admin'), productController.deleteProduct);
+
+// src/controllers/productController.js
+const Product = require('../models/Product');
+
+exports.getAllProducts = async (req, res, next) => {
+  try {
+    const { page = 1, limit = 10, sort, category, search } = req.query;
+
+    const query = {};
+    if (category) query.category = category;
+    if (search) query.name = { $regex: search, $options: 'i' };
+
+    const products = await Product.find(query)
+      .sort(sort || '-createdAt')
+      .limit(limit * 1)
+      .skip((page - 1) * limit);
+
+    const count = await Product.countDocuments(query);
+
+    res.json({
+      products,
+      totalPages: Math.ceil(count / limit),
+      currentPage: page,
+      total: count
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+exports.createProduct = async (req, res, next) => {
+  try {
+    const product = await Product.create(req.body);
+    res.status(201).json(product);
+  } catch (error) {
+    next(error);
+  }
+};</pre>
+                    </div>
+
+                    <div class="exercise-box">
+                        <h4><i class="fas fa-keyboard" aria-hidden="true"></i> Projet final : API E-commerce complète</h4>
+                        <p>Créez une API REST complète pour un e-commerce avec : gestion des produits (CRUD + filtres), système d'authentification JWT, panier avec persistance MongoDB, commandes avec historique, middleware de sécurité (helmet, rate-limit, CORS), gestion des erreurs globale, et documentation Swagger.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="deploy" aria-labelledby="deploy-title">
+                    <h2 id="deploy-title"><span class="lesson-number">6</span> Déploiement et Production</h2>
+
+                    <h3>6.1 Variables d'environnement</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>.env</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>PORT=3000
+NODE_ENV=production
+MONGODB_URI=mongodb+srv://user:password@cluster.mongodb.net/dbname
+JWT_SECRET=votre_secret_tres_long_et_aleatoire
+JWT_EXPIRES_IN=7d
+
+# Cloudinary (images)
+CLOUDINARY_CLOUD_NAME=xxx
+CLOUDINARY_API_KEY=xxx
+CLOUDINARY_API_SECRET=xxx</pre>
+                    </div>
+
+                    <h3>6.2 Déploiement sur Render/Railway</h3>
+                    <ol>
+                        <li>Créer un compte sur <a href="https://render.com" target="_blank" rel="noopener">Render</a> ou <a href="https://railway.app" target="_blank" rel="noopener">Railway</a></li>
+                        <li>Connecter votre repo GitHub</li>
+                        <li>Configurer les variables d'environnement</li>
+                        <li>Définir la commande de build : <code>npm install</code></li>
+                        <li>Définir la commande de start : <code>node src/app.js</code></li>
+                        <li>Déployer et obtenir l'URL de production</li>
+                    </ol>
+
+                    <h3>6.3 Bonnes pratiques production</h3>
+                    <ul>
+                        <li>Utiliser un process manager comme PM2 : <code>pm2 start app.js</code></li>
+                        <li>Activer la compression gzip</li>
+                        <li>Configurer un reverse proxy (Nginx)</li>
+                        <li>Mettre en place le logging structuré (Winston/Pino)</li>
+                        <li>Monitorer avec des outils comme New Relic ou Datadog</li>
+                    </ul>
+                </section>
+
+                <section class="lesson-section" id="conclusion-node" aria-labelledby="conclusion-node-title">
+                    <h2 id="conclusion-node-title"><span class="lesson-number">7</span> Conclusion</h2>
+                    <p>Vous êtes maintenant capable de construire des API REST complètes et sécurisées avec Node.js. Prochaines étapes :</p>
+                    <ul>
+                        <li><strong>GraphQL</strong> : Alternative moderne à REST avec Apollo Server</li>
+                        <li><strong>WebSockets</strong> : Communication temps réel avec Socket.io</li>
+                        <li><strong>Testing</strong> : Jest et Supertest pour tester vos APIs</li>
+                        <li><strong>Docker</strong> : Conteneurisation de vos applications</li>
+                        <li><strong>CI/CD</strong> : GitHub Actions pour le déploiement automatique</li>
+                    </ul>
+                </section>
+            </div>
+
+            <aside class="course-sidebar-sticky" aria-label="Navigation du cours">
+                <div class="course-nav">
+                    <h4>Contenu du cours</h4>
+                    <ul>
+                        <li><a href="#intro-node" class="active">1. Introduction Node.js</a></li>
+                        <li><a href="#routing-middleware">2. Routing & Middleware</a></li>
+                        <li><a href="#mongodb">3. MongoDB & Mongoose</a></li>
+                        <li><a href="#auth">4. Auth & Sécurité</a></li>
+                        <li><a href="#api-rest">5. API REST</a></li>
+                        <li><a href="#deploy">6. Déploiement</a></li>
+                        <li><a href="#conclusion-node">7. Conclusion</a></li>
+                    </ul>
+                </div>
+                <div class="course-nav">
+                    <h4>Progression</h4>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 0%;"></div>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">7 leçons • 40 heures</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>WebLearn</h4>
+                <p>Votre plateforme d'apprentissage en ligne pour maîtriser le développement web et les technologies numériques.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liens rapides</h4>
+                <a href="index.html">Accueil</a>
+                <a href="cours.html">Cours</a>
+                <a href="apropos.html">A Propos</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Catégories</h4>
+                <a href="cours.html">Développement Web</a>
+                <a href="cours.html">Design UI/UX</a>
+                <a href="cours.html">Marketing Digital</a>
+                <a href="cours.html">Data Science</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> contact@</p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> +261 38 22 819 76</p>
+                <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Fianarantsoa, Madagascar</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© WebLearn - Online Academy & Knowledge Hub. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="weblearn.js"></script>
+</body>
+</html>

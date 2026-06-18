@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Cours - WebLearn | Formation Développement Web & Design</title>
+    <meta name="description" content="Catalogue complet des cours WebLearn : HTML, CSS, JavaScript, React, Node.js, Tailwind, Angular, Figma, Design Graphique, Mobile First. Formations gratuites et payantes.">
+    <meta name="keywords" content="cours développement web, formation HTML CSS, cours JavaScript, React formation, Node.js cours, Figma tutorial, design UI/UX">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="cours.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="cours.html">
+    <meta property="og:title" content="Nos Cours - WebLearn">
+    <meta property="og:description" content="Explorez notre catalogue complet de formations en développement web et design.">
+    <meta property="og:image" content="logoWebLearn.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "url": "cours-html-css.html", "name": "HTML5 & CSS3 Fondamentaux"},
+            {"@type": "ListItem", "position": 2, "url": "cours-javascript.html", "name": "JavaScript Moderne"},
+            {"@type": "ListItem", "position": 3, "url": "cours-react.html", "name": "React.js Mastery"},
+            {"@type": "ListItem", "position": 4, "url": "cours-nodejs.html", "name": "Node.js & Express"},
+            {"@type": "ListItem", "position": 5, "url": "cours-tailwind.html", "name": "Tailwind CSS Avancé"},
+            {"@type": "ListItem", "position": 6, "url": "cours-angular.html", "name": "Angular Complet"},
+            {"@type": "ListItem", "position": 7, "url": "cours-figma.html", "name": "Figma pour UI/UX"},
+            {"@type": "ListItem", "position": 8, "url": "cours-design-graphique.html", "name": "Design Graphique"},
+            {"@type": "ListItem", "position": 9, "url": "cours-mobile-first.html", "name": "Design Mobile First"}
+        ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="weblearn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="logoWebLearn.png">
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="WebLearn - Accueil">
+                <img src="logoWebLearn.png" alt="WebLearn Logo">
+                <div class="logo-text">Web<span>Learn</span></div>
+            </a>
+            <nav role="navigation" aria-label="Navigation principale">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="cours.html" class="dropdown-toggle active" aria-current="page">Cours</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Développement Web</div>
+                            <a href="cours-html-css.html"><i class="fab fa-html5"></i> HTML5 & CSS3</a>
+                            <a href="cours-javascript.html"><i class="fab fa-js"></i> JavaScript Moderne</a>
+                            <a href="cours-react.html"><i class="fab fa-react"></i> React.js Mastery</a>
+                            <a href="cours-nodejs.html"><i class="fab fa-node-js"></i> Node.js & Express</a>
+                            <a href="cours-tailwind.html"><i class="fab fa-css3-alt"></i> Tailwind CSS</a>
+                            <a href="cours-angular.html"><i class="fab fa-angular"></i> Angular Complet</a>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-header">Design & Créativité</div>
+                            <a href="cours-figma.html"><i class="fab fa-figma"></i> Figma pour UI/UX</a>
+                            <a href="cours-design-graphique.html"><i class="fas fa-paint-brush"></i> Design Graphique</a>
+                            <a href="cours-mobile-first.html"><i class="fas fa-mobile-alt"></i> Design Mobile First</a>
+                        </div>
+                    </li>
+                    <li><a href="apropos.html">A Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Activer/Désactiver le mode nuit"><i class="fas fa-moon" id="darkModeIcon"></i></button></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Menu mobile"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Nos Cours</h1>
+            <p>Explorez notre catalogue complet de formations et trouvez celle qui vous correspond.</p>
+        </section>
+
+        <section class="section" aria-labelledby="dev-web">
+            <div class="section-title">
+                <h2 id="dev-web">Développement Web</h2>
+                <p>Devenez un développeur web complet avec nos parcours structurés.</p>
+            </div>
+            <div class="card-grid">
+                <article class="course-card">
+                    <div class="course-img" style="background: linear-gradient(135deg, #e34f26, #c0392b);"><i class="fab fa-html5" aria-hidden="true"></i></div>
+                    <div class="course-body">
+                        <span class="course-tag">Débutant</span>
+                        <h3><a href="cours-html-css.html" style="text-decoration:none;color:inherit;">HTML5 & CSS3 Fondamentaux</a></h3>
+                        <p>Maîtrisez les bases du développement web et créez vos premières pages interactives.</p>
+                        <div class="course-meta">
+                            <span><i class="far fa-clock" aria-hidden="true"></i> 20h</span>
+                            <span class="course-price">Gratuit</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="course-card">
+                    <div class="course-img" style="background: linear-gradient(135deg, #f7df1e, #e6c200);"><i class="fab fa-js" aria-hidden="true"></i></div>
+                    <div class="course-body">
+                        <span class="course-tag">Intermédiaire</span>
+                        <h3><a href="cours-javascript.html" style="text-decoration:none;color:inherit;">JavaScript Moderne</a></h3>
+                        <p>Apprenez ES6+, les promesses, async/await et construisez des applications dynamiques.</p>
+                        <div class="course-meta">
+                            <span><i class="far fa-clock" aria-hidden="true"></i> 35h</span>
+                            <span class="course-price">Gratuit</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="course-card">
+                    <div class="course-img" style="background: linear-gradient(135deg, #61dafb, #21a9c4);"><i class="fab fa-react" aria-hidden="true"></i></div>
+                    <div class="course-body">
+                        <span class="course-tag">Avancé</span>
+                        <h3><a href="cours-react.html" style="text-decoration:none;color:inherit;">React.js Mastery</a></h3>
+                        <p>Devenez expert en React : Hooks, Redux, Next.js et architecture d'applications.</p>
+                        <div class="course-meta">
+                            <span><i class="far fa-clock" aria-hidden="true"></i> 50h</span>
+                            <span class="course-price">Gratuit</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="course-card">
+                    <div class="course-img" style="background: linear-gradient(135deg, #339933, #268026);"><i class="fab fa-node-js" aria-hidden="true"></i></div>
+                    <div class="course-body">
+                        <span class="course-tag">Avancé</span>
+                        <h3><a href="cours-nodejs.html" style="text-decoration:none;color:inherit;">Node.js & Express</a></h3>
+                        <p>Construisez des API REST robustes et des applications backend scalables.</p>
+                        <div class="course-meta">
+                            <span><i class="far fa-clock" aria-hidden="true"></i> 40h</span>
+                            <span class="course-price">Gratuit</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="course-card">
+                    <div class="course-img" style="background: linear-gradient(135deg, #38bdf8, #0ea5e9);"><i class="fab fa-css3-alt" aria-hidden="true"></i></div>
+                    <div class="course-body">
+                        <span class="course-tag">Intermédiaire</span>
+                        <h3><a href="cours-tailwind.html" style="text-decoration:none;color:inherit;">Tailwind CSS Avancé</a></h3>
+                        <p>Créez des interfaces modernes rapidement avec l'approche utility-first.</p>
+                        <div class="course-meta">
+                            <span><i class="far fa-clock" aria-hidden="true"></i> 15h</span>
+                            <span class="course-price">Gratuit</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="course-card">
+                    <div class="course-img" style="background: linear-gradient(135deg, #dd0031, #c3002f);"><i class="fab fa-angular" aria-hidden="true"></i></div>
+                    <div class="course-body">
+                        <span class="course-tag">Avancé</span>
+                        <h3><a href="cours-angular.html" style="text-decoration:none;color:inherit;">Angular Complet</a></h3>
+                        <p>Développez des applications enterprise avec TypeScript et Angular.</p>
+                        <div class="course-meta">
+                            <span><i class="far fa-clock" aria-hidden="true"></i> 45h</span>
+                            <span class="course-price">Gratuit</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--bg-white); margin: 0; max-width: 100%; padding: 80px 20px;" aria-labelledby="design-creativity">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <div class="section-title">
+                    <h2 id="design-creativity">Design & Créativité</h2>
+                    <p>Maîtrisez les outils de design et créez des expériences utilisateur mémorables.</p>
+                </div>
+                <div class="card-grid">
+                    <article class="course-card">
+                        <div class="course-img" style="background: linear-gradient(135deg, #ff7262, #f24e1e);"><i class="fab fa-figma" aria-hidden="true"></i></div>
+                        <div class="course-body">
+                            <span class="course-tag">Débutant</span>
+                            <h3><a href="cours-figma.html" style="text-decoration:none;color:inherit;">Figma pour UI/UX</a></h3>
+                            <p>Concevez des interfaces modernes et prototypez avec Figma.</p>
+                            <div class="course-meta">
+                                <span><i class="far fa-clock" aria-hidden="true"></i> 18h</span>
+                                <span class="course-price">Gratuit</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="course-card">
+                        <div class="course-img" style="background: linear-gradient(135deg, #31a8ff, #001e36);"><i class="fas fa-paint-brush" aria-hidden="true"></i></div>
+                        <div class="course-body">
+                            <span class="course-tag">Intermédiaire</span>
+                            <h3><a href="cours-design-graphique.html" style="text-decoration:none;color:inherit;">Design Graphique</a></h3>
+                            <p>Théorie du design, typographie, couleurs et composition visuelle.</p>
+                            <div class="course-meta">
+                                <span><i class="far fa-clock" aria-hidden="true"></i> 25h</span>
+                                <span class="course-price">Gratuit</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="course-card">
+                        <div class="course-img" style="background: linear-gradient(135deg, #a259ff, #7c3aed);"><i class="fas fa-mobile-alt" aria-hidden="true"></i></div>
+                        <div class="course-body">
+                            <span class="course-tag">Avancé</span>
+                            <h3><a href="cours-mobile-first.html" style="text-decoration:none;color:inherit;">Design Mobile First</a></h3>
+                            <p>Créez des expériences mobiles optimales et responsive design avancé.</p>
+                            <div class="course-meta">
+                                <span><i class="far fa-clock" aria-hidden="true"></i> 22h</span>
+                                <span class="course-price">Gratuit</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta" aria-label="Appel à l'action">
+            <h2>Besoin d'un parcours personnalisé ?</h2>
+            <p>Contactez-nous pour créer un programme de formation adapté à vos objectifs.</p>
+            <a href="contact.html" class="btn">Nous contacter</a>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>WebLearn</h4>
+                <p>Votre plateforme d'apprentissage en ligne pour maîtriser le développement web et les technologies numériques.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liens rapides</h4>
+                <a href="index.html">Accueil</a>
+                <a href="cours.html">Cours</a>
+                <a href="apropos.html">A Propos</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Catégories</h4>
+                <a href="cours.html">Développement Web</a>
+                <a href="cours.html">Design UI/UX</a>
+                <a href="cours.html">Marketing Digital</a>
+                <a href="cours.html">Data Science</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> contact@</p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> +261 38 22 819 76</p>
+                <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Fianarantsoa, Madagascar</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© WebLearn - Online Academy & Knowledge Hub. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="weblearn.js"></script>
+</body>
+</html>

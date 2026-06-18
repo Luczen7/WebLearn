@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours Figma pour UI/UX - WebLearn | Formation Design d'Interfaces</title>
+    <meta name="description" content="Concevez des interfaces modernes et prototypez avec Figma. 18 heures de formation : wireframes, design system, prototypage, collaboration.">
+    <meta name="keywords" content="Figma cours, UI/UX design, prototypage Figma, design system, wireframes, maquettes, design d'interfaces">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="cours-figma.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="cours-figma.html">
+    <meta property="og:title" content="Figma pour UI/UX - WebLearn">
+    <meta property="og:description" content="Concevez des interfaces modernes et prototypez avec Figma.">
+    <meta property="og:image" content="logoWebLearn.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Figma pour UI/UX",
+        "description": "Concevez des interfaces modernes et prototypez avec Figma.",
+        "provider": {"@type": "Organization", "name": "WebLearn", "sameAs": "https://"},
+        "educationalLevel": "Débutant",
+        "timeRequired": "PT18H",
+        "isAccessibleForFree": false,
+        "coursePrerequisites": "Aucun prérequis",
+        "teaches": ["Figma", "UI Design", "UX Design", "Prototypage", "Design System", "Wireframing"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="weblearn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="logoWebLearn.png">
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="WebLearn - Accueil">
+                <img src="logoWebLearn.png" alt="WebLearn Logo">
+                <div class="logo-text">Web<span>Learn</span></div>
+            </a>
+            <nav role="navigation" aria-label="Navigation principale">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="cours.html" class="dropdown-toggle active">Cours</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Développement Web</div>
+                            <a href="cours-html-css.html"><i class="fab fa-html5"></i> HTML5 & CSS3</a>
+                            <a href="cours-javascript.html"><i class="fab fa-js"></i> JavaScript Moderne</a>
+                            <a href="cours-react.html"><i class="fab fa-react"></i> React.js Mastery</a>
+                            <a href="cours-nodejs.html"><i class="fab fa-node-js"></i> Node.js & Express</a>
+                            <a href="cours-tailwind.html"><i class="fab fa-css3-alt"></i> Tailwind CSS</a>
+                            <a href="cours-angular.html"><i class="fab fa-angular"></i> Angular Complet</a>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-header">Design & Créativité</div>
+                            <a href="cours-figma.html" class="active"><i class="fab fa-figma"></i> Figma pour UI/UX</a>
+                            <a href="cours-design-graphique.html"><i class="fas fa-paint-brush"></i> Design Graphique</a>
+                            <a href="cours-mobile-first.html"><i class="fas fa-mobile-alt"></i> Design Mobile First</a>
+                        </div>
+                    </li>
+                    <li><a href="apropos.html">A Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Activer/Désactiver le mode nuit"><i class="fas fa-moon" id="darkModeIcon"></i></button></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Menu mobile"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+            <a href="index.html">Accueil</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <a href="cours.html">Cours</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <span>Figma pour UI/UX</span>
+        </nav>
+
+        <div class="course-detail-header">
+            <div class="container">
+                <div>
+                    <span class="course-tag" style="margin-bottom: 15px; display: inline-block;">Débutant</span>
+                    <h1>Figma pour UI/UX</h1>
+                    <div class="course-meta-header">
+                        <span><i class="far fa-clock" aria-hidden="true"></i> 18 heures</span>
+                        <span><i class="fas fa-signal" aria-hidden="true"></i> Niveau débutant</span>
+                        <span><i class="fas fa-certificate" aria-hidden="true"></i> Certificat inclus</span>
+                        <span><i class="fas fa-infinity" aria-hidden="true"></i> Accès illimité</span>
+                    </div>
+                    <p class="course-description">
+                        Maîtrisez Figma, l'outil de design collaboratif le plus populaire au monde. Apprenez à créer des wireframes, des maquettes haute fidélité, des prototypes interactifs et des design systems complets pour vos projets web et mobile.
+                    </p>
+                    <div class="course-tags">
+                        <span>Figma</span>
+                        <span>UI Design</span>
+                        <span>UX Design</span>
+                        <span>Prototypage</span>
+                        <span>Design System</span>
+                        <span>Wireframing</span>
+                    </div>
+                </div>
+                <div class="course-card-sidebar">
+                    <div class="price">Gratuit</div>
+                    <ul class="features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 18 heures de contenu</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 35 leçons vidéo</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 12 projets pratiques</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Certificat de réussite</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Fichiers Figma inclus</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Templates téléchargeables</li>
+                    </ul>
+                    <a href="#contenu" class="btn btn-primary" style="width: 100%; text-align: center; margin-bottom: 10px;">Commencer le cours</a>
+                    <a href="cours.html" class="btn btn-secondary" style="width: 100%; text-align: center;">Voir tous les cours</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content" id="contenu">
+            <div class="course-main">
+                <section class="lesson-section" id="intro-figma" aria-labelledby="intro-figma-title">
+                    <h2 id="intro-figma-title"><span class="lesson-number">1</span> Introduction à Figma et au Design UI/UX</h2>
+                    <p>Figma est un outil de design d'interfaces basé sur le cloud qui permet de créer des maquettes, des prototypes et des design systems en collaboration temps réel. C'est devenu l'outil standard de l'industrie.</p>
+
+                    <h3>1.1 Pourquoi Figma ?</h3>
+                    <ul>
+                        <li><strong>Cloud-based</strong> : Travaillez de n'importe où, sur n'importe quel OS</li>
+                        <li><strong>Collaboration temps réel</strong> : Plusieurs designers sur le même fichier</li>
+                        <li><strong>Prototypage intégré</strong> : Créez des interactions sans quitter l'outil</li>
+                        <li><strong>Design system natif</strong> : Composants, variables, et styles partagés</li>
+                        <li><strong>Plugins riches</strong> : Écosystème extensible</li>
+                        <li><strong>Dev Mode</strong> : Handoff facile aux développeurs</li>
+                    </ul>
+
+                    <h3>1.2 Interface et outils de base</h3>
+                    <p>L'interface Figma se compose de plusieurs zones :</p>
+                    <ul>
+                        <li><strong>Toolbar</strong> (haut) : Outils de sélection, formes, texte, pen</li>
+                        <li><strong>Layers panel</strong> (gauche) : Hiérarchie des éléments</li>
+                        <li><strong>Canvas</strong> (centre) : Zone de travail</li>
+                        <li><strong>Properties panel</strong> (droite) : Propriétés de l'élément sélectionné</li>
+                        <li><strong>Assets panel</strong> : Composants et styles réutilisables</li>
+                    </ul>
+
+                    <h3>1.3 Raccourcis essentiels</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr><th>Raccourci</th><th>Action</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><code>V</code></td><td>Outil de sélection</td></tr>
+                                <tr><td><code>F</code></td><td>Créer un frame</td></tr>
+                                <tr><td><code>R</code></td><td>Rectangle</td></tr>
+                                <tr><td><code>T</code></td><td>Texte</td></tr>
+                                <tr><td><code>L</code></td><td>Ligne</td></tr>
+                                <tr><td><code>Ctrl/Cmd + D</code></td><td>Dupliquer</td></tr>
+                                <tr><td><code>Ctrl/Cmd + G</code></td><td>Grouper</td></tr>
+                                <tr><td><code>Alt + clic</code></td><td>Voir les distances</td></tr>
+                                <tr><td><code>Shift + A</code></td><td>Auto layout</td></tr>
+                                <tr><td><code>Ctrl/Cmd + /</code></td><td>Quick actions</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="wireframes" aria-labelledby="wireframes-title">
+                    <h2 id="wireframes-title"><span class="lesson-number">2</span> Wireframing et Architecture de l'Information</h2>
+
+                    <h3>2.1 Qu'est-ce qu'un wireframe ?</h3>
+                    <p>Un wireframe est une représentation schématique basse fidélité d'une interface. Il se concentre sur :</p>
+                    <ul>
+                        <li><strong>La structure</strong> : Organisation des éléments sur la page</li>
+                        <li><strong>La hiérarchie</strong> : Importance relative des éléments</li>
+                        <li><strong>La navigation</strong> : Flux utilisateur entre les pages</li>
+                        <li><strong>Le contenu</strong> : Placement du texte et des images</li>
+                    </ul>
+                    <p>Il ne se concentre PAS sur : les couleurs, les polices, les images réelles, les animations.</p>
+
+                    <h3>2.2 Types de wireframes</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr><th>Type</th><th>Fidélité</th><th>Usage</th><th>Temps</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Sketch / Papier</td><td>Très basse</td><td>Brainstorming rapide</td><td>5-15 min</td></tr>
+                                <tr><td>Low-fidelity digital</td><td>Basse</td><td>Validation structure</td><td>30-60 min/page</td></tr>
+                                <tr><td>Mid-fidelity</td><td>Moyenne</td><td>Tests utilisateurs</td><td>1-2h/page</td></tr>
+                                <tr><td>High-fidelity</td><td>Haute</td><td>Présentation client</td><td>2-4h/page</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>2.3 Créer des wireframes dans Figma</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Figma - Wireframe Setup</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Bonnes pratiques wireframing dans Figma :
+
+1. Utiliser des couleurs neutres (gris #D9D9D9, #B3B3B3, #808080)
+2. Utiliser des placeholders pour les images (rectangle + icône image)
+3. Utiliser du faux texte (Lorem ipsum ou plugins comme "Lorem Ipsum")
+4. Créer des composants réutilisables pour les éléments communs :
+   - Header wireframe
+   - Footer wireframe  
+   - Card wireframe
+   - Formulaire wireframe
+
+5. Organiser en pages :
+   - Page "Wireframes Desktop"
+   - Page "Wireframes Mobile"
+   - Page "User Flow"
+
+6. Nommer les frames selon le format : [Numéro] - [Nom de la page]
+   Ex: 01 - Homepage, 02 - Product List, 03 - Product Detail</pre>
+                    </div>
+
+                    <div class="exercise-box">
+                        <h4><i class="fas fa-keyboard" aria-hidden="true"></i> Exercice : Wireframe E-commerce</h4>
+                        <p>Créez les wireframes pour un site e-commerce comprenant : Homepage (header, hero, catégories, produits populaires, footer), Page produit (images, infos, avis, produits similaires), Panier, et Checkout (formulaire, récapitulatif, paiement). Utilisez uniquement des rectangles gris et du texte.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="ui-design" aria-labelledby="ui-design-title">
+                    <h2 id="ui-design-title"><span class="lesson-number">3</span> Design d'Interfaces (UI Design)</h2>
+
+                    <h3>3.1 Principes fondamentaux du design visuel</h3>
+                    <ul>
+                        <li><strong>Hiérarchie visuelle</strong> : Guider l'œil de l'utilisateur (taille, couleur, contraste, espacement)</li>
+                        <li><strong>Alignement</strong> : Créer de l'ordre et de la cohérence</li>
+                        <li><strong>Contraste</strong> : Différencier les éléments importants</li>
+                        <li><strong>Répétition</strong> : Cohérence à travers l'interface</li>
+                        <li><strong>Proximité</strong> : Regrouper les éléments liés</li>
+                        <li><strong>Équilibre</strong> : Distribution visuelle harmonieuse</li>
+                    </ul>
+
+                    <h3>3.2 Système de couleurs</h3>
+                    <p>Un système de couleurs cohérent comprend :</p>
+                    <ul>
+                        <li><strong>Couleur primaire</strong> : Actions principales, éléments clés</li>
+                        <li><strong>Couleur secondaire</strong> : Actions secondaires, accents</li>
+                        <li><strong>Couleurs sémantiques</strong> : Succès (vert), erreur (rouge), avertissement (jaune), info (bleu)</li>
+                        <li><strong>Neutres</strong> : Texte, fonds, bordures (nuances de gris)</li>
+                    </ul>
+
+                    <h3>3.3 Typographie</h3>
+                    <p>Règles typographiques essentielles :</p>
+                    <ul>
+                        <li><strong>Maximum 2-3 polices</strong> par projet</li>
+                        <li><strong>Échelle typographique</strong> : Définir des tailles cohérentes (12, 14, 16, 18, 20, 24, 32, 48px)</li>
+                        <li><strong>Interligne</strong> : 1.5x la taille de police pour le corps de texte</li>
+                        <li><strong>Longueur de ligne</strong> : 45-75 caractères maximum</li>
+                        <li><strong>Contraste</strong> : Ratio minimum 4.5:1 pour l'accessibilité WCAG AA</li>
+                    </ul>
+
+                    <h3>3.4 Espacement et grille</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Design - Système d'espacement 8pt</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Système d'espacement basé sur 8px :
+
+4px   - Très petit (icônes proches du texte)
+8px   - Petit (padding interne boutons)
+16px  - Standard (gap entre éléments, padding cards)
+24px  - Moyen (espacement sections)
+32px  - Grand (espacement blocs)
+48px  - Très grand (espacement sections majeures)
+64px  - Section (espacement entre sections de page)
+
+// Grille de colonnes
+Desktop : 12 colonnes, gutter 24px, margin 48px
+Tablet  : 8 colonnes, gutter 24px, margin 32px
+Mobile  : 4 colonnes, gutter 16px, margin 16px
+
+// Dans Figma : Layout Grid > Columns
+// Columns: 12, Type: Stretch, Gutter: 24, Margin: 48</pre>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="auto-layout" aria-labelledby="auto-layout-title">
+                    <h2 id="auto-layout-title"><span class="lesson-number">4</span> Auto Layout et Composants</h2>
+                    <p>L'Auto Layout est la fonctionnalité la plus puissante de Figma. Il permet de créer des designs responsives et des composants intelligents qui s'adaptent automatiquement à leur contenu.</p>
+
+                    <h3>4.1 Fonctionnement de l'Auto Layout</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Figma - Auto Layout</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Auto Layout = Flexbox visuel
+
+// Direction :
+- Vertical (column) : Éléments empilés verticalement
+- Horizontal (row) : Éléments côte à côte
+
+// Propriétés essentielles :
+- Spacing between items : Espacement entre les enfants
+- Padding : Marge interne (top, right, bottom, left)
+- Alignment : Alignement des enfants (start, center, end, space-between)
+
+// Distribution :
+- Hug contents : Le parent s'adapte à la taille des enfants
+- Fixed width/height : Taille fixe
+- Fill container : Remplit l'espace disponible
+
+// Exemples d'usage :
+1. Bouton : Texte + Auto Layout (hug, padding 16px 24px)
+2. Card : Image + Texte + Auto Layout vertical
+3. Navbar : Logo + Liens + Auto Layout horizontal
+4. Liste : Plusieurs items en Auto Layout vertical
+5. Formulaire : Label + Input + Error en Auto Layout vertical</pre>
+                    </div>
+
+                    <h3>4.2 Composants et variants</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Figma - Composants & Variants</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Créer un composant : Ctrl/Cmd + Alt + K
+// Créer une instance : Copier-coller le composant
+
+// Structure d'un composant bouton avec variants :
+
+Composant : Button
+Variants :
+  - Type : Primary / Secondary / Ghost / Danger
+  - Size : Small / Medium / Large
+  - State : Default / Hover / Active / Disabled / Loading
+  - Icon : Left / Right / None
+
+// = 4 × 3 × 5 × 3 = 180 combinaisons possibles !
+
+// Bonnes pratiques variants :
+1. Nommer les propriétés en camelCase : "type", "size", "state"
+2. Nommer les valeurs en PascalCase : "Primary", "Medium", "Default"
+3. Utiliser des couleurs de fond différentes pour chaque frame variant
+4. Documenter le composant avec des notes
+
+// Properties (Figma 2022+) :
+- Text properties : Texte modifiable dans l'instance
+- Boolean properties : Afficher/masquer des éléments
+- Instance swap : Remplacer un nested component
+- Variant properties : Changer de variant</pre>
+                    </div>
+
+                    <div class="info-box success">
+                        <strong><i class="fas fa-lightbulb" aria-hidden="true"></i> Astuce pro</strong>
+                        <p>Utilisez les <strong>Component Properties</strong> (text, boolean, instance swap) pour réduire le nombre de variants nécessaires. Un bouton avec icône optionnelle n'a plus besoin de variants "with icon" / "without icon" - utilisez une propriété boolean.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="prototypage" aria-labelledby="prototypage-title">
+                    <h2 id="prototypage-title"><span class="lesson-number">5</span> Prototypage Interactif</h2>
+                    <p>Le prototypage permet de simuler l'expérience utilisateur réelle avant le développement. Figma offre des interactions riches pour tester vos designs.</p>
+
+                    <h3>5.1 Types d'interactions</h3>
+                    <ul>
+                        <li><strong>On Click</strong> : Navigation vers une autre frame</li>
+                        <li><strong>On Hover</strong> : Changement d'état au survol</li>
+                        <li><strong>On Drag</strong> : Glisser-déposer, carrousels</li>
+                        <li><strong>After Delay</strong> : Animation automatique après un délai</li>
+                        <li><strong>On Scroll</strong> : Parallax, sticky headers</li>
+                        <li><strong>Smart Animate</strong> : Transition fluide entre deux états</li>
+                    </ul>
+
+                    <h3>5.2 Smart Animate</h3>
+                    <p>Smart Animate détecte automatiquement les différences entre deux frames et anime la transition :</p>
+                    <ul>
+                        <li>Position (x, y)</li>
+                        <li>Dimension (width, height)</li>
+                        <li>Opacité</li>
+                        <li>Rotation</li>
+                        <li>Couleur de fond</li>
+                        <li>Rayon de bordure</li>
+                    </ul>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Figma - Prototype Flow</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Exemple de flow utilisateur E-commerce :
+
+Frame 1: Homepage
+  - "Voir produits" → On Click → Navigate to → Frame 2
+  - "Panier" → On Click → Open overlay → Frame 5
+
+Frame 2: Product List
+  - Filtre "Prix" → On Click → Smart Animate → Frame 3 (filtres ouverts)
+  - Produit 1 → On Click → Navigate to → Frame 4
+
+Frame 3: Product List (filtres ouverts)
+  - "Appliquer" → On Click → Smart Animate → Frame 2
+
+Frame 4: Product Detail
+  - "Ajouter au panier" → On Click → Smart Animate → Frame 4 (état ajouté)
+  - "Continuer" → On Click → Navigate to → Frame 5
+
+Frame 5: Cart Overlay
+  - "Commander" → On Click → Navigate to → Frame 6
+
+Frame 6: Checkout
+  - "Payer" → On Click → After Delay 2s → Frame 7
+
+Frame 7: Confirmation
+  - Animation : Scale up + Fade in
+
+// Réglages de transition :
+- Animation : Smart Animate (Ease Out, 300ms)
+- Ou : Instant, Dissolve, Move, Slide, Push</pre>
+                    </div>
+
+                    <div class="exercise-box">
+                        <h4><i class="fas fa-keyboard" aria-hidden="true"></i> Projet : Prototype App Mobile</h4>
+                        <p>Créez un prototype complet d'une application mobile de livraison de nourriture avec : écran d'accueil avec animations, liste des restaurants avec filtres, détail restaurant avec menu, panier avec animations d'ajout, checkout avec formulaires, et confirmation avec animation de succès. Utilisez Smart Animate pour toutes les transitions.</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="design-system" aria-labelledby="design-system-title">
+                    <h2 id="design-system-title"><span class="lesson-number">6</span> Design System</h2>
+                    <p>Un design system est un ensemble de composants réutilisables guidés par des standards clairs, permettant d'accélérer le développement et d'assurer la cohérence.</p>
+
+                    <h3>6.1 Structure d'un design system Figma</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Figma - Design System Structure</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Organisation du fichier Design System :
+
+📁 Fichier : Design System v1.0
+├── 📄 Page : Foundations
+│   ├── Colors (Local Styles)
+│   │   ├── Primary / 50, 100, 200...900
+│   │   ├── Secondary / 50, 100...900
+│   │   ├── Semantic / Success, Error, Warning, Info
+│   │   └── Neutrals / White, Gray 50...900, Black
+│   ├── Typography (Local Styles)
+│   │   ├── Display / Large, Medium
+│   │   ├── Heading / H1, H2, H3, H4
+│   │   ├── Body / Large, Medium, Small
+│   │   └── Label / Large, Medium, Small
+│   ├── Effects (Drop Shadows, Inner Shadows)
+│   └── Grid & Spacing (Tokens)
+│
+├── 📄 Page : Components
+│   ├── Actions
+│   │   ├── Button (variants: type, size, state)
+│   │   ├── Icon Button
+│   │   └── Floating Action Button
+│   ├── Inputs
+│   │   ├── Text Field
+│   │   ├── Text Area
+│   │   ├── Select / Dropdown
+│   │   ├── Checkbox
+│   │   ├── Radio Button
+│   │   └── Toggle / Switch
+│   ├── Navigation
+│   │   ├── Tab Bar
+│   │   ├── Side Navigation
+│   │   └── Breadcrumb
+│   ├── Feedback
+│   │   ├── Alert / Banner
+│   │   ├── Toast / Snackbar
+│   │   ├── Modal / Dialog
+│   │   └── Progress Indicator
+│   ├── Data Display
+│   │   ├── Card
+│   │   ├── Table
+│   │   ├── List
+│   │   └── Badge / Tag
+│   └── Overlays
+│       ├── Tooltip
+│       ├── Popover
+│       └── Menu
+│
+└── 📄 Page : Documentation
+    ├── Usage Guidelines
+    ├── Do's and Don'ts
+    ├── Accessibility Notes
+    └── Changelog</pre>
+                    </div>
+
+                    <h3>6.2 Variables Figma (v2023)</h3>
+                    <p>Les Variables sont le successeur des Styles, permettant des tokens de design plus puissants :</p>
+                    <ul>
+                        <li><strong>Color variables</strong> : Couleurs réutilisables avec modes (light/dark)</li>
+                        <li><strong>Number variables</strong> : Espacements, rayons, tailles</li>
+                        <li><strong>String variables</strong> : Texte réutilisable</li>
+                        <li><strong>Boolean variables</strong> : Afficher/masquer conditionnellement</li>
+                    </ul>
+                </section>
+
+                <section class="lesson-section" id="dev-mode" aria-labelledby="dev-mode-title">
+                    <h2 id="dev-mode-title"><span class="lesson-number">7</span> Dev Mode et Handoff</h2>
+                    <p>Le Dev Mode (anciennement Inspect) permet aux développeurs d'accéder facilement aux spécifications de design.</p>
+
+                    <h3>7.1 Préparer un fichier pour les développeurs</h3>
+                    <ul>
+                        <li><strong>Nommer les layers</strong> de manière sémantique (pas "Rectangle 47")</li>
+                        <li><strong>Utiliser des frames</strong> au lieu de groupes quand possible</li>
+                        <li><strong>Documenter les comportements responsives</strong></li>
+                        <li><strong>Indiquer les états interactifs</strong> (hover, active, disabled)</li>
+                        <li><strong>Ajouter des annotations</strong> pour les comportements complexes</li>
+                        <li><strong>Organiser les pages</strong> : Design, Prototype, Archive</li>
+                    </ul>
+
+                    <h3>7.2 Export d'assets</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Figma - Export</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copier</button>
+                        </div>
+                        <pre>// Formats d'export recommandés :
+
+// Images (photos, illustrations) :
+- Format : JPG (qualité 80%)
+- 1x et 2x pour le retina
+
+// Icônes et logos :
+- Format : SVG (vectoriel, léger)
+- Ou PNG avec fond transparent
+
+// Composants UI :
+- Format : SVG pour les formes simples
+- Format : PNG pour les effets complexes (ombres, dégradés)
+
+// Dans Figma :
+1. Sélectionner l'élément
+2. Cliquer sur "Export [nom]" dans le panel droit
+3. Choisir le format et le suffixe
+4. Cliquer sur l'icône d'export
+
+// Nommage des exports :
+icon-search.svg
+logo-primary.svg
+hero-image@2x.jpg
+avatar-placeholder.png</pre>
+                    </div>
+                </section>
+
+                <section class="lesson-section" id="conclusion-figma" aria-labelledby="conclusion-figma-title">
+                    <h2 id="conclusion-figma-title"><span class="lesson-number">8</span> Conclusion</h2>
+                    <p>Vous maîtrisez maintenant Figma pour créer des designs professionnels. Prochaines étapes :</p>
+                    <ul>
+                        <li><strong>Plugins avancés</strong> : Tokens Studio, Autoflow, Unsplash</li>
+                        <li><strong>Design tokens</strong> : Intégration avec le code via Style Dictionary</li>
+                        <li><strong>Micro-interactions</strong> : Animations avancées avec After Effects ou Rive</li>
+                        <li><strong>Tests utilisateurs</strong> : Maze, Useberry pour tester vos prototypes</li>
+                        <li><strong>Design ops</strong> : Organisation et scaling du design system</li>
+                    </ul>
+                </section>
+            </div>
+
+            <aside class="course-sidebar-sticky" aria-label="Navigation du cours">
+                <div class="course-nav">
+                    <h4>Contenu du cours</h4>
+                    <ul>
+                        <li><a href="#intro-figma" class="active">1. Introduction Figma</a></li>
+                        <li><a href="#wireframes">2. Wireframing</a></li>
+                        <li><a href="#ui-design">3. UI Design</a></li>
+                        <li><a href="#auto-layout">4. Auto Layout</a></li>
+                        <li><a href="#prototypage">5. Prototypage</a></li>
+                        <li><a href="#design-system">6. Design System</a></li>
+                        <li><a href="#dev-mode">7. Dev Mode</a></li>
+                        <li><a href="#conclusion-figma">8. Conclusion</a></li>
+                    </ul>
+                </div>
+                <div class="course-nav">
+                    <h4>Progression</h4>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 0%;"></div>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">8 leçons • 18 heures</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>WebLearn</h4>
+                <p>Votre plateforme d'apprentissage en ligne pour maîtriser le développement web et les technologies numériques.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liens rapides</h4>
+                <a href="index.html">Accueil</a>
+                <a href="cours.html">Cours</a>
+                <a href="apropos.html">A Propos</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Catégories</h4>
+                <a href="cours.html">Développement Web</a>
+                <a href="cours.html">Design UI/UX</a>
+                <a href="cours.html">Marketing Digital</a>
+                <a href="cours.html">Data Science</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> contact@</p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> +261 38 22 819 76</p>
+                <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Fianarantsoa, Madagascar</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© WebLearn - Online Academy & Knowledge Hub. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="weblearn.js"></script>
+</body>
+</html>
