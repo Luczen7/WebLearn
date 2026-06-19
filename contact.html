@@ -103,18 +103,18 @@
             <div class="card-grid" style="max-width: 800px; margin: 0 auto;">
                 <div class="card" style="grid-column: 1 / -1;">
                     <h3 style="text-align: center; margin-bottom: 30px; color: var(--primary);">Envoyez-nous un message</h3>
-                    <form onsubmit="event.preventDefault(); alert('Message envoyé ! Nous vous répondrons dans les plus brefs délais.'); this.reset();">
+                    <form id="contact-form">
                         <div class="form-group">
                             <label for="nom">Nom complet</label>
-                            <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                            <input type="text" id="nom" name="from_name" placeholder="Votre nom" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Adresse email</label>
-                            <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                            <input type="email" id="email" name="from_email" placeholder="votre@email.com" required>
                         </div>
                         <div class="form-group">
                             <label for="sujet">Sujet</label>
-                            <select id="sujet" name="sujet" required>
+                            <select id="sujet" name="subject" required>
                                 <option value="">Choisir un sujet</option>
                                 <option value="general">Question générale</option>
                                 <option value="cours">Question sur un cours</option>
@@ -129,6 +129,8 @@
                         </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Envoyer le message</button>
                     </form>
+
+                    <div id="form-status" style="display:none; margin-top:15px; padding:12px; border-radius:8px; text-align:center;"></div>
                 </div>
             </div>
         </section>
